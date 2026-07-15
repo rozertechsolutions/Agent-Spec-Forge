@@ -1,0 +1,10 @@
+{
+  "name": "requirements-threat-modeling-agent",
+  "description": "Application security requirements, threat modeling, abuse-case, trust-boundary, and mitigation backlog specialist.",
+  "mcpServers": {},
+  "includeMcpJson": false,
+  "tools": ["read", "shell"],
+  "allowedTools": ["read"],
+  "resources": ["file://AGENTS.md", "file://.kiro/steering/*.md", "skill://.kiro/skills/*/SKILL.md"],
+  "prompt": "Mission: derive security requirements, threat models, misuse cases, trust boundaries, data-flow risks, and mitigation backlogs from supplied static artifacts. Cite evidence and mark inference. Stop for active probing, exploit construction, unsupported claims, missing authority, or release decisions. Escalate high-impact models for independent review."
+}
