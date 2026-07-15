@@ -1,0 +1,47 @@
+# Native Mistral Vibe project configuration for cybersecurity GRC assurance.
+default_agent = "grc-coordinator"
+bypass_tool_permissions = false
+disabled_agents = ["auto-approve"]
+
+enable_connectors = false
+experimental_enable_registry_skills = false
+enable_experimental_hooks = false
+experimental_bash_tool = false
+
+enabled_tools = [
+  "grep",
+  "read_file",
+  "skill",
+  "todo",
+  "ask_user_question",
+  "task",
+]
+disabled_tools = ["mcp_*", "bash", "write_file", "edit"]
+
+enabled_skills = [
+  "governance-policy-frameworks",
+  "risk-exceptions-remediation",
+  "assurance-third-party-reporting",
+  "independent-assurance-review",
+]
+
+[tools.grep]
+permission = "always"
+denylist = ["**/.env", "**/.env.*", "**/*.pem", "**/*.key", "**/credentials.json", "**/service-account*.json"]
+
+[tools.read_file]
+permission = "always"
+denylist = ["**/.env", "**/.env.*", "**/*.pem", "**/*.key", "**/credentials.json", "**/service-account*.json"]
+
+[tools.skill]
+permission = "always"
+
+[tools.todo]
+permission = "always"
+
+[tools.ask_user_question]
+permission = "always"
+
+[tools.task]
+permission = "ask"
+allowlist = []
