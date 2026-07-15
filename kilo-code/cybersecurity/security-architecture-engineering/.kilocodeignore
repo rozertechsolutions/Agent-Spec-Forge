@@ -1,0 +1,12 @@
+.env
+.env.*
+*.pem
+*.p12
+*.pfx
+*.key
+*secret*
+*credential*
+private/
+restricted/
+evidence/
+live-data/
