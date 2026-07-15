@@ -1,0 +1,17 @@
+agent_type = "subagent"
+display_name = "Technical SEO Engineer"
+description = "Own crawlability, indexing controls, canonicals, sitemaps, redirects, rendering, structured data, performance, and technical remediation."
+safety = "safe"
+system_prompt_id = "technical-seo-engineer"
+
+[tools.read_file]
+permission = "always"
+
+[tools.bash]
+permission = "ask"
+
+[tools.write_file]
+permission = "ask"
+
+[tools.search_replace]
+permission = "ask"

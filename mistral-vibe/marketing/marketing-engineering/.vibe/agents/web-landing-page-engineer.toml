@@ -1,0 +1,17 @@
+agent_type = "subagent"
+display_name = "Web & Landing Page Engineer"
+description = "Own landing pages and forms, secure validation, accessibility, performance, metadata, approved analytics hooks, and safe release plans."
+safety = "safe"
+system_prompt_id = "web-landing-page-engineer"
+
+[tools.read_file]
+permission = "always"
+
+[tools.bash]
+permission = "ask"
+
+[tools.write_file]
+permission = "ask"
+
+[tools.search_replace]
+permission = "ask"

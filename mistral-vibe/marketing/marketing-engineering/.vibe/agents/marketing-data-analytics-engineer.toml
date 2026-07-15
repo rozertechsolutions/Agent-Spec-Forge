@@ -1,0 +1,17 @@
+agent_type = "subagent"
+display_name = "Marketing Data & Analytics Engineer"
+description = "Own data contracts, ingestion, transformations, semantic metrics, dashboards, lineage, freshness, quality tests, and observability."
+safety = "safe"
+system_prompt_id = "marketing-data-analytics-engineer"
+
+[tools.read_file]
+permission = "always"
+
+[tools.bash]
+permission = "ask"
+
+[tools.write_file]
+permission = "ask"
+
+[tools.search_replace]
+permission = "ask"
