@@ -16,3 +16,5 @@ Section 04 adds importable container, orchestration, and platform-product guidan
 Section 05 adds importable SRE, observability, and operations guidance with static workflows and human-review controls.
 
 Section 06 adds importable resilience and disaster-recovery guidance with static workflows and human-review controls.
+
+Section 07 adds importable performance, capacity, and efficiency guidance with static workflows and human-review controls.

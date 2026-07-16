@@ -13,3 +13,5 @@ Section 04 adds native Containers and Platform Engineering roles, skill, workflo
 Section 05 adds native SRE, Observability and Operations roles, skill, workflow procedures, safety gates, and human-review controls where supported.
 
 Section 06 adds native Resilience and Disaster Recovery role, skill, workflow procedures, safety gates, and human-review controls where supported.
+
+Section 07 adds native Performance, Capacity and Efficiency role, skill, workflows, safety gates, and human-review controls where supported.

@@ -38,3 +38,8 @@ def test_resilience_disaster_recovery_static_contracts():
     from devops_cloud_department.resilience_disaster_recovery import QUALITY_GATES, ROLE_INSTRUCTIONS
     assert 'resilience-and-disaster-recovery-engineer' in ROLE_INSTRUCTIONS
     assert 'RTO and RPO are justified by service requirements' in QUALITY_GATES
+
+def test_performance_capacity_efficiency_static_contracts():
+    from devops_cloud_department.performance_capacity_efficiency import QUALITY_GATES, ROLE_INSTRUCTIONS
+    assert 'performance-and-capacity-engineer' in ROLE_INSTRUCTIONS
+    assert 'No benchmark result is invented or inferred without execution evidence' in QUALITY_GATES

@@ -16,3 +16,5 @@ Section 04 adds Windsurf rules and workflow references for static containers and
 Section 05 adds Windsurf rules and workflow references for static SRE and observability work.
 
 Section 06 adds Windsurf rules and workflow references for static resilience and DR work.
+
+Section 07 adds Windsurf rules and workflow references for static performance and capacity work.

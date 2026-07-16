@@ -30,3 +30,8 @@ rules:
 - Backups are not considered valid without a restoration verification strategy.
 - Failback and data-consistency risks are documented.
 - Destructive exercises require explicit human authorization and are never executed by these prompts.
+
+- Performance targets are measurable and tied to workload assumptions.
+- Capacity includes uncertainty, seasonality and failure headroom.
+- Autoscaling defines safe minimums, maximums and stabilization behavior.
+- No benchmark result is invented or inferred without execution evidence.

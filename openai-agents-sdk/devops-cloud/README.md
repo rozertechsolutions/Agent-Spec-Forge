@@ -22,3 +22,5 @@ Section 04 adds static SDK constants for containers and platform-engineering rol
 Section 05 adds static SDK constants for SRE, observability, and operations roles, skill, workflows, and quality gates. The package remains uninstalled and unexecuted.
 
 Section 06 adds static SDK constants for resilience and DR role, skill, workflows, and quality gates. The package remains uninstalled and unexecuted.
+
+Section 07 adds static SDK constants for performance, capacity, and efficiency role, skill, workflows, and quality gates. The package remains uninstalled and unexecuted.

@@ -16,3 +16,5 @@ Section 04 adds Cursor rules and workflow references for static containers and p
 Section 05 adds Cursor rules and workflow references for static SRE and observability work.
 
 Section 06 adds Cursor rules and workflow references for static resilience and DR work.
+
+Section 07 adds Cursor rules and workflow references for static performance and capacity work.

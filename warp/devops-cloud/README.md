@@ -16,3 +16,5 @@ Section 04 adds Warp project Skill and workflow references for static containers
 Section 05 adds Warp Skill and workflow references for static SRE and observability work.
 
 Section 06 adds Warp Skill and workflow references for static resilience and DR work.
+
+Section 07 adds Warp Skill and workflow references for static performance and capacity work.
