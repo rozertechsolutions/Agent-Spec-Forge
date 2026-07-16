@@ -10,11 +10,13 @@ sections:
 - 06-resilience-disaster-recovery
 - 07-performance-capacity-efficiency
 - 08-devsecops
+- 09-finops-sustainability
 scope:
 - request intake, architecture, cloud foundations, infrastructure, networking, managed services, and lifecycle
 - CI/CD, release engineering, containers, orchestration, platform product management, SRE, observability, and operations
 - resilience, disaster recovery, backup/restore, RTO/RPO, performance, capacity, autoscaling, and resource efficiency
 - DevSecOps, cloud security controls, software supply chain security, policy evidence, and secure delivery guardrails
+- FinOps, cost allocation, budgets, forecasts, unit economics, optimization recommendations, technology value, and measurable sustainability
 roles:
 - devops-cloud-orchestrator
 - cloud-and-platform-architect
@@ -33,6 +35,8 @@ roles:
 - devsecops-engineer
 - cloud-security-controls-engineer
 - software-supply-chain-security-engineer
+- finops-engineer
+- cloud-sustainability-and-efficiency-analyst
 skills:
 - leadership-architecture
 - cloud-foundation-infrastructure
@@ -42,6 +46,7 @@ skills:
 - resilience-disaster-recovery
 - performance-capacity-efficiency
 - devsecops
+- finops-sustainability
 workflows:
 - leadership-architecture
 - cloud-foundation-infrastructure
@@ -51,6 +56,7 @@ workflows:
 - resilience-disaster-recovery
 - performance-capacity-efficiency
 - devsecops
+- finops-sustainability
 policies:
 - safety
 - quality-gates

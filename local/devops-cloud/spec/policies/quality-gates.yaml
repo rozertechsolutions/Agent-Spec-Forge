@@ -40,3 +40,8 @@ rules:
 - Findings have severity, evidence, owner, remediation and exception paths.
 - No secret values or real identifiers are committed.
 - DevSecOps does not absorb Cybersecurity's independent assurance or offensive responsibilities.
+
+- Recommendations distinguish measured facts, estimates and assumptions.
+- Every saving estimate includes method, risk and operational tradeoff.
+- Financial decisions remain human-owned.
+- Sustainability claims require measurable evidence.

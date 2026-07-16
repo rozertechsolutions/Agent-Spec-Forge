@@ -49,3 +49,11 @@ def test_devsecops_static_contracts():
     assert 'cloud-security-controls-engineer' in ROLE_INSTRUCTIONS
     assert 'software-supply-chain-security-engineer' in ROLE_INSTRUCTIONS
     assert 'No secret values or real identifiers are committed' in QUALITY_GATES
+
+
+def test_finops_sustainability_static_contracts():
+    from devops_cloud_department.finops_sustainability import QUALITY_GATES, ROLE_INSTRUCTIONS
+    assert 'finops-engineer' in ROLE_INSTRUCTIONS
+    assert 'cloud-sustainability-and-efficiency-analyst' in ROLE_INSTRUCTIONS
+    assert 'Financial decisions remain human-owned' in QUALITY_GATES
+    assert 'Sustainability claims require measurable evidence' in QUALITY_GATES

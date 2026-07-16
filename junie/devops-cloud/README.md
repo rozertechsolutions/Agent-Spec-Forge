@@ -17,3 +17,8 @@ Section 06 adds Junie Skill and workflow references for static resilience and DR
 Section 07 adds Junie Skill and workflow references for static performance and capacity work.
 
 Section 08 adds Junie Skill and workflow references for static DevSecOps work.
+
+
+## Section 09 - FinOps and Sustainability
+
+Adds FinOps and Sustainability roles, skills and workflows for cost allocation, budgets, forecasts, anomaly response, unit economics, rightsizing, commitment analysis, technology-value review and measurable sustainability assessment. All outputs are static recommendations; financial authorization, resource mutation and public sustainability claims require human approval.

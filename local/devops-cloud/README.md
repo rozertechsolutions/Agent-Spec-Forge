@@ -26,3 +26,8 @@ Section 06 adds provider-independent resilience, backup/restore, DR, failover/fa
 Section 07 adds provider-independent performance, workload model, capacity, autoscaling, bottleneck, and resource-efficiency specs.
 
 Section 08 adds provider-independent DevSecOps, IAM/secrets, policy-as-code, supply-chain, and exception specs.
+
+
+## Section 09 - FinOps and Sustainability
+
+Adds FinOps and Sustainability roles, skills and workflows for cost allocation, budgets, forecasts, anomaly response, unit economics, rightsizing, commitment analysis, technology-value review and measurable sustainability assessment. All outputs are static recommendations; financial authorization, resource mutation and public sustainability claims require human approval.

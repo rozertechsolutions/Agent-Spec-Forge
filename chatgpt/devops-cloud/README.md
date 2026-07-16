@@ -20,3 +20,8 @@ Section 06 adds importable resilience and disaster-recovery guidance with static
 Section 07 adds importable performance, capacity, and efficiency guidance with static workflows and human-review controls.
 
 Section 08 adds importable DevSecOps guidance with static workflows and human-review controls.
+
+
+## Section 09 - FinOps and Sustainability
+
+Adds FinOps and Sustainability roles, skills and workflows for cost allocation, budgets, forecasts, anomaly response, unit economics, rightsizing, commitment analysis, technology-value review and measurable sustainability assessment. All outputs are static recommendations; financial authorization, resource mutation and public sustainability claims require human approval.

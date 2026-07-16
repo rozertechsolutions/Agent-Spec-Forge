@@ -17,3 +17,8 @@ Section 06 adds native Resilience and Disaster Recovery role, skill, workflow pr
 Section 07 adds native Performance, Capacity and Efficiency role, skill, workflows, safety gates, and human-review controls where supported.
 
 Section 08 adds native DevSecOps roles, skill, workflows, safety gates, and human-review controls where supported.
+
+
+## Section 09 - FinOps and Sustainability
+
+Adds FinOps and Sustainability roles, skills and workflows for cost allocation, budgets, forecasts, anomaly response, unit economics, rightsizing, commitment analysis, technology-value review and measurable sustainability assessment. All outputs are static recommendations; financial authorization, resource mutation and public sustainability claims require human approval.

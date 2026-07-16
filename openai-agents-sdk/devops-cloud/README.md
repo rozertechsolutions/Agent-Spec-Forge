@@ -26,3 +26,8 @@ Section 06 adds static SDK constants for resilience and DR role, skill, workflow
 Section 07 adds static SDK constants for performance, capacity, and efficiency role, skill, workflows, and quality gates. The package remains uninstalled and unexecuted.
 
 Section 08 adds static SDK constants for DevSecOps roles, skill, workflows, and quality gates. The package remains uninstalled and unexecuted.
+
+
+## Section 09 - FinOps and Sustainability
+
+Adds FinOps and Sustainability roles, skills and workflows for cost allocation, budgets, forecasts, anomaly response, unit economics, rightsizing, commitment analysis, technology-value review and measurable sustainability assessment. All outputs are static recommendations; financial authorization, resource mutation and public sustainability claims require human approval.
