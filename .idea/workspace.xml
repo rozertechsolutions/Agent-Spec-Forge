@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ca5b4c6b-b9c8-4c51-b616-0f1e05b5aefe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/openai-agents-sdk/software-development/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-agents-sdk/software-development/pyproject.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-agents-sdk/software-development/src/software_development_department/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-agents-sdk/software-development/src/software_development_department/agents.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-agents-sdk/software-development/src/software_development_department/guardrails.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-agents-sdk/software-development/src/software_development_department/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-agents-sdk/software-development/src/software_development_department/orchestrator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-agents-sdk/software-development/src/software_development_department/policies.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-agents-sdk/software-development/src/software_development_department/skills.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-agents-sdk/software-development/src/software_development_department/tools.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-agents-sdk/software-development/src/software_development_department/workflows.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-agents-sdk/software-development/tests/test_models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-agents-sdk/software-development/tests/test_policies.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/rules/00-software-development-core.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/rules/10-safety-and-human-review.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/rules/20-quality-and-completion.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/skills/architecture-decision-management/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/skills/codebase-analysis/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/skills/controlled-refactoring/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/skills/dependency-and-supply-chain-review/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/skills/feature-implementation/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/skills/independent-code-review/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/skills/performance-and-reliability-review/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/skills/release-readiness-assessment/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/skills/requirements-decomposition/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/skills/root-cause-debugging/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/skills/secure-software-review/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/skills/technical-documentation/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/skills/technical-implementation-planning/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/skills/test-strategy-and-validation/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/workflows/api-or-library-evolution.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/workflows/architecture-change.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/workflows/bug-investigation-and-correction.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/workflows/controlled-refactoring.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/workflows/dependency-update.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/workflows/maintenance-and-compatibility-update.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/workflows/new-feature-development.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/workflows/performance-and-reliability-improvement.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/workflows/release-readiness-review.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/workflows/security-remediation.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/.windsurf/workflows/technical-debt-reduction.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/AGENTS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windsurf/software-development/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="fix/mobile-development" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;rozertechsolutions&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/rozertechsolutions/AI-Specialized-Departments&quot;,
+    &quot;accountId&quot;: &quot;3ffb08ca-d9cd-4792-80b7-19cf5c54cea8&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3GZfKWm69fnolhdYoexxX66Jn17" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/software-development&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/azerva/Desktop/AI-Specialized-Departments/openai-agents-sdk&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/openai-agents-sdk" />
+      <recent name="$PROJECT_DIR$/windsurf" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/codex" />
+      <recent name="$PROJECT_DIR$/cursor" />
+      <recent name="$PROJECT_DIR$/gemini-cli" />
+      <recent name="$PROJECT_DIR$/github-copilot" />
+      <recent name="$PROJECT_DIR$/junie" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca5b4c6b-b9c8-4c51-b616-0f1e05b5aefe" name="Changes" comment="" />
+      <created>1784183948909</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1784183948909</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
