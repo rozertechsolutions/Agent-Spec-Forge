@@ -20,3 +20,5 @@ Section 03 adds provider-independent CI/CD and release-engineering specs for pip
 Section 04 adds provider-independent container, orchestration, internal platform, golden path, and platform product specs.
 
 Section 05 adds provider-independent SRE, observability, incident, postmortem, runbook, and toil-reduction specs.
+
+Section 06 adds provider-independent resilience, backup/restore, DR, failover/failback, chaos design, and recovery evidence specs.

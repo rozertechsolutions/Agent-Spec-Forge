@@ -7,10 +7,11 @@ sections:
 - 03-ci-cd-release-engineering
 - 04-containers-platform-engineering
 - 05-sre-observability-operations
+- 06-resilience-disaster-recovery
 scope:
 - request intake, architecture, cloud foundations, infrastructure, networking, managed services, and lifecycle
-- CI/CD design, release engineering, containers, orchestration, platform product management, and developer experience
-- SRE, observability, operations, incidents, postmortems, runbooks, and toil reduction
+- CI/CD, release engineering, containers, orchestration, platform product management, SRE, observability, and operations
+- resilience, disaster recovery, backup/restore, RTO/RPO, failover/failback, recovery exercises, and gap remediation
 roles:
 - devops-cloud-orchestrator
 - cloud-and-platform-architect
@@ -24,18 +25,21 @@ roles:
 - platform-product-and-developer-experience-engineer
 - site-reliability-engineer
 - observability-engineer
+- resilience-and-disaster-recovery-engineer
 skills:
 - leadership-architecture
 - cloud-foundation-infrastructure
 - ci-cd-release-engineering
 - containers-platform-engineering
 - sre-observability-operations
+- resilience-disaster-recovery
 workflows:
 - leadership-architecture
 - cloud-foundation-infrastructure
 - ci-cd-release-engineering
 - containers-platform-engineering
 - sre-observability-operations
+- resilience-disaster-recovery
 policies:
 - safety
 - quality-gates

@@ -12,6 +12,7 @@
     "observability-engineer": {"mode": "subagent", "prompt": "{file:./.opencode/agents/observability-engineer.md}", "permission": {"edit": "ask", "bash": "deny"}},
     "platform-product-and-developer-experience-engineer": {"mode": "subagent", "prompt": "{file:./.opencode/agents/platform-product-and-developer-experience-engineer.md}", "permission": {"edit": "ask", "bash": "deny"}},
     "release-and-deployment-engineer": {"mode": "subagent", "prompt": "{file:./.opencode/agents/release-and-deployment-engineer.md}", "permission": {"edit": "ask", "bash": "deny"}},
+    "resilience-and-disaster-recovery-engineer": {"mode": "subagent", "prompt": "{file:./.opencode/agents/resilience-and-disaster-recovery-engineer.md}", "permission": {"edit": "ask", "bash": "deny"}},
     "site-reliability-engineer": {"mode": "subagent", "prompt": "{file:./.opencode/agents/site-reliability-engineer.md}", "permission": {"edit": "ask", "bash": "deny"}}
   }
 }

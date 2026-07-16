@@ -14,3 +14,5 @@ Section 03 adds importable CI/CD and release-engineering guidance, skill procedu
 Section 04 adds importable container, orchestration, and platform-product guidance with static workflows and human-review controls.
 
 Section 05 adds importable SRE, observability, and operations guidance with static workflows and human-review controls.
+
+Section 06 adds importable resilience and disaster-recovery guidance with static workflows and human-review controls.

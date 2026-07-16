@@ -14,3 +14,5 @@ Section 03 adds Cursor rules and workflow references for static CI/CD and releas
 Section 04 adds Cursor rules and workflow references for static containers and platform engineering.
 
 Section 05 adds Cursor rules and workflow references for static SRE and observability work.
+
+Section 06 adds Cursor rules and workflow references for static resilience and DR work.

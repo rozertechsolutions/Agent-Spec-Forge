@@ -11,3 +11,5 @@ Section 03 adds Cline rules, Skill, and workflow procedures for static CI/CD and
 Section 04 adds Cline rules, Skill, and workflow procedures for static containers and platform engineering.
 
 Section 05 adds Cline rules, Skill, and workflow procedures for static SRE and observability work.
+
+Section 06 adds Cline rules, Skill, and workflows for static resilience and DR work.

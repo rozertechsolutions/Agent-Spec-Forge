@@ -14,3 +14,5 @@ Section 03 adds Kiro steering and workflow references for static CI/CD and relea
 Section 04 adds Kiro steering and workflow references for static containers and platform engineering.
 
 Section 05 adds Kiro steering and workflow references for static SRE and observability work.
+
+Section 06 adds Kiro steering and workflow references for static resilience and DR work.

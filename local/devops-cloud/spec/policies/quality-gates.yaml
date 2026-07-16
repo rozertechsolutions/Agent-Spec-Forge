@@ -25,3 +25,8 @@ rules:
 - Alerts are actionable, owned and tied to service objectives.
 - Runbooks define prerequisites, diagnosis, safe actions, rollback and escalation.
 - Postmortems are evidence-based, blameless and action-oriented.
+
+- RTO and RPO are justified by service requirements.
+- Backups are not considered valid without a restoration verification strategy.
+- Failback and data-consistency risks are documented.
+- Destructive exercises require explicit human authorization and are never executed by these prompts.

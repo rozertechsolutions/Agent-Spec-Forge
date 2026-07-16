@@ -33,3 +33,8 @@ def test_sre_observability_operations_static_contracts():
     assert 'site-reliability-engineer' in ROLE_INSTRUCTIONS
     assert 'observability-engineer' in ROLE_INSTRUCTIONS
     assert 'Alerts are actionable, owned and tied to service objectives' in QUALITY_GATES
+
+def test_resilience_disaster_recovery_static_contracts():
+    from devops_cloud_department.resilience_disaster_recovery import QUALITY_GATES, ROLE_INSTRUCTIONS
+    assert 'resilience-and-disaster-recovery-engineer' in ROLE_INSTRUCTIONS
+    assert 'RTO and RPO are justified by service requirements' in QUALITY_GATES
