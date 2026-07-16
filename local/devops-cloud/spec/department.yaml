@@ -1,0 +1,21 @@
+schema_version: '1.0'
+id: devops-cloud
+name: DevOps and Cloud
+section: 01-leadership-architecture
+scope:
+- request intake, classification, prioritization, and routing
+- cloud, hybrid, multicloud, and platform architecture
+- ADRs, technology selection, standards, guardrails, exceptions, and handoffs
+roles:
+- devops-cloud-orchestrator
+- cloud-and-platform-architect
+skills:
+- leadership-architecture
+workflows:
+- leadership-architecture
+policies:
+- safety
+- quality-gates
+providers_enabled: false
+runtime_enabled: false
+tools_enabled: false

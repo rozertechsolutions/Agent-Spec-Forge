@@ -1,0 +1,7 @@
+schema_version: '1.0'
+id: quality-gates
+rules:
+- every responsibility has one primary owner
+- every ADR records context, alternatives, tradeoffs, risks, owner, and review status
+- provider selection requires explicit requirements and tradeoff analysis
+- specialist implementation detail is routed to later sections
