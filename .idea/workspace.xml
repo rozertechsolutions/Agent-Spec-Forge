@@ -4,7 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca5b4c6b-b9c8-4c51-b616-0f1e05b5aefe" name="Changes" comment="" />
+    <list default="true" id="ca5b4c6b-b9c8-4c51-b616-0f1e05b5aefe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/chatgpt/web-development/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatgpt/web-development/custom-gpt-setup.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatgpt/web-development/knowledge/department-charter.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatgpt/web-development/knowledge/quality-gates.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatgpt/web-development/knowledge/security-and-human-review.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatgpt/web-development/project-instructions.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatgpt/web-development/skills/accessibility-performance-seo/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatgpt/web-development/skills/architecture-decision/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatgpt/web-development/skills/backend-api-auth/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatgpt/web-development/skills/dependency-supply-chain-review/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatgpt/web-development/skills/frontend-delivery/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatgpt/web-development/skills/release-readiness/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatgpt/web-development/skills/security-privacy-review/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatgpt/web-development/skills/stack-discovery/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatgpt/web-development/skills/testing-browser-compatibility/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatgpt/web-development/workspace-agent-setup.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/agents/accessibility-performance-seo-reviewer.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/agents/backend-api-specialist.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/agents/frontend-specialist.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/agents/quality-release-reviewer.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/agents/security-privacy-reviewer.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/agents/web-architecture-specialist.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/agents/web-development-lead.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/skills/accessibility-performance-seo/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/skills/architecture-decision/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/skills/backend-api-auth/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/skills/dependency-supply-chain-review/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/skills/frontend-delivery/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/skills/release-readiness/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/skills/security-privacy-review/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/skills/stack-discovery/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/skills/testing-browser-compatibility/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/skills/workflow-audit-accessibility-performance-seo/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/skills/workflow-debug-web-regression/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/skills/workflow-implement-web-change/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/skills/workflow-plan-web-change/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/skills/workflow-review-api-and-auth/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/skills/workflow-review-dependencies/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/skills/workflow-review-security-and-privacy/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.claude/skills/workflow-verify-release-readiness/SKILL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/.mcp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/CLAUDE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/claude-code/web-development/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,27 +58,27 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fix/mobile-development" />
+        <entry key="$PROJECT_DIR$" value="feature/software-development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "rozertechsolutions"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;rozertechsolutions&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/rozertechsolutions/AI-Specialized-Departments",
-    "accountId": "3ffb08ca-d9cd-4792-80b7-19cf5c54cea8"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/rozertechsolutions/AI-Specialized-Departments&quot;,
+    &quot;accountId&quot;: &quot;3ffb08ca-d9cd-4792-80b7-19cf5c54cea8&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4,
-  "fromUser": false
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3GZfKWm69fnolhdYoexxX66Jn17" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -52,7 +97,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "feature/web-development",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/azerva/Desktop/AI-Specialized-Departments",
+    "last_opened_file_path": "/Users/azerva/Desktop/AI-Specialized-Departments/claude-code",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -60,6 +105,16 @@
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/claude-code" />
+      <recent name="$PROJECT_DIR$/chatgpt" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cline" />
+      <recent name="$PROJECT_DIR$/claude" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" IS_LOCATION_SIMULATION_SUPPORTED="false" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" DEVELOPMENT_TEAM="" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
       <embedded_app_extension_list />

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "default": "deny",
+  "capabilities": {
+    "readWorkspace": "ask",
+    "writeWorkspace": "ask",
+    "executeCommands": "deny",
+    "installDependencies": "deny",
+    "gitMutation": "deny",
+    "networkAccess": "ask",
+    "externalIntegrations": "deny",
+    "mcp": "deny",
+    "deploy": "deny",
+    "publish": "deny",
+    "destructiveActions": "deny"
+  },
+  "humanApprovalRequired": [
+    "authentication",
+    "authorization",
+    "secrets",
+    "sensitiveData",
+    "databaseMigration",
+    "dependencies",
+    "thirdPartyScripts",
+    "tracking",
+    "production",
+    "deployment",
+    "publication",
+    "billing",
+    "destructiveActions"
+  ]
+}

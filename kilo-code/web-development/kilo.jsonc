@@ -1,0 +1,11 @@
+{
+  "$schema": "https://kilo.ai/config.json",
+  "instructions": [
+    ".kilo/rules/*.md"
+  ],
+  "mcp": {},
+  "permission": {
+    "bash": "ask",
+    "edit": "ask"
+  }
+}
