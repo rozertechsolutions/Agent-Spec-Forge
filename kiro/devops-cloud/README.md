@@ -18,3 +18,5 @@ Section 05 adds Kiro steering and workflow references for static SRE and observa
 Section 06 adds Kiro steering and workflow references for static resilience and DR work.
 
 Section 07 adds Kiro steering and workflow references for static performance and capacity work.
+
+Section 08 adds Kiro steering and workflow references for static DevSecOps work.

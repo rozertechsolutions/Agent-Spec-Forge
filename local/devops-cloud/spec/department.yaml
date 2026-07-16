@@ -9,10 +9,12 @@ sections:
 - 05-sre-observability-operations
 - 06-resilience-disaster-recovery
 - 07-performance-capacity-efficiency
+- 08-devsecops
 scope:
 - request intake, architecture, cloud foundations, infrastructure, networking, managed services, and lifecycle
 - CI/CD, release engineering, containers, orchestration, platform product management, SRE, observability, and operations
 - resilience, disaster recovery, backup/restore, RTO/RPO, performance, capacity, autoscaling, and resource efficiency
+- DevSecOps, cloud security controls, software supply chain security, policy evidence, and secure delivery guardrails
 roles:
 - devops-cloud-orchestrator
 - cloud-and-platform-architect
@@ -28,6 +30,9 @@ roles:
 - observability-engineer
 - resilience-and-disaster-recovery-engineer
 - performance-and-capacity-engineer
+- devsecops-engineer
+- cloud-security-controls-engineer
+- software-supply-chain-security-engineer
 skills:
 - leadership-architecture
 - cloud-foundation-infrastructure
@@ -36,6 +41,7 @@ skills:
 - sre-observability-operations
 - resilience-disaster-recovery
 - performance-capacity-efficiency
+- devsecops
 workflows:
 - leadership-architecture
 - cloud-foundation-infrastructure
@@ -44,6 +50,7 @@ workflows:
 - sre-observability-operations
 - resilience-disaster-recovery
 - performance-capacity-efficiency
+- devsecops
 policies:
 - safety
 - quality-gates

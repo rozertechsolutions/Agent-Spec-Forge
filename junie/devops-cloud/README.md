@@ -15,3 +15,5 @@ Section 05 adds Junie Skill and workflow references for static SRE and observabi
 Section 06 adds Junie Skill and workflow references for static resilience and DR work.
 
 Section 07 adds Junie Skill and workflow references for static performance and capacity work.
+
+Section 08 adds Junie Skill and workflow references for static DevSecOps work.

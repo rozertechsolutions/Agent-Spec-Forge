@@ -15,3 +15,5 @@ Section 05 adds Cline rules, Skill, and workflow procedures for static SRE and o
 Section 06 adds Cline rules, Skill, and workflows for static resilience and DR work.
 
 Section 07 adds Cline rules, Skill, and workflows for static performance and capacity work.
+
+Section 08 adds Cline rules, Skill, and workflows for static DevSecOps work.

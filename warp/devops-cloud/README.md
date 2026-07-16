@@ -18,3 +18,5 @@ Section 05 adds Warp Skill and workflow references for static SRE and observabil
 Section 06 adds Warp Skill and workflow references for static resilience and DR work.
 
 Section 07 adds Warp Skill and workflow references for static performance and capacity work.
+
+Section 08 adds Warp Skill and workflow references for static DevSecOps work.

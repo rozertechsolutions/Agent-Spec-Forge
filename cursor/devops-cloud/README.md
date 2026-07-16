@@ -18,3 +18,5 @@ Section 05 adds Cursor rules and workflow references for static SRE and observab
 Section 06 adds Cursor rules and workflow references for static resilience and DR work.
 
 Section 07 adds Cursor rules and workflow references for static performance and capacity work.
+
+Section 08 adds Cursor rules and workflow references for static DevSecOps work.

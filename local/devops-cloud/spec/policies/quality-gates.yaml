@@ -35,3 +35,8 @@ rules:
 - Capacity includes uncertainty, seasonality and failure headroom.
 - Autoscaling defines safe minimums, maximums and stabilization behavior.
 - No benchmark result is invented or inferred without execution evidence.
+
+- Controls are risk-based, traceable and placed at the earliest practical stage.
+- Findings have severity, evidence, owner, remediation and exception paths.
+- No secret values or real identifiers are committed.
+- DevSecOps does not absorb Cybersecurity's independent assurance or offensive responsibilities.

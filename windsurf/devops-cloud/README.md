@@ -18,3 +18,5 @@ Section 05 adds Windsurf rules and workflow references for static SRE and observ
 Section 06 adds Windsurf rules and workflow references for static resilience and DR work.
 
 Section 07 adds Windsurf rules and workflow references for static performance and capacity work.
+
+Section 08 adds Windsurf rules and workflow references for static DevSecOps work.

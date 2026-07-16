@@ -24,3 +24,5 @@ Section 05 adds provider-independent SRE, observability, incident, postmortem, r
 Section 06 adds provider-independent resilience, backup/restore, DR, failover/failback, chaos design, and recovery evidence specs.
 
 Section 07 adds provider-independent performance, workload model, capacity, autoscaling, bottleneck, and resource-efficiency specs.
+
+Section 08 adds provider-independent DevSecOps, IAM/secrets, policy-as-code, supply-chain, and exception specs.

@@ -11,8 +11,7 @@ def test_section_roles_are_present():
 
 
 def test_cloud_foundation_quality_gates_are_static():
-    text = "
-".join(ROLE_INSTRUCTIONS.values())
+    text = "\n".join(ROLE_INSTRUCTIONS.values())
     assert "Do not authenticate to cloud accounts" in text
     assert "State, drift, rollback" in text
 
@@ -43,3 +42,10 @@ def test_performance_capacity_efficiency_static_contracts():
     from devops_cloud_department.performance_capacity_efficiency import QUALITY_GATES, ROLE_INSTRUCTIONS
     assert 'performance-and-capacity-engineer' in ROLE_INSTRUCTIONS
     assert 'No benchmark result is invented or inferred without execution evidence' in QUALITY_GATES
+
+def test_devsecops_static_contracts():
+    from devops_cloud_department.devsecops import QUALITY_GATES, ROLE_INSTRUCTIONS
+    assert 'devsecops-engineer' in ROLE_INSTRUCTIONS
+    assert 'cloud-security-controls-engineer' in ROLE_INSTRUCTIONS
+    assert 'software-supply-chain-security-engineer' in ROLE_INSTRUCTIONS
+    assert 'No secret values or real identifiers are committed' in QUALITY_GATES
