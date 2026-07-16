@@ -1,6 +1,12 @@
 # Secrets and local environment
 .env
 .env.*
+!.env.example
+!.env.sample
+!.env.template
+!.env.*.example
+!.env.*.sample
+!.env.*.template
 *.pem
 *.p12
 *.p8
@@ -10,8 +16,6 @@
 *.cer
 *.crt
 *.key
-GoogleService-Info.plist
-google-services.json
 firebase-service-account*.json
 service-account*.json
 

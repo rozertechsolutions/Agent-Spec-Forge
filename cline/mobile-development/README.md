@@ -35,6 +35,10 @@ This specialization is implemented for Cline project configuration under `cline/
 | Standalone executable hook scripts | unsupported | Current hooks page points to SDK plugin hooks; no stable `.cline/hooks` file schema was available. |
 | MCP server configuration | unsupported for default activation | MCP requires explicit server configuration and credentials; no inactive project MCP state was present. |
 
+## Rules Location Decision
+
+Current Cline documentation is not worded identically across pages: the Rules page describes `.clinerules/` as the primary workspace rule format, while the Config page lists `.cline/rules/` as the project-level configuration location. This specialization targets the stable project configuration surface, so it keeps a single coordinator rule in `.cline/rules/mobile-development.md` and does not duplicate it into `.clinerules/`.
+
 ## Responsibilities Implemented
 
 The twelve required responsibilities are implemented as focused Cline skills:

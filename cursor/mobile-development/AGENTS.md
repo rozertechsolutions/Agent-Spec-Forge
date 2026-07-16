@@ -78,6 +78,8 @@ Require human control for authentication/authorization changes, privacy, manifes
 
 MCP remains inactive by default. Do not add or authenticate an MCP server unless the user explicitly asks and reviews exposed data, permissions, external writes, and approval behavior.
 
+Static hook tests are provided in `.cursor/hooks/tests/test_hooks.py` for manual execution with `python3 -m unittest discover -s .cursor/hooks/tests`; they are dependency-free and were not executed during static generation.
+
 ## Verification
 
 Discover actual project commands. Prefer wrappers and declared scripts. Never guess schemes, destinations, flavors, targets, package managers, or scripts.
