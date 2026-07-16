@@ -45,3 +45,8 @@ rules:
 - Every saving estimate includes method, risk and operational tradeoff.
 - Financial decisions remain human-owned.
 - Sustainability claims require measurable evidence.
+
+- Reviewer independence is explicit.
+- Every finding includes evidence, impact, owner, severity and closure criteria.
+- Static review is never represented as runtime validation.
+- Completion is blocked while critical findings remain unresolved.

@@ -57,3 +57,10 @@ def test_finops_sustainability_static_contracts():
     assert 'cloud-sustainability-and-efficiency-analyst' in ROLE_INSTRUCTIONS
     assert 'Financial decisions remain human-owned' in QUALITY_GATES
     assert 'Sustainability claims require measurable evidence' in QUALITY_GATES
+
+
+def test_assurance_review_static_contracts():
+    from devops_cloud_department.assurance_review import QUALITY_GATES, ROLE_INSTRUCTIONS
+    assert 'devops-and-cloud-assurance-reviewer' in ROLE_INSTRUCTIONS
+    assert 'Reviewer independence is explicit' in QUALITY_GATES
+    assert 'Static review is never represented as runtime validation' in QUALITY_GATES

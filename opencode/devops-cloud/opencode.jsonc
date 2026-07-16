@@ -65,6 +65,14 @@
         "bash": "deny"
       }
     },
+    "devops-and-cloud-assurance-reviewer": {
+      "mode": "subagent",
+      "prompt": "{file:./.opencode/agents/devops-and-cloud-assurance-reviewer.md}",
+      "permission": {
+        "edit": "ask",
+        "bash": "deny"
+      }
+    },
     "devops-cloud-orchestrator": {
       "mode": "subagent",
       "prompt": "{file:./.opencode/agents/devops-cloud-orchestrator.md}",

@@ -22,3 +22,8 @@ Section 08 adds Junie Skill and workflow references for static DevSecOps work.
 ## Section 09 - FinOps and Sustainability
 
 Adds FinOps and Sustainability roles, skills and workflows for cost allocation, budgets, forecasts, anomaly response, unit economics, rightsizing, commitment analysis, technology-value review and measurable sustainability assessment. All outputs are static recommendations; financial authorization, resource mutation and public sustainability claims require human approval.
+
+
+## Section 10 - Assurance and Independent Review
+
+Adds an independent assurance reviewer, reusable review skill and static workflows for evidence-based review, cross-section consistency, findings, waivers and completion gates. The reviewer may block completion, but cannot self-review, silently rewrite implementation work or claim runtime validation.

@@ -11,12 +11,14 @@ sections:
 - 07-performance-capacity-efficiency
 - 08-devsecops
 - 09-finops-sustainability
+- 10-assurance-review
 scope:
 - request intake, architecture, cloud foundations, infrastructure, networking, managed services, and lifecycle
 - CI/CD, release engineering, containers, orchestration, platform product management, SRE, observability, and operations
 - resilience, disaster recovery, backup/restore, RTO/RPO, performance, capacity, autoscaling, and resource efficiency
 - DevSecOps, cloud security controls, software supply chain security, policy evidence, and secure delivery guardrails
 - FinOps, cost allocation, budgets, forecasts, unit economics, optimization recommendations, technology value, and measurable sustainability
+- independent assurance, cross-section consistency, evidence validation, findings, waivers, completion gates, and operational readiness review
 roles:
 - devops-cloud-orchestrator
 - cloud-and-platform-architect
@@ -37,6 +39,7 @@ roles:
 - software-supply-chain-security-engineer
 - finops-engineer
 - cloud-sustainability-and-efficiency-analyst
+- devops-and-cloud-assurance-reviewer
 skills:
 - leadership-architecture
 - cloud-foundation-infrastructure
@@ -47,6 +50,7 @@ skills:
 - performance-capacity-efficiency
 - devsecops
 - finops-sustainability
+- assurance-review
 workflows:
 - leadership-architecture
 - cloud-foundation-infrastructure
@@ -57,6 +61,7 @@ workflows:
 - performance-capacity-efficiency
 - devsecops
 - finops-sustainability
+- assurance-review
 policies:
 - safety
 - quality-gates
