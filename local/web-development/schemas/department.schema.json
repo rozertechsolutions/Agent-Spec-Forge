@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/web-development-department.schema.json",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "provider_agnostic",
+    "default_state"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "const": "web-development"
+    },
+    "provider_agnostic": {
+      "type": "boolean",
+      "const": true
+    },
+    "default_state": {
+      "type": "string",
+      "const": "disabled"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,13 @@
+schema_version: 1
+id: web-development
+name: Web Development Department
+provider_agnostic: true
+default_state: disabled
+instructions: instructions.md
+roles_directory: roles
+skills_directory: skills
+workflows_directory: workflows
+policies:
+  permissions: policies/permissions.json
+  integrations: policies/integrations.json
+quality_gates: quality-gates.md
