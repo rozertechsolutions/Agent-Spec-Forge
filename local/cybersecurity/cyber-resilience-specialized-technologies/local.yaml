@@ -1,0 +1,9 @@
+name: cybersecurity-area-08-cyber-resilience-specialized-technologies
+static_only: true
+provider: user_configured
+runtime: user_configured
+model: user_configured
+external_integrations_enabled: false
+production_actions_enabled: false
+tools_enabled: false
+specialist_review_required_for_high_impact_outputs: true

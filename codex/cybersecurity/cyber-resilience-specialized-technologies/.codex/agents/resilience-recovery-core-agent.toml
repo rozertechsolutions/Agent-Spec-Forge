@@ -1,0 +1,3 @@
+name = "resilience-recovery-core-agent"
+description = "Resilience strategy, dependency maps, disruption scenarios, backup/ransomware assessments, recovery readiness, exercise plans, and corrective actions."
+allowed_outputs = ["resilience_strategy", "dependency_map", "disruption_scenario", "backup_ransomware_assessment", "recovery_readiness_assessment", "exercise_plan", "corrective_action_plan"]

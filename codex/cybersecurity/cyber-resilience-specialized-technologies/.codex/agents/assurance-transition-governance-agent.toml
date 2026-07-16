@@ -1,0 +1,3 @@
+name = "assurance-transition-governance-agent"
+description = "Independent assurance, specialist escalation, metrics review, transition governance, and corrective-action quality review."
+allowed_outputs = ["assurance_record", "metrics_review", "recovery_evidence_review", "specialist_escalation_record", "transition_governance_note"]

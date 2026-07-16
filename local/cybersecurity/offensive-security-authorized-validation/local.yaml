@@ -1,0 +1,10 @@
+name: cybersecurity-area-07-offensive-security-authorized-validation
+static_only: true
+provider: user_configured
+runtime: user_configured
+model: user_configured
+external_integrations_enabled: false
+active_testing_enabled: false
+tools_enabled: false
+human_authorization_required: true
+independent_review_required_for_critical_outputs: true

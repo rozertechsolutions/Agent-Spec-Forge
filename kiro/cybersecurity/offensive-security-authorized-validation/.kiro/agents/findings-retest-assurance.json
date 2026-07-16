@@ -1,0 +1,5 @@
+{
+  "name": "findings-retest-assurance",
+  "description": "Findings, evidence manifests, cleanup plans, retest plans, validation records, reports, and assurance.",
+  "staticOnly": true
+}

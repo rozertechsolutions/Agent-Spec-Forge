@@ -1,0 +1,7 @@
+{
+  "name": "cybersecurity-area-07-offensive-security-authorized-validation",
+  "staticOnly": true,
+  "externalIntegrationsEnabled": false,
+  "activeTestingEnabled": false,
+  "humanAuthorizationRequired": true
+}

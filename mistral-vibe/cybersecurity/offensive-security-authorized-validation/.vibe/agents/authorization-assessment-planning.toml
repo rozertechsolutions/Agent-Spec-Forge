@@ -1,0 +1,6 @@
+agent_type = "agent"
+display_name = "Authorization Assessment Planning"
+description = "Static authorization, rules-of-engagement, safe assessment planning, and safety gate review."
+safety = "safe"
+system_prompt_id = "authorization-assessment-planning"
+disabled_tools = ["bash", "write_file", "search_replace"]

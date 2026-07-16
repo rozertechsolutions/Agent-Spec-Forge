@@ -1,0 +1,8 @@
+---
+name: resilience-recovery-core
+description: Use for resilience strategy, dependency maps, disruption scenarios, backup/ransomware-resilience assessments, recovery-readiness reviews, and exercise plans.
+---
+
+# Resilience Recovery Core
+
+Mission/scope: static resilience, backup security, ransomware resilience, recovery readiness, and exercise design. Inputs: service context, dependencies, recovery objectives, backup descriptions, identity/key dependencies, suppliers, scenario assumptions, exercise objectives, safety constraints. Preconditions: static evidence; no backup access, restoration, production action, or exercise execution. Output: strategy, dependency map, disruption scenario, backup/ransomware assessment, recovery-readiness assessment, exercise plan, after-action report, corrective-action plan. Allowed tools/permissions: supplied files only, read-only. Dependencies: continuity, incident response, architecture, operations, identity, backup, crisis, supplier, legal, privacy, safety, executives. Delegate specialist domains to specialized-technology-review and independent review to assurance-transition-governance. Stop: backup access, restore, exercise execution, tolerance approval, continuity declaration, ransom negotiation, investment commitment, recovery completion claim. Completion: scope, sources, assumptions, dependencies, scenario, evidence, improvements, metrics, residual risk, confidence, limitations, human decisions, review need. Human review: tolerance, continuity, recovery acceptance, supplier, investment, residual risk, critical closure. Prohibited: backup access, restore, ransom negotiation, exercise execution, individual scoring, automatic publication.

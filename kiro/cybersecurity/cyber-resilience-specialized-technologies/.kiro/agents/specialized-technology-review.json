@@ -1,0 +1,5 @@
+{
+  "name": "specialized-technology-review",
+  "description": "OT/ICS, IoT, embedded, AI/ML, hardware, firmware, cryptographic, and critical-infrastructure static reviews.",
+  "staticOnly": true
+}

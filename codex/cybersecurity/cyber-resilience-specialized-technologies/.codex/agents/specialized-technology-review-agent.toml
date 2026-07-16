@@ -1,0 +1,3 @@
+name = "specialized-technology-review-agent"
+description = "OT/ICS, IoT, embedded, AI/ML, hardware, firmware, cryptographic, and critical-infrastructure static security reviews."
+allowed_outputs = ["ot_ics_assessment", "iot_embedded_assessment", "ai_system_assessment", "hardware_firmware_assessment", "cryptographic_agility_plan", "critical_infrastructure_assessment"]

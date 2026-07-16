@@ -1,0 +1,3 @@
+name = "findings-retest-assurance-agent"
+description = "Findings, evidence manifests, cleanup plans, authorized retest plans, validation records, assessment reports, and assurance records."
+allowed_outputs = ["finding", "evidence_manifest", "cleanup_plan", "retest_plan", "validation_record", "assessment_report", "assurance_record"]

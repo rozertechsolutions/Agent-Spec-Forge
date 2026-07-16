@@ -1,0 +1,3 @@
+name = "authorization-assessment-planning-agent"
+description = "Authorization checklists, rules of engagement, penetration-test plans, assessment test cases, and safety gates."
+allowed_outputs = ["authorization_checklist", "rules_of_engagement", "penetration_test_plan", "offensive_test_case"]

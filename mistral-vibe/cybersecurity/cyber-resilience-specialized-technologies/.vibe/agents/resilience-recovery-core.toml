@@ -1,0 +1,6 @@
+agent_type = "agent"
+display_name = "Resilience Recovery Core"
+description = "Static resilience strategy, backup/ransomware resilience, recovery readiness, exercise design, and corrective-action review."
+safety = "safe"
+system_prompt_id = "resilience-recovery-core"
+disabled_tools = ["bash", "write_file", "search_replace"]
