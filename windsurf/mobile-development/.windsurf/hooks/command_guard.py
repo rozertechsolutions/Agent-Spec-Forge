@@ -58,7 +58,7 @@ BLOCK_PATTERNS = [
     r"(?i)\bchmod\s+(-R\s+)?777\b",
     r"(?i)\b(chown|mkfs|diskutil|dd)\b",
     r"(?i)\bgit\s+(reset|clean|checkout|restore|push|pull|merge|rebase|branch|switch|commit|tag)\b",
-    r"(?i)\bxcodebuild\b.*\b(archive|-exportArchive|CODE_SIGN_IDENTITY=)\b",
+    r"(?i)\bxcodebuild\b.*(?:\barchive\b|-exportArchive\b|\bCODE_SIGN_IDENTITY=)",
     r"(?i)\b(codesign|jarsigner|apksigner\s+sign|keytool\s+-genkey|notarytool|altool)\b",
     r"(?i)\bsecurity\s+(import|unlock-keychain|set-key-partition-list)\b",
     r"(?i)\b(npm|pnpm|yarn|bun|pip|gem|bundle|brew)\b.*\b(install|add|update|upgrade)\b",
