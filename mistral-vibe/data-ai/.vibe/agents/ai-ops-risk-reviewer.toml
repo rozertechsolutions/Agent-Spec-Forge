@@ -1,0 +1,6 @@
+agent_type = "subagent"
+display_name = "AI Ops Risk Reviewer"
+description = "Review MLOps, LLMOps, monitoring, drift, change control, incidents, rollback, retirement, supplier risk, model risk, and operational readiness."
+safety = "safe"
+system_prompt_id = "ai-ops-risk-reviewer"
+enabled_tools = ["grep", "read_file"]

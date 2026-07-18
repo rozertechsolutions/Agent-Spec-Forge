@@ -1,0 +1,6 @@
+agent_type = "subagent"
+display_name = "ML GenAI Evaluation Reviewer"
+description = "Review ML engineering, GenAI, RAG, agent systems, AI inference contracts, independent evaluation, validation, safety testing, and red-team evidence."
+safety = "safe"
+system_prompt_id = "ml-genai-evaluation-reviewer"
+enabled_tools = ["grep", "read_file"]

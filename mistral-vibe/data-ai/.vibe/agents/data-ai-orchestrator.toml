@@ -1,0 +1,6 @@
+agent_type = "agent"
+display_name = "Data and AI Orchestrator"
+description = "Coordinate Data and AI intake, routing, dependency control, evidence collection, status, and stop conditions without approving its own work."
+safety = "safe"
+system_prompt_id = "data-ai-orchestrator"
+enabled_tools = ["grep", "read_file", "task"]
