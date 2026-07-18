@@ -2,13 +2,22 @@
 
 ## Purpose
 
-Correct a verified software weakness without exposing sensitive details or creating regressions.
+Correct a software weakness without exposing sensitive details or expanding scope.
 
 ## Entry conditions
 
 - A named human-requested objective exists.
 - The authorized repository scope is known.
-- The expected behavior or maintenance objective can be expressed as acceptance criteria.
+- Acceptance criteria or the maintenance objective can be verified.
+- Required approvals are identified before any sensitive or irreversible action.
+
+## Workflow-specific focus
+
+- threat or weakness and affected trust boundary
+- exploitability assumptions stated without secret exposure
+- least-change remediation that preserves valid behavior
+- security regression evidence and related validation
+- disclosure-safe reporting with unresolved risk
 
 ## Risk triggers
 
@@ -20,33 +29,32 @@ Correct a verified software weakness without exposing sensitive details or creat
 
 Any trigger requires Engineering Risk Reviewer participation and may require explicit human approval before implementation.
 
-## Stages
+## Common stages
 
-1. **Intake — Software Development Lead:** confirm objective, scope, exclusions, constraints, and ownership.
-2. **Requirements — Requirements and Planning Specialist:** define requirements, acceptance criteria, assumptions, and unresolved questions.
-3. **Analysis — appropriate specialist:** inspect only necessary context and identify dependencies and impact.
-4. **Risk classification — Software Development Lead:** select required reviews and approval checkpoints.
-5. **Design — Software Architect when applicable:** document boundaries, contracts, alternatives, compatibility, and migration implications.
-6. **Plan — Requirements and Planning Specialist:** produce ordered changes, validation strategy, review points, and rollback considerations.
-7. **Human checkpoint:** obtain explicit approval for sensitive, irreversible, dependency, architecture, contract, migration, or scope-changing decisions.
-8. **Implementation — Implementation and Maintenance Engineer:** make only approved changes and record evidence.
-9. **Validation — Test and Quality Engineer:** assess acceptance, regression, edge cases, and every unexecuted check.
-10. **Independent code review — Code Quality Reviewer:** review correctness, maintainability, architecture fit, and unintended effects.
-11. **Independent risk review — Engineering Risk Reviewer when triggered:** review security, supply chain, performance, concurrency, reliability, and data integrity.
-12. **Documentation — Documentation and Release Readiness Specialist:** update technical, migration, compatibility, and versioning documentation.
-13. **Readiness — Documentation and Release Readiness Specialist:** issue a readiness verdict without releasing, deploying, publishing, signing, or submitting.
-14. **Close — Software Development Lead:** aggregate evidence, blockers, limitations, and required human decisions.
+1. **Intake - Software Development Lead:** confirm objective, authorized scope, exclusions, constraints, and required human approvals.
+2. **Requirements - Requirements and Planning Specialist:** define requirements, acceptance criteria, assumptions, and unresolved questions.
+3. **Context analysis - assigned specialist:** inspect only necessary repository context and return factual evidence to the Lead.
+4. **Risk classification - Software Development Lead:** identify required reviews, approval checkpoints, and stop conditions.
+5. **Design or plan - Software Architect or Requirements and Planning Specialist:** define contracts, ordered changes, validation strategy, and rollback considerations where applicable.
+6. **Human checkpoint:** obtain explicit approval before sensitive, irreversible, dependency, architecture, public-contract, migration, permission, trust-boundary, or scope-changing decisions.
+7. **Implementation - Implementation and Maintenance Engineer:** make only approved changes and return implementation evidence.
+8. **Validation - Test and Quality Engineer:** evaluate acceptance, regression, edge cases, and every unexecuted check.
+9. **Independent code review - Code Quality Reviewer:** review correctness, maintainability, architecture fit, compatibility, and unintended effects.
+10. **Independent risk review - Engineering Risk Reviewer when triggered:** review security, dependencies, supply chain, performance, concurrency, reliability, data integrity, and operational risk.
+11. **Documentation/readiness - Documentation and Release Readiness Specialist:** update required documentation and assess readiness without release execution.
+12. **Close - Software Development Lead:** aggregate returned evidence, blockers, limitations, and human decisions.
 
 ## Stop conditions
 
-Stop and escalate on missing approval, conflicting requirements, secret exposure, unsupported behavior, unbounded scope, unavailable evidence, failed critical validation, or any requested action outside the authorized repository scope.
+Stop and escalate on missing approval, conflicting requirements, secret exposure, unsupported behavior, unbounded scope, unavailable evidence, failed critical validation, circular delegation, self-review, or any requested Bash, web, MCP, Git, deployment, publication, signing, release, submission, account, credential, or external communication action.
 
 ## Completion evidence
 
 - Requirement-to-change traceability.
+- Workflow-specific evidence listed above.
 - Acceptance and validation matrix.
-- Independent review outcomes.
-- Risk findings and remediation status.
-- Documentation and compatibility status.
-- Explicit list of tests/checks not run.
-- Human-controlled release-readiness verdict.
+- Independent code-quality outcome.
+- Engineering-risk outcome when triggered.
+- Documentation, compatibility, migration, and readiness status.
+- Explicit list of tests and checks not run.
+- Human-controlled release-readiness verdict aggregated only by the Software Development Lead.
