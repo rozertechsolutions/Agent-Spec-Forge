@@ -3,17 +3,6 @@ description: Evidence-based quality and completion gates
 alwaysApply: true
 ---
 
-## Completion gates
+# Quality and Completion
 
-A task is complete only when all applicable conditions are met:
-
-1. Every change is traceable to an approved requirement or maintenance objective.
-2. Acceptance criteria are satisfied, or deviations are explicitly documented and approved.
-3. Scope boundaries, exclusions, assumptions, and unknowns are explicit.
-4. Applicable validation evidence exists; every unexecuted check is listed as not run.
-5. No known critical correctness or security issue is hidden.
-6. Code-quality review is independent from implementation.
-7. Engineering-risk review is completed when security, dependencies, performance, concurrency, reliability, data integrity, architecture, or public contracts are affected.
-8. Documentation, compatibility, migration, and versioning implications are addressed.
-9. Remaining risks, limitations, and follow-up work are explicit.
-10. No release, publication, deployment, signing, or submission has been performed automatically.
+A task is complete only when requirements, scope, assumptions, exclusions, and acceptance criteria are explicit; changes are limited to approved scope; validation evidence or checks not run are listed; independent code-quality review follows implementation; engineering-risk review occurs when triggered; documentation, migration, compatibility, and versioning implications are addressed; unresolved risks are explicit; and release readiness stops before publication, deployment, signing, submission, or release.

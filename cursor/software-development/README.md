@@ -1,42 +1,18 @@
-# Cursor — Software Development
+# Cursor - Software Development
 
-This directory implements the Software Development specialization for Cursor using only platform-appropriate, repository-scoped content.
+This directory configures Cursor for the Software Development specialization.
 
-## Department scope
+## Native Surfaces
 
-This specialization covers requirements analysis, architecture, backend services, APIs, desktop applications, command-line applications, libraries, SDKs, general-purpose software, implementation, maintenance, debugging, refactoring, testing, code quality, software security, dependencies, performance, reliability, technical documentation, and release readiness.
+- `AGENTS.md` makes the primary Cursor Agent the Software Development Lead.
+- `.cursor/rules/` contains Cursor project rules.
+- `.cursor/skills/` contains static reusable Skills.
+- `docs/workflows/` contains auxiliary workflow references, not a guaranteed native workflow engine.
 
-It does not replace the independent Web Development or Mobile Development specializations. Browser-specific frontend work and mobile-platform-specific implementation belong there. Shared or technology-agnostic code may be handled here when the task originates in Software Development.
+## Subagent Omission
 
-The configuration is language-, framework-, database-, provider-, model-, and vendor-agnostic. It must inspect and respect the repository's existing stack instead of imposing one.
+This package intentionally omits Cursor project subagents because the exact stable project subagent path and frontmatter cannot be established from the current target files. Do not simulate them, create legacy `.cursorrules`, or add background-agent automation.
 
-## Native content
+## Safety Defaults
 
-- AGENTS.md project guidance
-- .cursor/rules project rules
-- .cursor/skills project Skills
-
-## Manual or auxiliary content
-
-- docs/workflows is supporting documentation
-
-## Intentionally omitted
-
-- hooks
-- MCP configuration
-- background-agent automation
-- legacy .cursorrules
-- unverified custom-agent schema
-
-## Safe-by-default behavior
-
-The package contains no executable hooks, active MCP servers, credentials, real endpoints, installers, launchers, deployment assets, release automation, or automatic authentication. External and sensitive actions require explicit human control.
-
-
-## Installation
-
-Copy this `software-development` directory to the corresponding platform directory in the repository. Follow the platform-specific manual steps described here. Do not execute generated scripts because this package contains none.
-
-## Validation status
-
-The package has been checked statically for file presence, non-empty content, JSON/TOML/YAML syntax where applicable, Python syntax, internal references, prohibited executable file types, and scope boundaries. Platform loading and runtime behavior were not executed.
+No hooks, MCP configuration, shell helpers, automatic approvals, background-agent configuration, credentials, endpoints, deployment automation, publication automation, signing automation, release automation, or automatic authentication are included. Human approval is required for sensitive actions, edits, command execution, external access, Git mutation, deployment, publication, signing, submission, and release.
