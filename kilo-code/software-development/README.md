@@ -1,43 +1,17 @@
-# Kilo Code — Software Development
+# Kilo Code - Software Development
 
-This directory implements the Software Development specialization for Kilo Code using only platform-appropriate, repository-scoped content.
+This directory configures Kilo Code for the Software Development specialization.
 
-## Department scope
+## Native Surfaces
 
-This specialization covers requirements analysis, architecture, backend services, APIs, desktop applications, command-line applications, libraries, SDKs, general-purpose software, implementation, maintenance, debugging, refactoring, testing, code quality, software security, dependencies, performance, reliability, technical documentation, and release readiness.
+- `AGENTS.md` makes the primary Kilo Code agent the Software Development Lead.
+- `kilo.jsonc` keeps broad fallback ask, denies Bash and web fetch, and makes edits approval-gated.
+- `.kilo/agents/` contains seven specialist subagents; there is intentionally no Lead subagent.
+- `.kilo/commands/*.md` contains native prompt-only workflows migrated from the former auxiliary `docs/workflows/` directory.
+- `.kilo/skills/` contains static reusable Skills.
 
-It does not replace the independent Web Development or Mobile Development specializations. Browser-specific frontend work and mobile-platform-specific implementation belong there. Shared or technology-agnostic code may be handled here when the task originates in Software Development.
+## Safety Model
 
-The configuration is language-, framework-, database-, provider-, model-, and vendor-agnostic. It must inspect and respect the repository's existing stack instead of imposing one.
+Specialists return bounded evidence to the primary agent, cannot recursively delegate, cannot expand scope, and cannot claim final completion. Reviewers and planners deny edits, Bash, and web. The implementation specialist may request edits but may not use Bash, web, MCP, Git mutation, deployment, publication, signing, or release actions.
 
-## Native content
-
-- AGENTS.md
-- kilo.jsonc project instructions and permission defaults
-- .kilo/rules
-- .kilo/agents current Markdown agents
-- .kilo/skills
-
-## Manual or auxiliary content
-
-- docs/workflows is supporting documentation
-
-## Intentionally omitted
-
-- legacy .kilocodemodes
-- hooks
-- MCP configuration
-- automatic Bash/web approval
-
-## Safe-by-default behavior
-
-The package contains no executable hooks, active MCP servers, credentials, real endpoints, installers, launchers, deployment assets, release automation, or automatic authentication. External and sensitive actions require explicit human control.
-
-
-## Installation
-
-Copy this `software-development` directory to the corresponding platform directory in the repository. Follow the platform-specific manual steps described here. Do not execute generated scripts because this package contains none.
-
-## Validation status
-
-The package has been checked statically for file presence, non-empty content, JSON/TOML/YAML syntax where applicable, Python syntax, internal references, prohibited executable file types, and scope boundaries. Platform loading and runtime behavior were not executed.
+No schema URI is declared because no exact official schema URI was verified in this target. Runtime loading and command execution have not been performed from this repository package.
