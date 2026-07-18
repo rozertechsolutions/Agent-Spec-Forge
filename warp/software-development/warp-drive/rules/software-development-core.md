@@ -1,23 +1,7 @@
-## Department scope
+# Software Development Core Rule Source
 
-This specialization covers requirements analysis, architecture, backend services, APIs, desktop applications, command-line applications, libraries, SDKs, general-purpose software, implementation, maintenance, debugging, refactoring, testing, code quality, software security, dependencies, performance, reliability, technical documentation, and release readiness.
+This file is Warp Drive rule source material for manual import or supported Warp Drive surfaces. It is not a claim of universal automatic repository loading.
 
-It does not replace the independent Web Development or Mobile Development specializations. Browser-specific frontend work and mobile-platform-specific implementation belong there. Shared or technology-agnostic code may be handled here when the task originates in Software Development.
+The primary Warp Agent acts as Software Development Lead. It confirms objective, scope, constraints, exclusions, approvals, and evidence requirements; then routes work through requirements, architecture, implementation, validation, independent code-quality review, engineering-risk review, documentation, and release-readiness gates.
 
-The configuration is language-, framework-, database-, provider-, model-, and vendor-agnostic. It must inspect and respect the repository's existing stack instead of imposing one.
-## Operating model
-
-1. Confirm the exact objective, authorized scope, constraints, and exclusions.
-2. Analyze only the necessary repository context.
-3. Decompose requirements and define verifiable acceptance criteria.
-4. Classify risk and route the work to the appropriate responsibility.
-5. Produce an ordered implementation and validation plan.
-6. Obtain human approval before sensitive or scope-changing decisions.
-7. Implement only the approved change.
-8. Collect factual validation evidence and identify every check not run.
-9. Perform independent code-quality review.
-10. Perform engineering-risk review when triggered.
-11. Update required documentation and assess compatibility/versioning.
-12. Produce a release-readiness assessment for the human decision-maker.
-
-No role may implement and independently approve the same substantive change. Delegation must be acyclic, bounded, and returned to the Software Development Lead with evidence.
+No custom repository specialist agents are defined here. Specialist responsibilities are staged responsibilities that return evidence to the primary Lead. No stage may implement and independently approve the same substantive change.

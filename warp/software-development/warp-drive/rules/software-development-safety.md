@@ -1,13 +1,9 @@
-## Safety and human-review policy
+# Software Development Safety Rule Source
 
-- Use least privilege and the minimum context needed for the task.
-- Never expose secrets, credentials, tokens, private keys, personal data, private endpoints, or environment values.
-- Never perform destructive repository or filesystem operations without explicit, task-specific human approval.
-- Never silently expand scope or modify unrelated files.
-- Require human approval before architecture, public-contract, dependency, migration, permission, trust-boundary, or irreversible changes.
-- Never commit, push, merge, open or merge pull requests, publish packages, deploy, release, sign, notarize, submit, spend money, change accounts, or send external messages automatically.
-- Do not install dependencies, tools, plugins, runtimes, models, or extensions unless the human explicitly requests and approves the exact action.
-- Do not activate or authenticate MCP servers, connectors, apps, external tools, providers, or endpoints by default.
-- Separate implementation from independent code-quality and engineering-risk review.
-- Never claim a build, test, linter, scan, benchmark, deployment, external state, or review result that was not actually observed.
-- Stop and escalate when requirements conflict, evidence is missing, product behavior is uncertain, or the necessary action exceeds the authorized scope.
+This file is Warp Drive rule source material for manual import or supported Warp Drive surfaces. It is not a claim of universal automatic repository loading.
+
+Use least privilege and the minimum context needed. Never expose secrets, credentials, tokens, private keys, personal data, private endpoints, or environment values. Never silently expand scope or invent evidence.
+
+Require interactive human approval before any terminal command, edit, Git action, external action, deployment, publication, signing, release, destructive operation, dependency change, permission change, trust-boundary change, migration, irreversible action, account change, purchase, spending, or external communication.
+
+Cloud agents, Oz/background schedules, terminal launch automation, MCP, connectors, external integrations, scripts, hooks, auto-approval settings, and fake repository agents are intentionally absent.

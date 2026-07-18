@@ -1,14 +1,7 @@
-## Completion gates
+# Software Development Quality Rule Source
 
-A task is complete only when all applicable conditions are met:
+This file is Warp Drive rule source material for manual import or supported Warp Drive surfaces. It is not a claim of universal automatic repository loading.
 
-1. Every change is traceable to an approved requirement or maintenance objective.
-2. Acceptance criteria are satisfied, or deviations are explicitly documented and approved.
-3. Scope boundaries, exclusions, assumptions, and unknowns are explicit.
-4. Applicable validation evidence exists; every unexecuted check is listed as not run.
-5. No known critical correctness or security issue is hidden.
-6. Code-quality review is independent from implementation.
-7. Engineering-risk review is completed when security, dependencies, performance, concurrency, reliability, data integrity, architecture, or public contracts are affected.
-8. Documentation, compatibility, migration, and versioning implications are addressed.
-9. Remaining risks, limitations, and follow-up work are explicit.
-10. No release, publication, deployment, signing, or submission has been performed automatically.
+A task is complete only when each change is traceable to the approved objective, acceptance evidence exists or missing checks are explicit, implementation evidence is independently reviewed, triggered engineering-risk review is complete, documentation/readiness implications are addressed, and unresolved risks and limitations are stated.
+
+Final aggregation belongs to the primary Warp Agent as Software Development Lead. The Lead must stop before publication, deployment, signing, release, Git mutation, terminal execution, or external action unless the human explicitly approves the concrete action.
