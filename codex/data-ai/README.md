@@ -53,12 +53,25 @@ Run these checks from the repository root:
 find codex/data-ai -type f | sort
 find codex/data-ai -type f -name '*.md' -print0 | xargs -0 -n1 sh -c 'test -s "$0"'
 python3 - <<'PY'
-import pathlib, tomllib
+import pathlib, re
 for path in pathlib.Path("codex/data-ai").rglob("*.toml"):
-    tomllib.loads(path.read_text())
+    text = path.read_text()
+    if text.count('"""') % 2:
+        raise SystemExit(f"unclosed multiline string: {path}")
+    stripped = re.sub(r'""".*?"""', '"MULTILINE"', text, flags=re.S)
+    for line_number, line in enumerate(stripped.splitlines(), 1):
+        stripped_line = line.strip()
+        if not stripped_line or stripped_line.startswith("#"):
+            continue
+        if stripped_line.startswith("[") and stripped_line.endswith("]"):
+            continue
+        if "=" not in stripped_line:
+            raise SystemExit(f"invalid TOML-like line {path}:{line_number}: {line}")
 PY
+tmp_file="${TMPDIR:-/tmp}/codex-data-ai-prompt-input.json"
+codex -C codex/data-ai debug prompt-input "config validation" > "$tmp_file" && test -s "$tmp_file" && rm "$tmp_file"
 find codex/data-ai -type f \( -name '*.py' -o -name '*.sh' -o -name 'hooks.json' -o -name '.mcp.json' \) -print
 git diff -- codex/data-ai
 ```
 
-Expected result: Markdown files are non-empty, TOML parses, no hook scripts or MCP configuration exist, and changes are limited to `codex/data-ai`.
+Expected result: Markdown files are non-empty, TOML syntax is sanity-checked, Codex's local config loader succeeds without model inference, no hook scripts or MCP configuration exist, and changes are limited to `codex/data-ai`.
