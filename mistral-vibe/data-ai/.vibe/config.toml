@@ -1,0 +1,26 @@
+default_agent = "data-ai-orchestrator"
+skill_paths = ["./.vibe/skills"]
+enabled_skills = [
+  "use-case-risk-triage",
+  "data-contract-dataset-readiness",
+  "pipeline-analytics-quality",
+  "analytics-experiment-review",
+  "ml-system-evaluation",
+  "genai-rag-agent-evaluation",
+  "ai-ops-risk-readiness",
+  "responsible-ai-assurance"
+]
+enabled_tools = ["grep", "read_file", "task"]
+disabled_tools = ["bash", "write_file", "edit", "mcp_*", "connector_*"]
+
+[tools.read_file]
+permission = "always"
+
+[tools.grep]
+permission = "always"
+
+[tools.task]
+permission = "ask"
+
+[tools.bash]
+permission = "ask"

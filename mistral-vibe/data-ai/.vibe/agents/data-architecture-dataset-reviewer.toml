@@ -1,0 +1,6 @@
+agent_type = "subagent"
+display_name = "Data Architecture Dataset Reviewer"
+description = "Review data architecture, modeling, semantic systems, sourcing, contracts, provenance, annotation, synthetic data, and dataset readiness."
+safety = "safe"
+system_prompt_id = "data-architecture-dataset-reviewer"
+enabled_tools = ["grep", "read_file"]
