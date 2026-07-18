@@ -1,40 +1,16 @@
-# Kiro — Software Development
+# Kiro IDE - Software Development
 
-This directory implements the Software Development specialization for Kiro using only platform-appropriate, repository-scoped content.
+This directory configures Kiro IDE for the Software Development specialization.
 
-## Department scope
+## Native Surfaces
 
-This specialization covers requirements analysis, architecture, backend services, APIs, desktop applications, command-line applications, libraries, SDKs, general-purpose software, implementation, maintenance, debugging, refactoring, testing, code quality, software security, dependencies, performance, reliability, technical documentation, and release readiness.
+- `.kiro/steering/` is authoritative for the primary Kiro agent, which acts as Software Development Lead.
+- `.kiro/agents/` contains seven Kiro IDE custom agents in Markdown frontmatter format; there is intentionally no Lead custom agent.
+- `.kiro/skills/` contains static reusable Skills.
+- `docs/workflows/` contains auxiliary workflow references, not a Kiro spec or executable workflow engine.
 
-It does not replace the independent Web Development or Mobile Development specializations. Browser-specific frontend work and mobile-platform-specific implementation belong there. Shared or technology-agnostic code may be handled here when the task originates in Software Development.
+## Safety Model
 
-The configuration is language-, framework-, database-, provider-, model-, and vendor-agnostic. It must inspect and respect the repository's existing stack instead of imposing one.
+Specialists report to the primary Kiro agent, cannot recursively delegate, cannot expand scope, and cannot claim final completion. Reviewers and planners are read-only through `tools: ["read"]`. The implementation specialist uses `tools: ["read", "write"]` for approval-gated workspace editing and has no shell, web, MCP, hook, deployment, publication, signing, release, credentials, or Git mutation authority.
 
-## Native content
-
-- .kiro/steering always-included guidance
-- .kiro/skills project Skills
-
-## Manual or auxiliary content
-
-- docs/workflows is supporting documentation
-
-## Intentionally omitted
-
-- generic placeholder specs
-- agent hooks
-- MCP configuration
-- invented custom-agent schemas
-
-## Safe-by-default behavior
-
-The package contains no executable hooks, active MCP servers, credentials, real endpoints, installers, launchers, deployment assets, release automation, or automatic authentication. External and sensitive actions require explicit human control.
-
-
-## Installation
-
-Copy this `software-development` directory to the corresponding platform directory in the repository. Follow the platform-specific manual steps described here. Do not execute generated scripts because this package contains none.
-
-## Validation status
-
-The package has been checked statically for file presence, non-empty content, JSON/TOML/YAML syntax where applicable, Python syntax, internal references, prohibited executable file types, and scope boundaries. Platform loading and runtime behavior were not executed.
+`.kiro/specs/`, Kiro CLI JSON agents, hooks, and MCP are intentionally absent. Runtime loading and command execution have not been performed from this repository package.

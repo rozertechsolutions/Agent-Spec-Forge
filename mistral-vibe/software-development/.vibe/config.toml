@@ -1,1 +1,5 @@
+# Project-local Mistral Vibe configuration for the Software Development specialization.
+# Programmatic callers must explicitly select software-development-lead.
+# Do not rely on implicit/default invocation because the host environment may apply
+# auto-approval behavior outside this package's static safety instructions.
 default_agent = "software-development-lead"
