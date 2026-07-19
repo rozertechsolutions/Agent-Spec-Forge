@@ -1,3 +1,9 @@
+---
+description: Static DevSecOps control, pipeline security, policy, SBOM, provenance, and exception workflows.
+agent: devsecops-engineer
+subtask: true
+---
+
 # DevSecOps Workflows
 
 ## secure-pipeline-design
