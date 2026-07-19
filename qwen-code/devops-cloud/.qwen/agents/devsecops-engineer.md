@@ -1,7 +1,15 @@
 ---
 name: devsecops-engineer
 description: Owns secure delivery controls, pipeline security requirements, security gate placement, findings routing and developer-facing remediation workflows.
-tools: Read, Grep, Glob
+approvalMode: plan
+tools:
+  - read_file
+  - grep_search
+  - glob
+disallowedTools:
+  - write_file
+  - edit
+  - run_shell_command
 ---
 
 # DevSecOps Engineer
