@@ -1,7 +1,12 @@
 ---
 name: software-supply-chain-security-engineer
 description: Owns dependency and artifact integrity, SBOM, provenance, signing, verification, build isolation and software supply-chain controls.
-tools: Read, Grep, Glob
+kind: local
+tools:
+  - read_file
+  - grep_search
+  - glob
+max_turns: 20
 ---
 
 # Software Supply Chain Security Engineer
