@@ -1,7 +1,17 @@
 ---
-name: cloud-security-controls-engineer
 description: Owns technical cloud IAM, secrets controls, policy as code, cloud configuration hardening and least-privilege patterns inside DevOps workflows.
-tools: Read, Grep, Glob
+mode: subagent
+permission:
+  "*": deny
+  read: allow
+  grep: allow
+  glob: allow
+  skill: allow
+  edit: deny
+  bash: deny
+  task: deny
+  webfetch: deny
+  websearch: deny
 ---
 
 # Cloud Security Controls Engineer
