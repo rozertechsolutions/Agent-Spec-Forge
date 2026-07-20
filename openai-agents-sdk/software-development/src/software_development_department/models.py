@@ -128,14 +128,6 @@ class DocumentationReadinessOutput(SpecialistResult):
     stop_before_release: bool = True
 
 
-
-@dataclass(frozen=True)
-class ReviewResult:
-    reviewer: str
-    approved: bool
-    findings: tuple[str, ...] = ()
-    blocking_findings: tuple[str, ...] = ()
-
 @dataclass(frozen=True)
 class HumanDecision:
     subject: str

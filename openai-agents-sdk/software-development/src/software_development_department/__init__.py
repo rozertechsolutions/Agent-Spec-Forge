@@ -5,7 +5,6 @@ from .models import (
     EvidenceItem,
     LeadFinalRecord,
     ProposedToolAction,
-    ReviewResult,
     RiskLevel,
     ToolActionType,
 )
@@ -24,7 +23,6 @@ __all__ = [
     "EvidenceItem",
     "LeadFinalRecord",
     "ProposedToolAction",
-    "ReviewResult",
     "RiskLevel",
     "ToolActionType",
 ]

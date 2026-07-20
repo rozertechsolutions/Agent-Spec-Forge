@@ -12,12 +12,18 @@ from .models import DepartmentTask, OrchestrationState
 class OrchestrationLimits:
     max_turns: int = 16
     max_specialist_calls: int = 12
+    max_total_tool_calls: int = 20
+    max_approval_cycles: int = 4
 
     def __post_init__(self) -> None:
         if not 1 <= self.max_turns <= 32:
             raise ValueError("max_turns must be between 1 and 32")
         if not 1 <= self.max_specialist_calls <= 24:
             raise ValueError("max_specialist_calls must be between 1 and 24")
+        if not 1 <= self.max_total_tool_calls <= 64:
+            raise ValueError("max_total_tool_calls must be between 1 and 64")
+        if not 1 <= self.max_approval_cycles <= 12:
+            raise ValueError("max_approval_cycles must be between 1 and 12")
 
 
 @dataclass
@@ -37,6 +43,16 @@ class DepartmentRuntime:
         if any(call not in SPECIALIST_OUTPUTS for call in calls):
             return OrchestrationState.STOPPED
         if len(calls) != len(tuple(dict.fromkeys(calls))):
+            return OrchestrationState.STOPPED
+        return OrchestrationState.RUNNING
+
+    def validate_total_tool_calls(self, count: int) -> OrchestrationState:
+        if count < 0 or count > self.limits.max_total_tool_calls:
+            return OrchestrationState.STOPPED
+        return OrchestrationState.RUNNING
+
+    def validate_approval_cycles(self, count: int) -> OrchestrationState:
+        if count < 0 or count > self.limits.max_approval_cycles:
             return OrchestrationState.STOPPED
         return OrchestrationState.RUNNING
 
