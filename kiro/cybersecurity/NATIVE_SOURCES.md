@@ -2,33 +2,76 @@
 
 Documentation review date: 2026-07-21.
 
-Product surface: Kiro IDE and CLI steering/AGENTS.md, custom agents JSON, Skills, hooks, Specs, MCP, and resource references.
+Product surface: Kiro IDE and CLI steering, AGENTS.md, Agent Skills, CLI custom agents, IDE custom subagents, Specs, hooks, MCP, and custom-agent resources.
 
-Official source evidence checked or retained for this platform:
+## Official Source Checks
 
-- https://kiro.dev/docs/cli/custom-agents/configuration-reference/
-- https://kiro.dev/docs/steering/
-- https://kiro.dev/docs/hooks/
-- https://kiro.dev/docs/mcp/
+### Check 1 - Current reference documentation
 
-Validation method:
+- Kiro CLI custom-agent configuration reference: https://kiro.dev/docs/cli/custom-agents/configuration-reference/
+- Kiro CLI custom-agent creation: https://kiro.dev/docs/cli/custom-agents/creating/
+- Kiro Agent Skills: https://kiro.dev/docs/skills/
+- Kiro Steering and AGENTS.md: https://kiro.dev/docs/steering/
+- Kiro Specs: https://kiro.dev/docs/specs/
+- Kiro Hooks: https://kiro.dev/docs/hooks/
+- Kiro IDE subagents: https://kiro.dev/docs/chat/subagents/
 
-- Inventory of `kiro/cybersecurity/` files and native support directories.
-- Static syntax parsing for JSON, TOML, YAML where applicable.
-- Reference resolution for retained repository-local prompts, Skills, agents, and config files where applicable.
-- Removal of redundant area-level source copies after this platform-wide source file replaced them.
+### Check 2 - Release notes or changelog
 
-Current native facts recorded:
+- Kiro changelog: https://kiro.dev/changelog/
 
-- Project paths: `kiro/cybersecurity/<area>/` for all eight Cybersecurity areas.
-- Discovery: use the platform-specific README and open/import from the documented working directory or manual UI location.
-- Permissions: read-only/static by default; shell, network, MCP, connector, hosted tool, scanner, deployment, and production actions absent or denied unless a human explicitly configures them outside this baseline.
-- Trust: repository-local configuration is effective only when the platform trusts or imports the project according to its current documentation.
-- Precedence: nearest area-level instructions or manually selected area package govern the selected work; platform-level README and this file provide package-wide evidence.
-- Omitted mechanisms: fake MCP servers, generated live hooks, external endpoints, credentials, cloud actions, scanners, and deployment automation are intentionally omitted.
+Relevant 2026-07 notes checked: IDE 1.0.x trust, hooks, MCP, custom-agent behavior, CLI 2.12.x MCP OAuth, and CLI 2.13.0 v3 global hooks and introspect subagent. These updates did not require repository hooks or MCP for this static package.
 
-Removed or deprecated field handling:
+### Check 3 - Current schema or package behavior
 
-- Unsupported descriptive-only metadata is not treated as a permission control.
-- Platform-specific frontmatter and config fields must be verified against current vendor documentation before use.
-- For SDK packages, runtime API compatibility must be validated in an isolated environment without model calls before production use.
+- The current Kiro CLI custom-agent configuration reference documents JSON fields used here: `name`, `description`, `prompt`, `mcpServers`, `tools`, `toolAliases`, `allowedTools`, `toolsSettings`, `resources`, `hooks`, `includeMcpJson`, `model`, `keyboardShortcut`, and `welcomeMessage`.
+- The current Kiro Skills documentation requires each `SKILL.md` to use Agent Skills frontmatter with at least `name` and `description`; `name` must match the folder name.
+- The current Kiro steering documentation documents workspace `.kiro/steering/`, global `~/.kiro/steering/`, AGENTS.md support, precedence favoring workspace steering over global steering, and optional inclusion frontmatter.
+
+## Current Native Facts
+
+- Area path: `kiro/cybersecurity/<area>/`.
+- Intended working directory: the selected area directory, not the platform root.
+- CLI custom-agent path: `.kiro/agents/*.json` inside the selected area.
+- IDE custom-subagent path: `.kiro/agents/*.md`; intentionally not used in this package.
+- Skill path: `.kiro/skills/<skill>/SKILL.md` inside the selected area.
+- Steering path: `.kiro/steering/<area>.md` inside the selected area.
+- AGENTS.md path: `AGENTS.md` at the selected area root.
+- Resource paths in retained JSON agents: `file://AGENTS.md` and `skill://.kiro/skills/**/SKILL.md`, matching the area workspace model.
+- Tools: retained JSON agents expose and allow only Kiro's built-in `read` tool.
+- MCP: retained JSON agents set `mcpServers` to `{}` and `includeMcpJson` to `false`.
+- Hooks: no hook files are retained because hooks can execute shell commands or agent prompts automatically.
+- Specs: no flat `.kiro/specs/*.md` files are retained. Native Kiro Specs are generated IDE workflows using `requirements.md` or `bugfix.md`, `design.md`, and `tasks.md`.
+
+## Discovery, Precedence, And Trust
+
+- Kiro CLI local agents are loaded from `.kiro/agents/` in the current workspace and take precedence over same-named global agents.
+- Kiro workspace Skills under `.kiro/skills/` take precedence over same-named global Skills.
+- Kiro workspace steering under `.kiro/steering/` takes precedence over global steering.
+- Kiro supports AGENTS.md as always-included steering; AGENTS.md does not support steering inclusion modes.
+- Custom agents inherit default resources such as steering, Skills, and AGENTS.md unless the user changes Kiro CLI default-resource inheritance settings.
+- Repository-local configuration is effective only when the user opens or trusts the selected area workspace according to Kiro's current trust behavior.
+
+## File Classification
+
+- Retained: 41 Kiro CLI custom-agent JSON files, 47 Kiro Skills, eight `AGENTS.md` files, and eight `.kiro/steering/<area>.md` files.
+- Retained duplicate pairs: each `AGENTS.md` and matching steering file are exact copies because they serve distinct native channels, AGENTS.md standard support and Kiro workspace steering.
+- Deleted: unreferenced flat `.kiro/specs/*.md` prompt artifacts because they do not match current native Kiro Spec structure and their workflow content is represented by retained Skills.
+- Deleted: four superseded AppSec legacy Skills with no references beyond themselves; retained AppSec Skills preserve the professional coverage.
+- Omitted: fake MCP servers, generated live hooks, hosted scanners, cloud integrations, deployment automation, credentials, IDE subagent Markdown duplicates, and production-action workflows.
+
+## Removed Or Deprecated Field Handling
+
+- No `staticOnly` metadata is used as a permission control.
+- `includeMcpJson` is current and retained with value `false`.
+- No unsupported Kiro custom-agent fields were added.
+- No model pin is used; Kiro falls back to the user's selected/default model according to current product behavior.
+
+## Validation Method
+
+- Inventory of all eight Kiro Cybersecurity areas.
+- JSON parsing and supported-key checks for all retained Kiro CLI custom agents.
+- Resource reference checks for `file://AGENTS.md` and `skill://.kiro/skills/**/SKILL.md` in each area.
+- Skill frontmatter checks for `name` and `description`, including folder/name match.
+- Confirmation that no hooks, MCP server definitions, obsolete flat Specs, or metadata-only permission files remain.
+- Duplicate review of AGENTS.md and steering copies with native retention rationale.
