@@ -1,3 +1,7 @@
+---
+description: "user-invoked Cyber Resilience and Specialized Technologies workflow for `resilience-program-review`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /resilience-program-review
 
 Purpose: user-invoked Cyber Resilience and Specialized Technologies workflow for `resilience-program-review`. This command is a prompt artifact only and is not executed during repository implementation.

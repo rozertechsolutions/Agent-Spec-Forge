@@ -1,3 +1,7 @@
+---
+description: "user-invoked Offensive Security Authorized Validation workflow for `purple-bas-social-governance`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /purple-bas-social-governance
 
 Purpose: user-invoked Offensive Security Authorized Validation workflow for `purple-bas-social-governance`. This command is a prompt artifact only and is not executed during repository implementation.

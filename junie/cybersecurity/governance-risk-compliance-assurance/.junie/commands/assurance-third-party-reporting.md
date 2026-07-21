@@ -1,3 +1,7 @@
+---
+description: "user-invoked Governance, Risk, Compliance, and Assurance workflow for `assurance-third-party-reporting`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /assurance-third-party-reporting
 
 Purpose: user-invoked Governance, Risk, Compliance, and Assurance workflow for `assurance-third-party-reporting`. This command is a prompt artifact only and is not executed during repository implementation.

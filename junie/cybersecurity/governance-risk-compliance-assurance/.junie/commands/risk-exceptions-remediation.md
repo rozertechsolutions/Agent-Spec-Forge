@@ -1,3 +1,7 @@
+---
+description: "user-invoked Governance, Risk, Compliance, and Assurance workflow for `risk-exceptions-remediation`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /risk-exceptions-remediation
 
 Purpose: user-invoked Governance, Risk, Compliance, and Assurance workflow for `risk-exceptions-remediation`. This command is a prompt artifact only and is not executed during repository implementation.

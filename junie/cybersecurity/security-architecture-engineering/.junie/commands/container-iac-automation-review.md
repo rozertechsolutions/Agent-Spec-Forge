@@ -1,3 +1,7 @@
+---
+description: "user-invoked Security Architecture and Engineering workflow for `container-iac-automation-review`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /container-iac-automation-review
 
 Purpose: user-invoked Security Architecture and Engineering workflow for `container-iac-automation-review`. This command is a prompt artifact only and is not executed during repository implementation.

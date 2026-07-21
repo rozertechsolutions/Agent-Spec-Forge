@@ -1,3 +1,7 @@
+---
+description: "user-invoked Incident Response, DFIR, and Recovery workflow for `independent-incident-recovery-assurance`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /independent-incident-recovery-assurance
 
 Purpose: user-invoked Incident Response, DFIR, and Recovery workflow for `independent-incident-recovery-assurance`. This command is a prompt artifact only and is not executed during repository implementation.

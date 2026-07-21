@@ -1,3 +1,7 @@
+---
+description: "user-invoked Security Architecture and Engineering workflow for `independent-architecture-assurance`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /independent-architecture-assurance
 
 Purpose: user-invoked Security Architecture and Engineering workflow for `independent-architecture-assurance`. This command is a prompt artifact only and is not executed during repository implementation.

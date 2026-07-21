@@ -1,7 +1,6 @@
 ---
 name: coverage-quality-assurance-agent
 description: Own SOC metrics, detection quality, adversary-behavior mapping, and independent quality review.
-model: inherit
 tools: [Read, Grep, Glob]
 ---
 

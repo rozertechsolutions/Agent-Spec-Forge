@@ -1,3 +1,7 @@
+---
+description: "user-invoked Security Architecture and Engineering workflow for `identity-cloud-network-data-design`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /identity-cloud-network-data-design
 
 Purpose: user-invoked Security Architecture and Engineering workflow for `identity-cloud-network-data-design`. This command is a prompt artifact only and is not executed during repository implementation.

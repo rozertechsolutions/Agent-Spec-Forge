@@ -1,3 +1,7 @@
+---
+description: "user-invoked Offensive Security Authorized Validation workflow for `independent-offensive-safety-review`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /independent-offensive-safety-review
 
 Purpose: user-invoked Offensive Security Authorized Validation workflow for `independent-offensive-safety-review`. This command is a prompt artifact only and is not executed during repository implementation.

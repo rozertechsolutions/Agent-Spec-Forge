@@ -1,3 +1,7 @@
+---
+description: "user-invoked Cyber Resilience and Specialized Technologies workflow for `crypto-critical-infrastructure-planning`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /crypto-critical-infrastructure-planning
 
 Purpose: user-invoked Cyber Resilience and Specialized Technologies workflow for `crypto-critical-infrastructure-planning`. This command is a prompt artifact only and is not executed during repository implementation.

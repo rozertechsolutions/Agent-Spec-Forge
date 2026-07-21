@@ -1,3 +1,7 @@
+---
+description: "user-invoked Security Architecture and Engineering workflow for `reference-and-control-patterns`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /reference-and-control-patterns
 
 Purpose: user-invoked Security Architecture and Engineering workflow for `reference-and-control-patterns`. This command is a prompt artifact only and is not executed during repository implementation.

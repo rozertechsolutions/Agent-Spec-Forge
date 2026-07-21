@@ -1,3 +1,7 @@
+---
+description: "user-invoked Offensive Security Authorized Validation workflow for `assessment-campaign-planning`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /assessment-campaign-planning
 
 Purpose: user-invoked Offensive Security Authorized Validation workflow for `assessment-campaign-planning`. This command is a prompt artifact only and is not executed during repository implementation.

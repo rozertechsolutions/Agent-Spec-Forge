@@ -1,3 +1,7 @@
+---
+description: "user-invoked Governance, Risk, Compliance, and Assurance workflow for `independent-assurance-review`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /independent-assurance-review
 
 Purpose: user-invoked Governance, Risk, Compliance, and Assurance workflow for `independent-assurance-review`. This command is a prompt artifact only and is not executed during repository implementation.

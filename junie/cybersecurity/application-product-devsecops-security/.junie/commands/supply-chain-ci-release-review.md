@@ -1,3 +1,7 @@
+---
+description: "user-invoked Application, Product, and DevSecOps Security workflow for `supply-chain-ci-release-review`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /supply-chain-ci-release-review
 
 Purpose: user-invoked Application, Product, and DevSecOps Security workflow for `supply-chain-ci-release-review`. This command is a prompt artifact only and is not executed during repository implementation.

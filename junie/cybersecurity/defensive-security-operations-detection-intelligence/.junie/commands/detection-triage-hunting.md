@@ -1,3 +1,7 @@
+---
+description: "user-invoked Defensive Security Operations, Detection, and Intelligence workflow for `detection-triage-hunting`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /detection-triage-hunting
 
 Purpose: user-invoked Defensive Security Operations, Detection, and Intelligence workflow for `detection-triage-hunting`. This command is a prompt artifact only and is not executed during repository implementation.

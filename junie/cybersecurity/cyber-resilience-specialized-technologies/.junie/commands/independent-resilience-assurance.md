@@ -1,3 +1,7 @@
+---
+description: "user-invoked Cyber Resilience and Specialized Technologies workflow for `independent-resilience-assurance`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /independent-resilience-assurance
 
 Purpose: user-invoked Cyber Resilience and Specialized Technologies workflow for `independent-resilience-assurance`. This command is a prompt artifact only and is not executed during repository implementation.

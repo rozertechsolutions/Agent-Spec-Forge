@@ -1,3 +1,7 @@
+---
+description: "user-invoked Application, Product, and DevSecOps Security workflow for `threat-modeling`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /threat-modeling
 
 Purpose: user-invoked Application, Product, and DevSecOps Security workflow for `threat-modeling`. This command is a prompt artifact only and is not executed during repository implementation.

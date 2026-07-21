@@ -1,3 +1,7 @@
+---
+description: "user-invoked Governance, Risk, Compliance, and Assurance workflow for `governance-policy-frameworks`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /governance-policy-frameworks
 
 Purpose: user-invoked Governance, Risk, Compliance, and Assurance workflow for `governance-policy-frameworks`. This command is a prompt artifact only and is not executed during repository implementation.

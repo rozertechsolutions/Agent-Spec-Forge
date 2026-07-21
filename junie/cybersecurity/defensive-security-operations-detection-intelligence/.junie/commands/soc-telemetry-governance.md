@@ -1,3 +1,7 @@
+---
+description: "user-invoked Defensive Security Operations, Detection, and Intelligence workflow for `soc-telemetry-governance`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /soc-telemetry-governance
 
 Purpose: user-invoked Defensive Security Operations, Detection, and Intelligence workflow for `soc-telemetry-governance`. This command is a prompt artifact only and is not executed during repository implementation.

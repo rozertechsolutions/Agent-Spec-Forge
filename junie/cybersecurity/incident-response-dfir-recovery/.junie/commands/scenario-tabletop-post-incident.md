@@ -1,3 +1,7 @@
+---
+description: "user-invoked Incident Response, DFIR, and Recovery workflow for `scenario-tabletop-post-incident`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /scenario-tabletop-post-incident
 
 Purpose: user-invoked Incident Response, DFIR, and Recovery workflow for `scenario-tabletop-post-incident`. This command is a prompt artifact only and is not executed during repository implementation.

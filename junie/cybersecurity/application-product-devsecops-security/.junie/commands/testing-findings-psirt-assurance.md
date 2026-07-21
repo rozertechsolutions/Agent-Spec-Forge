@@ -1,3 +1,7 @@
+---
+description: "user-invoked Application, Product, and DevSecOps Security workflow for `testing-findings-psirt-assurance`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /testing-findings-psirt-assurance
 
 Purpose: user-invoked Application, Product, and DevSecOps Security workflow for `testing-findings-psirt-assurance`. This command is a prompt artifact only and is not executed during repository implementation.

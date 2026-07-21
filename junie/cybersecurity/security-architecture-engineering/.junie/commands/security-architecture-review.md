@@ -1,3 +1,7 @@
+---
+description: "user-invoked Security Architecture and Engineering workflow for `security-architecture-review`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /security-architecture-review
 
 Purpose: user-invoked Security Architecture and Engineering workflow for `security-architecture-review`. This command is a prompt artifact only and is not executed during repository implementation.

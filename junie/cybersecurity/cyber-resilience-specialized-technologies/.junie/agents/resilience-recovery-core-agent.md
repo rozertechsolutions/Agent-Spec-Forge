@@ -1,7 +1,6 @@
 ---
 name: resilience-recovery-core-agent
 description: Own resilience strategy, critical services, dependencies, disruption scenarios, backup, restoration, immutability, ransomware resilience, and recovery exercise planning.
-model: inherit
 tools: [Read, Grep, Glob]
 ---
 

@@ -1,3 +1,7 @@
+---
+description: "user-invoked Offensive Security Authorized Validation workflow for `findings-cleanup-retest-assurance`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /findings-cleanup-retest-assurance
 
 Purpose: user-invoked Offensive Security Authorized Validation workflow for `findings-cleanup-retest-assurance`. This command is a prompt artifact only and is not executed during repository implementation.

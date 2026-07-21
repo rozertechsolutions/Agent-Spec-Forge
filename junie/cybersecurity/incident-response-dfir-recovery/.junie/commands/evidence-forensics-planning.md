@@ -1,3 +1,7 @@
+---
+description: "user-invoked Incident Response, DFIR, and Recovery workflow for `evidence-forensics-planning`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /evidence-forensics-planning
 
 Purpose: user-invoked Incident Response, DFIR, and Recovery workflow for `evidence-forensics-planning`. This command is a prompt artifact only and is not executed during repository implementation.

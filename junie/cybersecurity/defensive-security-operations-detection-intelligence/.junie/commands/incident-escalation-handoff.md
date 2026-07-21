@@ -1,3 +1,7 @@
+---
+description: "user-invoked Defensive Security Operations, Detection, and Intelligence workflow for `incident-escalation-handoff`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /incident-escalation-handoff
 
 Purpose: user-invoked Defensive Security Operations, Detection, and Intelligence workflow for `incident-escalation-handoff`. This command is a prompt artifact only and is not executed during repository implementation.

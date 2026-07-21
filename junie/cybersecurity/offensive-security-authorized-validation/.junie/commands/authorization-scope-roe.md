@@ -1,3 +1,7 @@
+---
+description: "user-invoked Offensive Security Authorized Validation workflow for `authorization-scope-roe`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /authorization-scope-roe
 
 Purpose: user-invoked Offensive Security Authorized Validation workflow for `authorization-scope-roe`. This command is a prompt artifact only and is not executed during repository implementation.

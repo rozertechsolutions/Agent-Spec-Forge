@@ -1,3 +1,7 @@
+---
+description: "user-invoked Incident Response, DFIR, and Recovery workflow for `containment-recovery-coordination`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /containment-recovery-coordination
 
 Purpose: user-invoked Incident Response, DFIR, and Recovery workflow for `containment-recovery-coordination`. This command is a prompt artifact only and is not executed during repository implementation.

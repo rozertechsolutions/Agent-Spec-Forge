@@ -1,3 +1,7 @@
+---
+description: "user-invoked Application, Product, and DevSecOps Security workflow for `secure-design-code-review`. This command is a prompt artifact only and is not executed during repository implementation."
+---
+
 # /secure-design-code-review
 
 Purpose: user-invoked Application, Product, and DevSecOps Security workflow for `secure-design-code-review`. This command is a prompt artifact only and is not executed during repository implementation.
