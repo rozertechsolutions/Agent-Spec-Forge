@@ -1,8 +1,7 @@
 ---
 name: specialized-technology-review-agent
 description: Own OT/ICS, IoT, embedded, AI, machine-learning, agent, retrieval, memory, model-supply-chain, hardware, and firmware security review.
-model: inherit
-tools: [Read, Grep, Glob]
+tools: ['search/codebase', 'search/usages']
 ---
 
 # specialized-technology-review-agent

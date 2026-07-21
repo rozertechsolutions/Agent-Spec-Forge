@@ -1,8 +1,7 @@
 ---
 name: post-incident-corrective-action-agent
 description: Own tabletop exercises, post-incident reviews, lessons learned, corrective actions, and recovery governance.
-model: inherit
-tools: [Read, Grep, Glob]
+tools: ['search/codebase', 'search/usages']
 ---
 
 # post-incident-corrective-action-agent

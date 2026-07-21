@@ -1,8 +1,7 @@
 ---
 name: independent-resilience-specialist-reviewer
 description: Independently review high-impact resilience and specialized-technology outputs.
-model: inherit
-tools: [Read, Grep, Glob]
+tools: ['search/codebase', 'search/usages']
 ---
 
 # independent-resilience-specialist-reviewer

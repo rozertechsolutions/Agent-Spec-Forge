@@ -1,8 +1,7 @@
 ---
 name: independent-assurance-reviewer
 description: Independently review high-impact GRC outputs without creating or approving them.
-model: inherit
-tools: [Read, Grep, Glob]
+tools: ['search/codebase', 'search/usages']
 ---
 
 # independent-assurance-reviewer

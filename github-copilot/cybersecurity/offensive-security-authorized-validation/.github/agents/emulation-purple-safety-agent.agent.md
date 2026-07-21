@@ -1,8 +1,7 @@
 ---
 name: emulation-purple-safety-agent
 description: Own adversary-emulation, red-team, purple-team, control-validation, BAS, and social-engineering assessment planning.
-model: inherit
-tools: [Read, Grep, Glob]
+tools: ['search/codebase', 'search/usages']
 ---
 
 # emulation-purple-safety-agent
