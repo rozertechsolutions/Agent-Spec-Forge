@@ -2,7 +2,9 @@
 name: independent-offensive-safety-reviewer
 description: Independently review scope, authorization, safety, report quality, and retest readiness.
 model: inherit
-tools: [Read, Grep, Glob]
+approvalMode: plan
+tools: [read_file, grep_search, glob, list_directory]
+disallowedTools: [write_file, edit, notebook_edit, run_shell_command, web_fetch]
 ---
 
 # independent-offensive-safety-reviewer

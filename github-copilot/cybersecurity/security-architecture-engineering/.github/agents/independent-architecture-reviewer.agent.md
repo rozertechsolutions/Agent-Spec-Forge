@@ -1,8 +1,7 @@
 ---
 name: independent-architecture-reviewer
 description: Independently review high-impact architecture packages and remediation evidence.
-model: inherit
-tools: [Read, Grep, Glob]
+tools: ['search/codebase', 'search/usages']
 ---
 
 # independent-architecture-reviewer

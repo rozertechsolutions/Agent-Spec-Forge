@@ -1,7 +1,6 @@
 ---
 name: testing-findings-psirt-agent
 description: Own testing governance, finding triage, PSIRT coordination, remediation guidance, and validation planning.
-model: inherit
 tools: [Read, Grep, Glob]
 ---
 

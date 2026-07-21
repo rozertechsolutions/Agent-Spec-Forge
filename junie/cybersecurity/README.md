@@ -1,112 +1,153 @@
-# Cybersecurity Department for junie
+# Cybersecurity Department for Junie
 
-This Cybersecurity department is a professional, adaptable baseline for junie covering governance, architecture, product security, vulnerability management, defensive operations, incident response, authorized offensive validation, and resilience.
+This Cybersecurity department is a reusable Junie baseline for governance, risk, compliance, and assurance; security architecture and engineering; application, product, and DevSecOps security; exposure, vulnerability, and hardening management; defensive operations, detection, and threat intelligence; incident response, DFIR, and recovery; authorized offensive validation; and resilience and specialized technologies.
 
-Its purpose is to help humans produce evidence-based cybersecurity work products while preserving clear professional ownership, least privilege, independent review, and human authority for consequential decisions.
+It solves the professional problem of turning scoped cybersecurity evidence into reviewable work products while keeping accountability, authorization, approvals, risk acceptance, incident command, offensive testing authorization, and production decisions with humans.
 
-Possible uses include risk and compliance assessment, security architecture review, threat modeling, secure SDLC review, vulnerability prioritization, detection engineering, incident-response planning, authorized penetration-test planning, resilience exercises, and independent assurance.
+Possible uses include risk and compliance assessment, architecture review, threat modeling, secure SDLC review, vulnerability prioritization, detection engineering review, incident-response planning, authorized assessment planning, resilience exercises, and independent assurance.
 
 ## Department overview
 
-The department contains eight Cybersecurity areas under `junie/cybersecurity/<area>/`. Each area is scoped to a distinct professional ownership boundary and is intended for static analysis, planning, review, documentation, and assurance using supplied evidence.
+The department contains eight isolated Junie project packages under `junie/cybersecurity/<area>/`. Each area has `.junie/AGENTS.md` guidelines, `.junie/agents/*.md` custom subagents, `.junie/skills/<skill>/SKILL.md` Agent Skills, `.junie/commands/*.md` custom slash commands, and `.junie/config.json` discovery controls.
 
-It does not authorize live scanning, exploitation, containment, recovery execution, production changes, publication, external integrations, legal determinations, risk acceptance, or closure decisions. Human owners remain accountable for authorization, approvals, exceptions, risk acceptance, incident declaration or closure, offensive testing authorization, and production action.
+The AI is not authorized to accept enterprise risk, approve its own work, authorize offensive testing, approve production changes, make legal determinations, approve incident closure or recovery completion, hide residual risk, or claim execution without evidence.
 
 ## Possible uses
 
-- Risk and compliance assessment using supplied policies, control evidence, and framework mappings.
-- Security architecture and engineering review for proposed designs and reference patterns.
-- Threat modeling, secure SDLC review, release-readiness support, and supply-chain evidence review.
-- Vulnerability prioritization, remediation planning, and hardening governance from provided findings.
-- Detection engineering, telemetry coverage review, SOC triage methods, and threat-hunt planning.
-- Incident-response readiness, DFIR planning, evidence governance, recovery planning, and lessons learned.
-- Authorized offensive assessment planning, rules of engagement review, validation planning, and retest assurance.
-- Resilience exercises, ransomware recovery planning, specialized technology review, and independent assurance.
+- Produce governance, policy, risk, compliance, exception, assurance, and reporting drafts from supplied evidence.
+- Review security architecture decisions, reference patterns, identity, network, cloud, data, platform, and control designs.
+- Support threat modeling, secure design and code review, CI/CD and supply-chain review, PSIRT coordination, and release-readiness evidence review.
+- Triage supplied vulnerability and exposure findings, plan hardening, and review remediation evidence.
+- Draft telemetry requirements, detection logic review notes, SOC triage procedures, threat-hunt plans, and intelligence assessments.
+- Prepare incident readiness, DFIR planning, evidence handling, containment planning, recovery coordination, tabletop, and lessons-learned artifacts.
+- Plan explicitly authorized offensive validation, rules of engagement, deconfliction, emulation, Purple Team validation, retest, and cleanup assurance.
+- Review resilience, ransomware recovery, OT/ICS, IoT, embedded, AI security, hardware, firmware, cryptography, and critical-infrastructure concerns.
 
 ## Platform compatibility
 
-Product surface: JetBrains Junie project instructions, .junie/AGENTS.md, commands, agents, Skills, MCP settings, model/reasoning controls where supported.
+Validated against current JetBrains Junie documentation checked on 2026-07-21 for Junie CLI and Junie in JetBrains IDEs. Junie Skills work in CLI and JetBrains IDEs. Custom subagents, custom slash commands, project configuration, MCP discovery controls, and command-line discovery controls are Junie CLI surfaces; IDE support and settings can vary by JetBrains IDE version, AI subscription, administrator policy, and Early Access availability.
 
-Validated documentation date: 2026-07-21. Plan, account, workspace, IDE, CLI, SDK, and preview availability vary by vendor release and administrator policy. This package documents static, repository-local or manually importable components only.
+Junie CLI discovers project configuration from `<project-root>/.junie/config.json` by default. This package is intentionally arranged so each cybersecurity area can be opened as the Junie project root.
 
 ## Prerequisites
 
-JetBrains IDE with Junie enabled; trusted workspace; no broad action approval enabled.
-
-Do not place credentials, tokens, keys, private endpoints, personal data, confidential customer data, or live system access material in this package. Connectors, MCP servers, cloud accounts, scanners, SIEM/EDR/XDR/SOAR tools, ticketing systems, identity providers, and hosted tools are disabled or absent unless a retained native file explicitly documents a human-approved external configuration.
+- A supported JetBrains IDE with Junie enabled, or Junie CLI installed and authenticated by the user outside this repository.
+- A trusted project workspace.
+- Explicit authorized scope, exclusions, human owner, reviewer, approver role, and redacted evidence for the requested cybersecurity work.
+- No committed credentials, API keys, tokens, private endpoints, live scanner access, SIEM/EDR/XDR/SOAR access, cloud account access, ticketing credentials, or incident contacts.
 
 ## Installation or import
 
-Open the area in a supported JetBrains IDE. Use .junie/AGENTS.md and native command/agent/skill folders; omit descriptive config files that have no native effect.
+For area-isolated CLI use, run Junie from the selected area as the project root:
 
-Use project-local or repository-local setup only. Do not install tools globally from this package, and do not authenticate services merely to import the instructions.
+```bash
+junie --project junie/cybersecurity/governance-risk-compliance-assurance --plan --prompt "Use /governance-policy-frameworks for a static policy-control mapping review using the supplied evidence in docs/security-evidence/"
+```
+
+For an IDE workflow, open the selected `junie/cybersecurity/<area>/` folder as the project in a supported JetBrains IDE, confirm Junie is enabled, and use the area `.junie/AGENTS.md`, Skills, agents, and commands from that project context.
+
+Do not copy these files to `~/.junie/` unless a user intentionally wants global personal defaults. This repository does not install global configuration, authenticate Junie, connect MCP, start hooks, or run a model during validation.
 
 ## Working directory and discovery
 
-Junie uses .junie/AGENTS.md and documented .junie locations from the opened project context. Skills and commands must be in supported native locations.
+Use the selected area directory as `<project-root>`, for example `junie/cybersecurity/application-product-devsecops-security/`.
 
-When a platform supports upward discovery, the nearest area-level instructions take precedence for that area. When a platform requires manual import, treat each area as an isolated package and do not mix files across areas unless a human explicitly approves a cross-area handoff.
+Junie discovers:
+
+- `.junie/AGENTS.md` as the project guidelines file.
+- `.junie/config.json` as project configuration.
+- `.junie/agents/*.md` as project custom subagents.
+- `.junie/skills/<skill-name>/SKILL.md` as project Skills.
+- `.junie/commands/*.md` as project slash commands.
+
+The retained `.junie/config.json` files set explicit area-local `agent-locations`, `skill-locations`, and `command-locations`, disable default user/project discovery for those component classes, disable default MCP discovery, disable custom model profile discovery, and disable auto-update checks. Command-line flags and user settings still have higher Junie precedence than project config, so the user must avoid overriding these safety defaults for security work unless an authorized human approves the change.
+
+Area isolation matters: do not open `junie/cybersecurity/` as the Junie project root and expect all eight nested area packages to merge correctly. Choose one area root per task.
 
 ## Area map
 
-- `junie/cybersecurity/governance-risk-compliance-assurance/` - Governance, Risk, Compliance, and Assurance: governance, cyber risk, compliance mapping, policies, assurance, exceptions, and risk-decision support.
-- `junie/cybersecurity/security-architecture-engineering/` - Security Architecture and Engineering: security architecture, engineering patterns, identity, network, cloud, data, platform, and control design review.
-- `junie/cybersecurity/application-product-devsecops-security/` - Application, Product, and DevSecOps Security: product security, secure SDLC, threat modeling, code/design review, CI/CD, supply chain, PSIRT, and release assurance.
-- `junie/cybersecurity/exposure-vulnerability-hardening/` - Exposure, Vulnerability, and Hardening: asset exposure, vulnerability triage, prioritization, hardening, remediation governance, and validation evidence.
-- `junie/cybersecurity/defensive-security-operations-detection-intelligence/` - Defensive Security Operations, Detection, and Intelligence: SOC operating model, telemetry, detection engineering, alert triage, hunting, intelligence, and coverage quality.
-- `junie/cybersecurity/incident-response-dfir-recovery/` - Incident Response, DFIR, and Recovery: incident planning, evidence governance, DFIR analysis planning, containment planning, recovery coordination, and lessons learned.
-- `junie/cybersecurity/offensive-security-authorized-validation/` - Offensive Security and Authorized Validation: explicitly authorized assessment planning, rules of engagement, emulation governance, retest planning, and safety review.
-- `junie/cybersecurity/cyber-resilience-specialized-technologies/` - Cyber Resilience and Specialized Technologies: resilience, ransomware recovery planning, specialized technology review, cryptography, critical infrastructure, OT/IoT/cloud edge, and transition assurance.
+- `junie/cybersecurity/governance-risk-compliance-assurance/` - governance, policy, risk, compliance mapping, exceptions, evidence assurance, third-party review, and reporting.
+- `junie/cybersecurity/security-architecture-engineering/` - enterprise, solution, identity, cloud, network, data, container, automation, and control architecture review.
+- `junie/cybersecurity/application-product-devsecops-security/` - product security, secure SDLC, threat modeling, secure design/code review, CI/CD, supply chain, PSIRT, and release assurance.
+- `junie/cybersecurity/exposure-vulnerability-hardening/` - exposure management, vulnerability triage, asset/finding prioritization, remediation, hardening, and validation reporting.
+- `junie/cybersecurity/defensive-security-operations-detection-intelligence/` - SOC governance, telemetry, detection, triage, hunting, intelligence, malware-analysis planning, automation review, and coverage quality.
+- `junie/cybersecurity/incident-response-dfir-recovery/` - incident command support, evidence governance, DFIR planning, containment planning, recovery coordination, scenarios, and post-incident corrective action.
+- `junie/cybersecurity/offensive-security-authorized-validation/` - authorization, scope, rules of engagement, assessment planning, emulation governance, deconfliction, retest, cleanup, and independent safety review.
+- `junie/cybersecurity/cyber-resilience-specialized-technologies/` - resilience program review, backup/recovery, ransomware recovery, specialized technology, OT/ICS, IoT, AI security, hardware, firmware, cryptography, and critical infrastructure.
 
 ## Native components
 
-- `governance-risk-compliance-assurance/`: `.junie/`
-- `security-architecture-engineering/`: `.junie/`
-- `application-product-devsecops-security/`: `.junie/`
-- `exposure-vulnerability-hardening/`: `.junie/`
-- `defensive-security-operations-detection-intelligence/`: `.junie/`
-- `incident-response-dfir-recovery/`: `.junie/`
-- `offensive-security-authorized-validation/`: `.junie/`
-- `cyber-resilience-specialized-technologies/`: `.junie/`
+Each area retains only native Junie components:
 
-Unsupported native mechanisms are omitted rather than simulated. The package does not include fake MCP servers, live hooks that execute security actions, hosted scanner integrations, cloud deployment automation, or credentials.
+- `.junie/AGENTS.md` project guidelines.
+- `.junie/config.json` documented CLI project configuration.
+- `.junie/agents/*.md` custom subagents with YAML frontmatter.
+- `.junie/skills/<skill>/SKILL.md` Agent Skills.
+- `.junie/commands/*.md` custom slash commands.
+
+No project hooks, MCP server definitions, global settings, scanner connectors, cloud connectors, or live-action workflows are included.
 
 ## How to use the department
 
-Select the area that owns the requested work, open or import that area according to the platform rules above, and provide authorized scope, exclusions, accountable owner, requester, intended audience, decision needed, evidence inventory, assumptions, constraints, reviewer, and approver role.
+Select the area that owns the work, open that area as the Junie project, and provide an input such as:
 
-Expected outputs are scoped artifacts with evidence tables, assumptions, findings or recommendations separated by evidence state, limitations, confidence, residual risk, required human decisions, and completion criteria. High-impact outputs must be routed to an independent reviewer that did not create the work. Components stop when authorization is missing, sensitive data is unredacted, scope is unclear, a live action is requested, evidence is insufficient for a conclusion, or self-review would occur.
+```text
+Use /threat-modeling for the payment-service design. Scope: repository files under services/payments and the attached architecture note. Exclusions: production access, scanning, exploitation, and deployment. Output: threat model, assumptions, evidence gaps, findings, and independent review checklist.
+```
+
+Expected output is a static artifact with scope, evidence table, assumptions, findings separated by evidence state, limitations, confidence, residual risk, required human decisions, handoffs, stop conditions, and completion criteria.
+
+Custom subagents are selected by Junie delegation based on `name` and `description`; they are not manually invoked as slash commands. Use slash commands such as `/threat-modeling`, `/independent-assurance-review`, or `/incident-readiness-triage` when the current area provides the command file. Skills load when their names and descriptions match the task or when an agent/command body explicitly directs their use.
+
+Stop if authorization is missing, evidence is insufficient for the requested conclusion, sensitive data is unredacted, the task asks for live action, a self-review would occur, or a human-only decision is requested.
 
 ## Permissions and safety
 
-Default behavior is read-only and static. Repository writes, where a platform technically allows them, must stay inside the selected `junie/cybersecurity/<area>/` directory and require an explicit user task to update static artifacts. Shell, network, installation, deployment, scanning, exploitation, recovery execution, remote Git operations, MCP connections, hosted tools, and external connectors are prohibited by default.
+Agent frontmatter uses the read-only built-in Junie tool groups `Read`, `Grep`, and `Glob`. Because `tools` is present and non-empty, other built-in tool groups are not available to those subagents by default.
 
-AI components cannot self-approve, accept enterprise risk, authorize offensive testing, approve production changes, close incidents, certify compliance, make legal determinations, or conceal residual risk. Human review is mandatory for approvals, exceptions, risk acceptance, release or closure decisions, incident command, offensive authorization, external reporting, and production actions.
+The project config disables default MCP discovery and this package contains no `.junie/mcp/mcp.json`. Shell, write, edit, network, MCP, connector, scanner, deployment, incident containment, recovery execution, and production changes are prohibited unless a separate authorized environment and human approval explicitly allow them outside this baseline.
+
+Junie IDE and CLI approval settings still matter. Do not add broad Action Allowlist rules for terminal commands, MCP tools, repository writes, or external actions when using this package for cybersecurity review.
 
 ## Configuration and customization
 
-Organizations may add policies, frameworks, asset context, risk appetite, service-level targets, tool names, responsible roles, approved integrations, sector requirements, and evidence templates as static files in the relevant area after human review. Keep values organization-neutral in shared packages, redact sensitive information, and document any integration without enabling it by default.
+### Project-dependent configuration
+
+Adapt repository paths, source directories, application architecture, build systems, technology stack, deployment model, cloud provider, CI/CD structure, telemetry locations, product requirements, threat-model scope, project assets, approved targets, area working directory, and repository-specific policies per project. These values belong in project evidence or area-local static context, not in global user configuration.
+
+### User/organization-dependent configuration
+
+Supply or approve account/subscription, user identity, organization policies, regulatory frameworks, risk appetite, asset criticality, SLAs, escalation contacts, approval authorities, permitted tools, permitted integrations, API credentials, MCP endpoints, cloud accounts, SIEM/EDR/XDR/SOAR systems, ticketing systems, incident contacts, offensive-testing scope, data retention, legal constraints, and privacy constraints outside this repository. Never commit real secrets or confidential organization values.
+
+### Fixed baseline configuration
+
+Keep area ownership boundaries, independent review, no self-approval, no automatic risk acceptance, evidence requirements, read-only defaults, prohibited unauthorized actions, stop conditions, and human approval gates unless a formal governance change approves a different baseline.
 
 ## Validation
 
-Static validation can check file syntax, native paths, frontmatter, JSON/TOML/YAML parsing, prompt references, Skill structure, duplicate or obsolete files, empty artifacts, broken links, and absence of secrets or active integrations. Live system behavior, connector access, model behavior, scanner operation, incident action, recovery, and production integration require a separate authorized environment and were not exercised by this repository package.
+Repository validation covers JSON parsing, Markdown/YAML frontmatter parsing, area coverage, native path layout, Skill names and descriptions, command file format, agent name uniqueness, read-only tool allowlists, reference reachability, duplicate/orphan review, empty artifact checks, and absence of secrets or temporary residue.
+
+Runtime validation of actual Junie delegation, model behavior, IDE UI behavior, authenticated CLI use, MCP availability, connector access, live scans, incident actions, and production changes requires a separate authorized environment and was not performed by this repository remediation.
 
 ## Troubleshooting
 
-- If instructions are ignored, confirm the platform was opened from the documented working directory or the files were manually imported into the correct Project, Skill, agent, or rule location.
-- If an agent or Skill is unavailable, verify the platform feature is enabled for the plan/workspace and that the directory name and native filename match the current product documentation.
-- If permissions appear broader than intended, inspect platform settings before use and deny shell, network, MCP, connector, deployment, scanner, and remote Git access.
-- If paths fail to resolve, use paths relative to the selected area package unless the platform documentation states otherwise.
-- If a platform preview feature changes, re-check official documentation and update `junie/cybersecurity/NATIVE_SOURCES.md` before relying on it.
+- If Junie ignores the files, confirm the selected area directory, not `junie/cybersecurity/`, is opened as the project root.
+- If commands are missing, confirm `.junie/config.json` points to `./commands` and the command file is under `.junie/commands/<command>.md`.
+- If a Skill is not used, check `.junie/skills/<name>/SKILL.md`, the YAML `name`, and the specificity of `description`.
+- If a subagent is not delegated to, check the `.junie/agents/*.md` YAML `name`, `description`, and supported tool group labels.
+- If MCP tools appear, inspect CLI flags, user settings, and IDE settings; command-line flags and user settings can override project config.
+- If model selection fails, remove unsupported project model overrides and select an available model through Junie's normal UI or CLI.
 
 ## Removal or uninstall
 
-Remove the imported Project, GPT, Skill, agent, rule, command, workflow, or workspace configuration from the platform UI or delete the selected `junie/cybersecurity/` directory from the repository. Remove any manually uploaded knowledge files from the platform. Do not delete organizational evidence or platform-global settings unless a human owner explicitly authorizes that cleanup.
+To remove this package from a repository, delete the selected `junie/cybersecurity/<area>/` or the whole `junie/cybersecurity/` directory after preserving any project evidence stored elsewhere. To remove an imported global copy, delete the copied files from `~/.junie/agents/`, `~/.junie/skills/`, `~/.junie/commands/`, or `~/.junie/config.json` only when the user owns those global settings and explicitly approves.
+
+For IDE removal, remove any manually imported commands, Skills, agents, MCP entries, or Action Allowlist rules through the Junie or JetBrains IDE settings. Do not delete organizational evidence, incident records, tickets, scanner data, or platform-global settings unless the responsible human owner authorizes it.
 
 ## Limitations
 
-This package is a static professional baseline. It is not a managed security service, scanner, SIEM, SOAR, EDR/XDR integration, penetration-testing tool, incident-response platform, legal opinion, compliance certification, or production-control system. Platform support and schema details can change, especially for preview agent, Skill, hook, and permission features.
+This package is a static professional baseline, not a managed security service, scanner, SIEM, SOAR, EDR/XDR integration, penetration-testing tool, DFIR platform, legal opinion, compliance certification, or production-control system. Junie feature availability, subagent behavior, model support, and IDE/CLI parity can change, especially for Early Access capabilities.
 
 ## Security notice
 
-Offensive testing, incident actions, production changes, external integrations, live scans, exploitation, deployment, recovery, publication, and use of sensitive evidence require explicit authorization, validated scope, and human control. Do not use these components to bypass approval, access secrets, contact external systems, or claim live execution without evidence.
+Offensive testing, incident actions, production changes, external integrations, live scans, exploitation, deployment, recovery, publication, and sensitive evidence handling require explicit authorization, validated scope, and human control. Do not use these components to bypass approval, access secrets, contact external systems, or claim live execution without evidence.

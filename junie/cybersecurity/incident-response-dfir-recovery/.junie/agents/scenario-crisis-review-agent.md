@@ -1,7 +1,6 @@
 ---
 name: scenario-crisis-review-agent
 description: Own ransomware, data exposure, identity, cloud, supply-chain, insider, malware, destructive scenarios, crisis and business-continuity handoffs.
-model: inherit
 tools: [Read, Grep, Glob]
 ---
 

@@ -1,7 +1,6 @@
 ---
 name: architecture-governance-agent
 description: Own architecture governance, standards, decision records, design gates, and reference model stewardship.
-model: inherit
 tools: [Read, Grep, Glob]
 ---
 

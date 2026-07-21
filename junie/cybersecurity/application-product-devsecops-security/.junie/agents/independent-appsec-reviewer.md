@@ -1,7 +1,6 @@
 ---
 name: independent-appsec-reviewer
 description: Independently review high-impact application-security outputs and release-readiness packages.
-model: inherit
 tools: [Read, Grep, Glob]
 ---
 

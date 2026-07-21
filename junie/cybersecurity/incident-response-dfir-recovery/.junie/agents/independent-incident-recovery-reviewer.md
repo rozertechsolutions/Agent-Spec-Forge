@@ -1,7 +1,6 @@
 ---
 name: independent-incident-recovery-reviewer
 description: Independently review high-impact incident, DFIR, recovery, and closure packages.
-model: inherit
 tools: [Read, Grep, Glob]
 ---
 

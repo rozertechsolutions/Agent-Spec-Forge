@@ -1,112 +1,168 @@
-# Cybersecurity Department for windsurf
+# Cybersecurity Department for Windsurf and Devin Local
 
-This Cybersecurity department is a professional, adaptable baseline for windsurf covering governance, architecture, product security, vulnerability management, defensive operations, incident response, authorized offensive validation, and resilience.
+This Cybersecurity department is a professional, reusable baseline for Windsurf Cascade and Devin Local/CLI. It helps humans produce evidence-based cybersecurity artifacts for governance, risk, compliance, and assurance; security architecture and engineering; application, product, and DevSecOps security; exposure, vulnerability, and hardening management; defensive operations, detection, and threat intelligence; incident response, DFIR, and recovery; authorized offensive validation; and cyber resilience with specialized technologies.
 
-Its purpose is to help humans produce evidence-based cybersecurity work products while preserving clear professional ownership, least privilege, independent review, and human authority for consequential decisions.
-
-Possible uses include risk and compliance assessment, security architecture review, threat modeling, secure SDLC review, vulnerability prioritization, detection engineering, incident-response planning, authorized penetration-test planning, resilience exercises, and independent assurance.
+It solves the problem of giving Cascade or Devin Local scoped, repository-owned cybersecurity instructions and Skills without granting automatic authority to scan, exploit, deploy, change production, approve risk, close incidents, or connect external systems. Realistic uses include risk reviews, security architecture review, threat modeling, secure SDLC review, vulnerability prioritization, detection planning, incident readiness, authorized assessment planning, resilience exercises, and independent assurance.
 
 ## Department overview
 
-The department contains eight Cybersecurity areas under `windsurf/cybersecurity/<area>/`. Each area is scoped to a distinct professional ownership boundary and is intended for static analysis, planning, review, documentation, and assurance using supplied evidence.
+The department contains eight area packages under `windsurf/cybersecurity/<area>/`. Each area has an `AGENTS.md` file for directory-scoped instructions and Windsurf workspace Skills in `.windsurf/skills/<skill-name>/SKILL.md`. The platform-level `.devin/config.json` is retained for Devin Local/CLI sessions launched from this department and sets conservative project permissions.
 
-It does not authorize live scanning, exploitation, containment, recovery execution, production changes, publication, external integrations, legal determinations, risk acceptance, or closure decisions. Human owners remain accountable for authorization, approvals, exceptions, risk acceptance, incident declaration or closure, offensive testing authorization, and production action.
+The AI is not authorized to accept enterprise risk, approve exceptions, authorize offensive testing, perform live scans, run incident containment, complete recovery, change production, publish external statements, make legal determinations, approve its own work, or claim execution without evidence. Human owners remain accountable for authorization, approvals, risk acceptance, incident command, production action, external reporting, and final decisions.
 
 ## Possible uses
 
-- Risk and compliance assessment using supplied policies, control evidence, and framework mappings.
-- Security architecture and engineering review for proposed designs and reference patterns.
-- Threat modeling, secure SDLC review, release-readiness support, and supply-chain evidence review.
-- Vulnerability prioritization, remediation planning, and hardening governance from provided findings.
-- Detection engineering, telemetry coverage review, SOC triage methods, and threat-hunt planning.
-- Incident-response readiness, DFIR planning, evidence governance, recovery planning, and lessons learned.
-- Authorized offensive assessment planning, rules of engagement review, validation planning, and retest assurance.
-- Resilience exercises, ransomware recovery planning, specialized technology review, and independent assurance.
+- Review policies, control mappings, exceptions, third-party evidence, and compliance gaps.
+- Review designs, identity/network/cloud/data controls, reference patterns, and security engineering decisions.
+- Support threat modeling, secure design review, supply-chain review, CI/CD evidence review, and PSIRT planning.
+- Triage vulnerability and exposure evidence, plan hardening, and prepare remediation governance.
+- Design telemetry, detection logic, triage methods, threat hunts, and intelligence handoffs.
+- Prepare incident response plans, DFIR evidence handling, containment options, recovery plans, and lessons learned.
+- Plan explicitly authorized penetration tests, Red Team exercises, Purple Team validation, retests, and rules of engagement.
+- Assess resilience, backup/recovery readiness, OT/ICS, IoT, AI security, firmware, cryptography, and critical infrastructure concerns.
 
 ## Platform compatibility
 
-Product surface: Windsurf Cascade rules, workflows, Skills where available, Devin Local support where current, AGENTS.md guidance, hooks, and permissions.
+Validated documentation date: 2026-07-21.
 
-Validated documentation date: 2026-07-21. Plan, account, workspace, IDE, CLI, SDK, and preview availability vary by vendor release and administrator policy. This package documents static, repository-local or manually importable components only.
+Supported native surfaces in this package:
+
+- Windsurf/Devin Desktop Cascade: `AGENTS.md` files, `.windsurf/skills/<skill-name>/SKILL.md`, and optional workspace hooks at `.windsurf/hooks.json` if an organization creates them later. This package does not ship hooks.
+- Devin Local and Devin CLI: `.devin/config.json`, `AGENTS.md`, and imported Windsurf Skills/rules when `read_config_from.windsurf` is enabled.
+- Shared rule behavior: `AGENTS.md` is recognized by Cascade and Devin CLI as project or directory-scoped rule context.
+
+Not included: repository-defined Windsurf custom agents, Devin cloud schedules, cloud Devins, MCP servers, connectors, scanner integrations, deployment automation, live hooks, credentials, or provider-specific runtime state.
+
+Devin Local is a preview local agent surface in Devin Desktop. Devin CLI requires a Devin account and local CLI installation. Cascade availability depends on the installed Devin Desktop/Windsurf release, workspace trust, organization controls, and plan/admin policy.
 
 ## Prerequisites
 
-Windsurf IDE with Cascade; Devin Local only where installed and supported; trusted workspace.
-
-Do not place credentials, tokens, keys, private endpoints, personal data, confidential customer data, or live system access material in this package. Connectors, MCP servers, cloud accounts, scanners, SIEM/EDR/XDR/SOAR tools, ticketing systems, identity providers, and hosted tools are disabled or absent unless a retained native file explicitly documents a human-approved external configuration.
+- Devin Desktop/Windsurf with Cascade for Cascade use, or Devin CLI/Devin Local for the `.devin` configuration path.
+- A trusted workspace opened at the selected area directory when using area Skills.
+- No committed secrets, API keys, tokens, private endpoints, personal data, or confidential evidence.
+- Explicit authorization and approved scope before any cybersecurity analysis that could affect live systems or third parties.
 
 ## Installation or import
 
-Open Windsurf from windsurf/cybersecurity/<area>/ and use area rules/AGENTS.md. Import workflows or Skills only on supported surfaces.
+For Windsurf Cascade:
 
-Use project-local or repository-local setup only. Do not install tools globally from this package, and do not authenticate services merely to import the instructions.
+1. Open the selected area directory as the workspace, for example `windsurf/cybersecurity/application-product-devsecops-security/`.
+2. Confirm Cascade sees that directory's `AGENTS.md`.
+3. Use natural language or an `@skill-name` mention to invoke an area Skill from `.windsurf/skills/`.
+4. Provide redacted evidence, authorized scope, exclusions, owner, intended audience, and required decision.
+
+Example Cascade request:
+
+```text
+@threat-modeling Review this proposed payment-service design from the supplied diagram and ADRs. Scope is design review only. No live testing, no connector use, and no production changes are authorized. Output a threat model with assumptions, evidence gaps, recommended controls, and required human approvals.
+```
+
+Expected output: a scoped artifact with evidence mapping, assumptions, threats, control recommendations, residual risk, limitations, confidence, stop conditions, and independent-review requirements.
+
+For Devin Local or Devin CLI:
+
+1. Start from `windsurf/cybersecurity/` or a selected area directory.
+2. Use the committed `.devin/config.json` for project permissions.
+3. Keep the session in `/plan` mode for read-only planning when using the CLI for assessment or review.
+4. Use `devin skills list` or `devin skills show <name>` only to inspect available Skills; do not authenticate MCP or start integrations from this package.
+
+Example CLI prompt after `cd windsurf/cybersecurity/exposure-vulnerability-hardening`:
+
+```text
+devin -- "Use AGENTS.md and the exposure-lifecycle-triage Skill to review these supplied vulnerability findings. Treat all data as static evidence. Do not run scanners, execute shell commands, connect MCP, or change files unless I explicitly approve a static documentation edit."
+```
+
+Human approval is required before writes, shell use, MCP, connector setup, live target access, incident action, offensive testing, recovery action, publication, or any final risk/closure decision.
 
 ## Working directory and discovery
 
-Windsurf Cascade uses workspace and rules context; Devin Local uses documented files when present. The package avoids fake agent formats and keeps area files separate.
+Cascade:
 
-When a platform supports upward discovery, the nearest area-level instructions take precedence for that area. When a platform requires manual import, treat each area as an isolated package and do not mix files across areas unless a human explicitly approves a cross-area handoff.
+- `AGENTS.md` files are automatically discovered in the workspace and scoped by file location.
+- `.windsurf/skills/<skill-name>/SKILL.md` is a workspace Skill path. Open the area directory as the workspace when you want that area's Skills to be available.
+- `.devin/rules/*.md` is the preferred current Cascade rules path; `.windsurf/rules/*.md` is a supported fallback. This package uses `AGENTS.md` instead of separate rule copies to avoid duplicate instruction channels.
+- `.windsurfrules` is a legacy single-file rule path and is intentionally omitted.
+- `.windsurf/hooks.json` would be the workspace hook file, but this package intentionally ships no hooks.
+
+Devin Local/CLI:
+
+- `.devin/config.json` is discovered by walking from the current directory and is a committed project config.
+- Nested `.devin` configs can take precedence over ancestor configs. Launch inside `windsurf/cybersecurity/` or a child area when using this department.
+- Project config supports `permissions`, `mcpServers`, `read_config_from`, and hooks. This package leaves `mcpServers` empty and denies MCP tool use.
+- `read_config_from.windsurf` is enabled so Devin can import supported Windsurf rules/Skills; Cursor and Claude imports are disabled to avoid cross-platform leakage.
+- `AGENTS.md` is loaded as project rule context.
+
+Files that are not auto-discovered by this package: platform README text, `NATIVE_SOURCES.md`, external evidence, uncommitted local overrides, global user rules, cloud Devin setup, connector credentials, and any MCP server not explicitly configured by a human outside this baseline.
 
 ## Area map
 
-- `windsurf/cybersecurity/governance-risk-compliance-assurance/` - Governance, Risk, Compliance, and Assurance: governance, cyber risk, compliance mapping, policies, assurance, exceptions, and risk-decision support.
-- `windsurf/cybersecurity/security-architecture-engineering/` - Security Architecture and Engineering: security architecture, engineering patterns, identity, network, cloud, data, platform, and control design review.
-- `windsurf/cybersecurity/application-product-devsecops-security/` - Application, Product, and DevSecOps Security: product security, secure SDLC, threat modeling, code/design review, CI/CD, supply chain, PSIRT, and release assurance.
-- `windsurf/cybersecurity/exposure-vulnerability-hardening/` - Exposure, Vulnerability, and Hardening: asset exposure, vulnerability triage, prioritization, hardening, remediation governance, and validation evidence.
-- `windsurf/cybersecurity/defensive-security-operations-detection-intelligence/` - Defensive Security Operations, Detection, and Intelligence: SOC operating model, telemetry, detection engineering, alert triage, hunting, intelligence, and coverage quality.
-- `windsurf/cybersecurity/incident-response-dfir-recovery/` - Incident Response, DFIR, and Recovery: incident planning, evidence governance, DFIR analysis planning, containment planning, recovery coordination, and lessons learned.
-- `windsurf/cybersecurity/offensive-security-authorized-validation/` - Offensive Security and Authorized Validation: explicitly authorized assessment planning, rules of engagement, emulation governance, retest planning, and safety review.
-- `windsurf/cybersecurity/cyber-resilience-specialized-technologies/` - Cyber Resilience and Specialized Technologies: resilience, ransomware recovery planning, specialized technology review, cryptography, critical infrastructure, OT/IoT/cloud edge, and transition assurance.
+- `windsurf/cybersecurity/governance-risk-compliance-assurance/` - governance, cyber risk, compliance mapping, policy, assurance, exceptions, and risk-decision support.
+- `windsurf/cybersecurity/security-architecture-engineering/` - security architecture, engineering patterns, identity, network, cloud, data, platform, and control design review.
+- `windsurf/cybersecurity/application-product-devsecops-security/` - product security, application security, secure SDLC, threat modeling, CI/CD, supply chain, PSIRT, and release assurance.
+- `windsurf/cybersecurity/exposure-vulnerability-hardening/` - exposure management, vulnerability triage, prioritization, hardening, remediation governance, and validation evidence.
+- `windsurf/cybersecurity/defensive-security-operations-detection-intelligence/` - SOC model, telemetry, detection engineering, alert triage, threat hunting, intelligence, and coverage quality.
+- `windsurf/cybersecurity/incident-response-dfir-recovery/` - incident planning, evidence governance, DFIR planning, containment options, recovery coordination, and lessons learned.
+- `windsurf/cybersecurity/offensive-security-authorized-validation/` - explicitly authorized assessment planning, rules of engagement, emulation governance, retest planning, and offensive safety review.
+- `windsurf/cybersecurity/cyber-resilience-specialized-technologies/` - resilience, backup/recovery, OT/ICS, IoT, AI security, firmware, cryptographic agility, and critical infrastructure.
 
 ## Native components
 
-- `governance-risk-compliance-assurance/`: `AGENTS.md`
-- `security-architecture-engineering/`: `AGENTS.md`
-- `application-product-devsecops-security/`: `AGENTS.md`
-- `exposure-vulnerability-hardening/`: `AGENTS.md`
-- `defensive-security-operations-detection-intelligence/`: `AGENTS.md`
-- `incident-response-dfir-recovery/`: `AGENTS.md`
-- `offensive-security-authorized-validation/`: `AGENTS.md`
-- `cyber-resilience-specialized-technologies/`: `AGENTS.md`
+- `windsurf/cybersecurity/.devin/config.json` - Devin Local/CLI project permissions, empty project MCP configuration, and import controls.
+- `windsurf/cybersecurity/<area>/AGENTS.md` - Cascade and Devin scoped area instructions.
+- `windsurf/cybersecurity/<area>/.windsurf/skills/<skill-name>/SKILL.md` - Cascade workspace Skills and Devin-importable Windsurf Skills.
 
-Unsupported native mechanisms are omitted rather than simulated. The package does not include fake MCP servers, live hooks that execute security actions, hosted scanner integrations, cloud deployment automation, or credentials.
+No repository custom-agent files, live workflows, hook files, MCP servers, connectors, or cloud-agent schedules are shipped.
 
 ## How to use the department
 
-Select the area that owns the requested work, open or import that area according to the platform rules above, and provide authorized scope, exclusions, accountable owner, requester, intended audience, decision needed, evidence inventory, assumptions, constraints, reviewer, and approver role.
-
-Expected outputs are scoped artifacts with evidence tables, assumptions, findings or recommendations separated by evidence state, limitations, confidence, residual risk, required human decisions, and completion criteria. High-impact outputs must be routed to an independent reviewer that did not create the work. Components stop when authorization is missing, sensitive data is unredacted, scope is unclear, a live action is requested, evidence is insufficient for a conclusion, or self-review would occur.
+1. Select the owning area from the area map.
+2. Open that area as the Cascade workspace or launch Devin from `windsurf/cybersecurity/` or the selected area.
+3. Provide the authorized scope, explicit exclusions, accountable owner, requester, intended audience, evidence inventory, assumptions, constraints, reviewer, approver role, and decision needed.
+4. Invoke the most relevant Skill by natural language or `@skill-name` when Cascade supports manual Skill mentions.
+5. Review the output for evidence quality, limitations, confidence, required human decisions, and independent review.
+6. Stop if the request needs live testing, sensitive data, unapproved tools, production action, offensive authorization, incident command, recovery execution, external publication, or self-review.
 
 ## Permissions and safety
 
-Default behavior is read-only and static. Repository writes, where a platform technically allows them, must stay inside the selected `windsurf/cybersecurity/<area>/` directory and require an explicit user task to update static artifacts. Shell, network, installation, deployment, scanning, exploitation, recovery execution, remote Git operations, MCP connections, hosted tools, and external connectors are prohibited by default.
+The Devin project config allows read/search/glob operations, asks before writes, denies shell execution, denies fetch, denies MCP tools, and denies writes to `.env` patterns or paths outside the selected tree. Cascade permissions and workspace trust remain controlled by the user's product settings and organization policy; this repository does not override those controls.
 
-AI components cannot self-approve, accept enterprise risk, authorize offensive testing, approve production changes, close incidents, certify compliance, make legal determinations, or conceal residual risk. Human review is mandatory for approvals, exceptions, risk acceptance, release or closure decisions, incident command, offensive authorization, external reporting, and production actions.
+Network access, MCP, connectors, cloud accounts, SIEM/EDR/XDR/SOAR systems, scanners, ticketing systems, identity providers, remote Git actions, app deploys, shell hooks, and hosted tools are absent or denied by default. Any later integration must be approved by a human owner and configured outside this reusable baseline with secrets stored only in user/local secret mechanisms.
 
 ## Configuration and customization
 
-Organizations may add policies, frameworks, asset context, risk appetite, service-level targets, tool names, responsible roles, approved integrations, sector requirements, and evidence templates as static files in the relevant area after human review. Keep values organization-neutral in shared packages, redact sensitive information, and document any integration without enabling it by default.
+### Project-dependent configuration
+
+Adapt repository paths, source directories, architecture, build systems, technology stack, deployment model, cloud providers, CI/CD structure, telemetry locations, asset inventories, threat-model scope, project policies, evidence locations, approved test scope, approved targets, and area-specific working directories per project.
+
+### User/organization-dependent configuration
+
+Supply or approve account access, subscriptions, organization policies, regulatory frameworks, risk appetite, asset criticality, SLAs, escalation contacts, approval authorities, permitted tools, permitted integrations, API credentials, MCP endpoints, cloud accounts, SIEM/EDR/XDR/SOAR systems, ticketing systems, incident contacts, authorized offensive-testing scope, data-retention requirements, and legal/privacy constraints. Do not commit real secrets or confidential organization values.
+
+### Fixed baseline configuration
+
+Keep area ownership boundaries, independent review, no self-approval, no automatic risk acceptance, evidence requirements, no unauthorized active testing, safe default permissions, stop conditions, and human-approval gates intact. These properties define the safety and governance model.
 
 ## Validation
 
-Static validation can check file syntax, native paths, frontmatter, JSON/TOML/YAML parsing, prompt references, Skill structure, duplicate or obsolete files, empty artifacts, broken links, and absence of secrets or active integrations. Live system behavior, connector access, model behavior, scanner operation, incident action, recovery, and production integration require a separate authorized environment and were not exercised by this repository package.
+Static validation covers JSON syntax, Markdown and Skill frontmatter, required area paths, native path inventory, README/source consistency, duplicate/orphan checks, and absence of committed credentials or active integrations. Repository validation does not execute Cascade, launch Devin sessions, run hooks, authenticate, connect MCP, call models, scan targets, run incident actions, or test production systems.
 
 ## Troubleshooting
 
-- If instructions are ignored, confirm the platform was opened from the documented working directory or the files were manually imported into the correct Project, Skill, agent, or rule location.
-- If an agent or Skill is unavailable, verify the platform feature is enabled for the plan/workspace and that the directory name and native filename match the current product documentation.
-- If permissions appear broader than intended, inspect platform settings before use and deny shell, network, MCP, connector, deployment, scanner, and remote Git access.
-- If paths fail to resolve, use paths relative to the selected area package unless the platform documentation states otherwise.
-- If a platform preview feature changes, re-check official documentation and update `windsurf/cybersecurity/NATIVE_SOURCES.md` before relying on it.
+- If Cascade ignores an area Skill, open the area directory itself as the workspace and confirm the Skill lives at `.windsurf/skills/<skill-name>/SKILL.md`.
+- If Devin does not load the permissions, launch from `windsurf/cybersecurity/` or a child directory so `.devin/config.json` is in the discovery path.
+- If Devin imports unexpected tool configuration, inspect `read_config_from` and user/global config. This baseline disables Cursor and Claude imports and leaves project MCP empty.
+- If writes are requested, verify they are static documentation changes inside the authorized area and approve them explicitly.
+- If hooks appear in the product UI, they came from user, workspace, system, or enterprise configuration outside this package; this repository ships no `.windsurf/hooks.json`.
+- If MCP tools appear, they came from user/global/project configuration outside this baseline or an organization policy; do not use them without explicit approval.
 
 ## Removal or uninstall
 
-Remove the imported Project, GPT, Skill, agent, rule, command, workflow, or workspace configuration from the platform UI or delete the selected `windsurf/cybersecurity/` directory from the repository. Remove any manually uploaded knowledge files from the platform. Do not delete organizational evidence or platform-global settings unless a human owner explicitly authorizes that cleanup.
+For Cascade, remove the selected area from the workspace or delete the imported `.windsurf/skills/` and `AGENTS.md` files from the project copy. For Devin Local/CLI, delete `windsurf/cybersecurity/.devin/config.json` from the project copy or remove the entire `windsurf/cybersecurity/` package. In the CLI, use `devin skills paths` and `devin rules paths` to confirm no copied project or global artifacts remain. Do not delete user-global Devin, Windsurf, MCP, or organization settings unless the responsible human owner explicitly approves that separate cleanup.
 
 ## Limitations
 
-This package is a static professional baseline. It is not a managed security service, scanner, SIEM, SOAR, EDR/XDR integration, penetration-testing tool, incident-response platform, legal opinion, compliance certification, or production-control system. Platform support and schema details can change, especially for preview agent, Skill, hook, and permission features.
+This package is static instruction and Skill content. It is not a scanner, SIEM, SOAR, EDR/XDR integration, penetration-testing tool, incident-response platform, managed service, legal opinion, compliance certification, or production-control system. Cascade, Devin Local, Skills, hooks, permissions, and import behavior can change by release, plan, account, and administrator policy.
 
 ## Security notice
 
-Offensive testing, incident actions, production changes, external integrations, live scans, exploitation, deployment, recovery, publication, and use of sensitive evidence require explicit authorization, validated scope, and human control. Do not use these components to bypass approval, access secrets, contact external systems, or claim live execution without evidence.
+Explicit authorization and human control are mandatory for offensive testing, incident actions, production changes, external integrations, live scans, exploitation, deployment, recovery, publication, and use of sensitive evidence. Do not use this package to bypass approval, access secrets, contact external systems, or claim live execution without evidence.

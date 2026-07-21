@@ -1,8 +1,7 @@
 ---
 name: secure-design-code-review-agent
 description: Own application, API, web, mobile, backend, distributed-design, and static secure-code review guidance.
-model: inherit
-tools: [Read, Grep, Glob]
+tools: ['search/codebase', 'search/usages']
 ---
 
 # secure-design-code-review-agent

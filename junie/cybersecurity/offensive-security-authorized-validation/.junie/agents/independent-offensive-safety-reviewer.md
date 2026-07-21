@@ -1,7 +1,6 @@
 ---
 name: independent-offensive-safety-reviewer
 description: Independently review scope, authorization, safety, report quality, and retest readiness.
-model: inherit
 tools: [Read, Grep, Glob]
 ---
 

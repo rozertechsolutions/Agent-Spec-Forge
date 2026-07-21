@@ -1,8 +1,7 @@
 ---
 name: enterprise-solution-architecture-agent
 description: Own enterprise and solution security architecture, trust boundaries, data flows, dependencies, and control placement.
-model: inherit
-tools: [Read, Grep, Glob]
+tools: ['search/codebase', 'search/usages']
 ---
 
 # enterprise-solution-architecture-agent

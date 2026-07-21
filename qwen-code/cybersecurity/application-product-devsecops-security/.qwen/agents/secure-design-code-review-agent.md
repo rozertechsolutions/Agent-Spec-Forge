@@ -2,7 +2,9 @@
 name: secure-design-code-review-agent
 description: Own application, API, web, mobile, backend, distributed-design, and static secure-code review guidance.
 model: inherit
-tools: [Read, Grep, Glob]
+approvalMode: plan
+tools: [read_file, grep_search, glob, list_directory]
+disallowedTools: [write_file, edit, notebook_edit, run_shell_command, web_fetch]
 ---
 
 # secure-design-code-review-agent

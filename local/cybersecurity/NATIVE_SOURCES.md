@@ -2,30 +2,70 @@
 
 Documentation review date: 2026-07-21.
 
-Product surface: Provider-neutral local specification, YAML schemas, roles, workflows, policies, and extension points.
+Product surface: provider-neutral local specification, YAML manifests, JSON Schema Draft 2020-12 schemas, role contracts, workflows, policies, tools, and portable Skill procedures.
 
-Official source evidence checked or retained for this platform:
+## Source Checks
 
-- local static schema and repository files only
+### Check 1 - Current reference surface
 
-Validation method:
+- Repository-defined local manifests: `local/cybersecurity/<area>/local.yaml`.
+- Repository-defined contract schemas: `local/cybersecurity/<area>/schemas/*.schema.json`.
+- Repository-defined area specifications: `local/cybersecurity/<area>/SPECIFICATION.md` where present.
 
-- Inventory of `local/cybersecurity/` files and native support directories.
-- Static syntax parsing for JSON, TOML, YAML where applicable.
-- Reference resolution for retained repository-local prompts, Skills, agents, and config files where applicable.
-- Removal of redundant area-level source copies after this platform-wide source file replaced them.
+### Check 2 - Change and compatibility review
 
-Current native facts recorded:
+- The local platform is intentionally not a vendor product and has no external release-note stream.
+- Compatibility is defined by the repository contracts, JSON Schema Draft 2020-12 declarations, and provider-neutral fields in the retained YAML files.
+- The audit verified that the package remains model-neutral, endpoint-neutral, runtime-neutral, and provider-neutral.
 
-- Project paths: `local/cybersecurity/<area>/` for all eight Cybersecurity areas.
-- Discovery: use the platform-specific README and open/import from the documented working directory or manual UI location.
-- Permissions: read-only/static by default; shell, network, MCP, connector, hosted tool, scanner, deployment, and production actions absent or denied unless a human explicitly configures them outside this baseline.
-- Trust: repository-local configuration is effective only when the platform trusts or imports the project according to its current documentation.
-- Precedence: nearest area-level instructions or manually selected area package govern the selected work; platform-level README and this file provide package-wide evidence.
-- Omitted mechanisms: fake MCP servers, generated live hooks, external endpoints, credentials, cloud actions, scanners, and deployment automation are intentionally omitted.
+### Check 3 - Current schema and parser behavior
 
-Removed or deprecated field handling:
+- JSON files parse successfully.
+- YAML files parse successfully with Ruby's standard YAML parser.
+- Area `local.yaml` files preserve `provider_neutral: true`, `runtime_binding: none`, `active_integrations: false`, `mcp_servers: []`, and denied shell/network/live-system actions.
+- Project-defined fields such as `manual_static_only`, `static_only`, `provider_neutral`, and `runtime_binding` are valid local contract fields.
 
-- Unsupported descriptive-only metadata is not treated as a permission control.
-- Platform-specific frontmatter and config fields must be verified against current vendor documentation before use.
-- For SDK packages, runtime API compatibility must be validated in an isolated environment without model calls before production use.
+## Current Native Facts
+
+- Area path: `local/cybersecurity/<area>/`.
+- Primary manifest: `local.yaml`.
+- Schemas: `schemas/*.schema.json`.
+- Agents: `agents/*.yaml`.
+- Subagents: `subagents/*.yaml` where present and referenced.
+- Skills: structured `skills/*.yaml` where present and portable `skills/*/SKILL.md`.
+- Workflows: `workflows/*.yaml`.
+- Tools and policies: `tools/*.yaml` and `policies/*` where present.
+- Discovery: deliberate consumer load only; no AI platform autoload.
+- Runtime binding: none in the reusable baseline.
+
+## Discovery, Precedence, And Trust
+
+- Consumers should launch or import from `local/cybersecurity/<area>/`.
+- Area-local relative paths are resolved from the selected area directory.
+- Recommended precedence: `local.yaml`, policies, coordinator or primary agent, subagent or Skill, workflow, artifact schema.
+- The consuming runtime is responsible for trust prompts, path isolation, and enforcement.
+- Runtime-specific provider, model, endpoint, credential, vector-store, connector, and tool settings belong outside this reusable baseline.
+
+## File Classification
+
+- Retained: all eight area roots, eight `local.yaml` files, 155 YAML files, 32 JSON schema files, 47 portable Skill Markdown files, area policies, tools, workflows, and specifications.
+- Retained `agents/` and `subagents/` pairs where present because `agents/` define full contracts and coordinators while `subagents/` provide referenced delegation targets for consuming runners.
+- Retained project-defined static policy fields because they are local contract fields, not unsupported vendor metadata.
+- Deleted: none for this platform stage; no exact duplicate files were found.
+- Omitted: bundled model provider, Ollama or LM Studio binding, vector store, orchestration framework, MCP runtime, connectors, scanners, hooks, cloud integrations, schedules, and production actions.
+
+## Removed Or Deprecated Field Handling
+
+- No vendor-specific configuration schema is applied to the local package.
+- No provider, model, endpoint, or external integration is hard-coded.
+- No project-defined `static_only` or equivalent static policy fields were removed.
+- No fake repository agent, hook, MCP, scanner, or live integration is simulated.
+
+## Validation Method
+
+- Inventory of all eight local Cybersecurity areas.
+- JSON parsing for 32 schema files.
+- YAML parsing for 155 YAML files.
+- Static local-contract validation for area manifests, disabled integrations, empty MCP lists, denied shell/network/live actions, and Skill frontmatter.
+- Exact duplicate scan across retained local files.
+- README review for implementation mapping, project-dependent values, user/organization-dependent values, fixed safety baseline, removal, and limitations.

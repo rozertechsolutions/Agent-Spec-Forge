@@ -1,13 +1,14 @@
 {
   "permissions": {
     "allow": [
+      "Read(**)",
       "read",
       "grep",
       "glob"
     ],
     "ask": [
-      "edit",
-      "Write(**)"
+      "Write(**)",
+      "edit"
     ],
     "deny": [
       "exec",
@@ -17,5 +18,11 @@
       "Write(.env*)",
       "Write(**/.env*)"
     ]
+  },
+  "mcpServers": {},
+  "read_config_from": {
+    "cursor": false,
+    "windsurf": true,
+    "claude": false
   }
 }

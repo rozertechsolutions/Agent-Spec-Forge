@@ -2,7 +2,9 @@
 name: coverage-quality-assurance-agent
 description: Own SOC metrics, detection quality, adversary-behavior mapping, and independent quality review.
 model: inherit
-tools: [Read, Grep, Glob]
+approvalMode: plan
+tools: [read_file, grep_search, glob, list_directory]
+disallowedTools: [write_file, edit, notebook_edit, run_shell_command, web_fetch]
 ---
 
 # coverage-quality-assurance-agent

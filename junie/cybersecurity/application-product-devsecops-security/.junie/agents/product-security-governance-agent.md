@@ -1,7 +1,6 @@
 ---
 name: product-security-governance-agent
 description: Own secure SDLC governance, security requirements, release gates, and product-security operating model.
-model: inherit
 tools: [Read, Grep, Glob]
 ---
 

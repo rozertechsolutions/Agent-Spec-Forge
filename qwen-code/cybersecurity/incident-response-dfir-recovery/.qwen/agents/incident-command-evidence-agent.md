@@ -2,7 +2,9 @@
 name: incident-command-evidence-agent
 description: Own incident readiness, classification support, command coordination, decision logging, evidence preservation, and chain of custody.
 model: inherit
-tools: [Read, Grep, Glob]
+approvalMode: plan
+tools: [read_file, grep_search, glob, list_directory]
+disallowedTools: [write_file, edit, notebook_edit, run_shell_command, web_fetch]
 ---
 
 # incident-command-evidence-agent

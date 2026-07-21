@@ -1,7 +1,6 @@
 ---
 name: white-team-deconfliction-agent
 description: Own white-team deconfliction, safety, communications, emergency stop, and artifact-control planning.
-model: inherit
 tools: [Read, Grep, Glob]
 ---
 

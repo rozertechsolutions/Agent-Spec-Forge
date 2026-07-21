@@ -1,112 +1,176 @@
-# Cybersecurity Department for kilo-code
+# Cybersecurity Department for Kilo Code
 
-This Cybersecurity department is a professional, adaptable baseline for kilo-code covering governance, architecture, product security, vulnerability management, defensive operations, incident response, authorized offensive validation, and resilience.
+This Cybersecurity department is a reusable Kilo Code baseline for governance, risk, compliance, and assurance; security architecture and engineering; application, product, and DevSecOps security; exposure, vulnerability, and hardening management; defensive operations, detection, and threat intelligence; incident response, DFIR, and recovery; authorized offensive validation; and resilience and specialized technologies.
 
-Its purpose is to help humans produce evidence-based cybersecurity work products while preserving clear professional ownership, least privilege, independent review, and human authority for consequential decisions.
+It solves the professional problem of producing scoped, evidence-based cybersecurity work products while keeping authorization, approvals, risk acceptance, incident command, offensive testing authorization, and production decisions under human control.
 
-Possible uses include risk and compliance assessment, security architecture review, threat modeling, secure SDLC review, vulnerability prioritization, detection engineering, incident-response planning, authorized penetration-test planning, resilience exercises, and independent assurance.
+Possible uses include risk and compliance assessment, architecture review, threat modeling, secure SDLC review, vulnerability prioritization, detection engineering review, incident-response planning, authorized validation planning, resilience exercises, and independent assurance.
 
 ## Department overview
 
-The department contains eight Cybersecurity areas under `kilo-code/cybersecurity/<area>/`. Each area is scoped to a distinct professional ownership boundary and is intended for static analysis, planning, review, documentation, and assurance using supplied evidence.
+The department contains eight isolated Kilo Code project packages under `kilo-code/cybersecurity/<area>/`. Each area uses current Kilo Code surfaces: `AGENTS.md`, `kilo.jsonc`, `.kilo/agents/*.md`, `.kilo/commands/*.md`, `.kilo/skills/<skill>/SKILL.md`, `.kilo/rules/*.md` where unique rule files are needed, and `.kilocodeignore`.
 
-It does not authorize live scanning, exploitation, containment, recovery execution, production changes, publication, external integrations, legal determinations, risk acceptance, or closure decisions. Human owners remain accountable for authorization, approvals, exceptions, risk acceptance, incident declaration or closure, offensive testing authorization, and production action.
+The AI is not authorized to accept enterprise risk, approve its own work, authorize offensive testing, approve production changes, make legal determinations, approve incident closure or recovery completion, hide residual risk, or claim execution without evidence.
 
 ## Possible uses
 
-- Risk and compliance assessment using supplied policies, control evidence, and framework mappings.
-- Security architecture and engineering review for proposed designs and reference patterns.
-- Threat modeling, secure SDLC review, release-readiness support, and supply-chain evidence review.
-- Vulnerability prioritization, remediation planning, and hardening governance from provided findings.
-- Detection engineering, telemetry coverage review, SOC triage methods, and threat-hunt planning.
-- Incident-response readiness, DFIR planning, evidence governance, recovery planning, and lessons learned.
-- Authorized offensive assessment planning, rules of engagement review, validation planning, and retest assurance.
-- Resilience exercises, ransomware recovery planning, specialized technology review, and independent assurance.
+- Draft governance, risk, policy, control, exception, assurance, third-party, and reporting artifacts from supplied evidence.
+- Review enterprise, solution, identity, cloud, network, data, container, automation, and control architecture.
+- Support secure SDLC, threat modeling, secure design/code review, CI/CD, supply-chain, PSIRT, and release-readiness evidence review.
+- Triage supplied vulnerabilities and exposures, plan remediation and hardening, and review validation evidence.
+- Review telemetry requirements, detection logic, SOC triage, hunting, intelligence, malware-analysis planning, automation, and coverage quality.
+- Prepare incident readiness, evidence handling, DFIR planning, containment planning, recovery coordination, tabletop, and corrective-action artifacts.
+- Plan explicitly authorized offensive validation, scope, rules of engagement, deconfliction, emulation, Purple Team validation, retest, and cleanup assurance.
+- Review resilience, ransomware recovery, specialized technology, OT/ICS, IoT, embedded, AI security, hardware, firmware, cryptography, and critical infrastructure.
 
 ## Platform compatibility
 
-Product surface: Kilo Code rules, AGENTS.md, .kilo agents, workflows, Skills, kilo.jsonc permissions, hooks, and MCP settings.
+Validated against current Kilo Code documentation checked on 2026-07-21. The relevant surface is Kilo Code 1.0 or later in the current VS Code extension and CLI, which are built on the Kilo CLI.
 
-Validated documentation date: 2026-07-21. Plan, account, workspace, IDE, CLI, SDK, and preview availability vary by vendor release and administrator policy. This package documents static, repository-local or manually importable components only.
+Current native mechanisms used here:
+
+- Project configuration in `kilo.jsonc`.
+- Project instructions through root `AGENTS.md`.
+- Additional project rules through `instructions` entries in `kilo.jsonc`.
+- Custom subagents in `.kilo/agents/*.md`.
+- Agent Skills in `.kilo/skills/<skill>/SKILL.md`.
+- Slash-command workflows in `.kilo/commands/*.md`.
+- File access exclusions in `.kilocodeignore`.
+
+Legacy `.kilocodemodes`, `.kilocode/rules`, and `.kilo/workflows` layouts are not used.
 
 ## Prerequisites
 
-Kilo Code installed; trusted workspace; current version with project rules and Skills support.
-
-Do not place credentials, tokens, keys, private endpoints, personal data, confidential customer data, or live system access material in this package. Connectors, MCP servers, cloud accounts, scanners, SIEM/EDR/XDR/SOAR tools, ticketing systems, identity providers, and hosted tools are disabled or absent unless a retained native file explicitly documents a human-approved external configuration.
+- Kilo Code VS Code extension or Kilo CLI version 1.0 or later.
+- User-managed Kilo provider authentication outside this repository if the user later runs Kilo.
+- A trusted workspace opened at the selected area root.
+- Explicit authorized scope, exclusions, human owner, reviewer, approver role, and redacted evidence.
+- No committed credentials, API keys, provider configs, private endpoints, scanner credentials, SIEM/EDR/XDR/SOAR credentials, cloud credentials, incident contacts, or customer secrets.
 
 ## Installation or import
 
-Open the relevant area directory in Kilo Code. Kilo reads kilo.jsonc and .kilo assets where present; Skills are under documented project skill paths.
+For CLI use from the repository root, start Kilo with the selected area as the project:
 
-Use project-local or repository-local setup only. Do not install tools globally from this package, and do not authenticate services merely to import the instructions.
+```bash
+kilo kilo-code/cybersecurity/governance-risk-compliance-assurance
+```
+
+For one-shot CLI use after the user has configured Kilo outside this repository, change into the area first:
+
+```bash
+cd kilo-code/cybersecurity/application-product-devsecops-security
+kilo run "Use /threat-modeling for a static review of the supplied payment-service design evidence. Do not scan, exploit, deploy, connect MCP, or modify production."
+```
+
+For the VS Code extension, open the selected `kilo-code/cybersecurity/<area>/` folder as the workspace root, then use Kilo's agent picker, `/agents`, `/reload`, and slash command picker from that workspace.
+
+This package does not run Kilo, authenticate providers, install global tools, connect MCP, or call a model during repository validation.
 
 ## Working directory and discovery
 
-Kilo Code loads project rules/config from documented locations in the opened workspace. Area isolation is preserved by area-local kilo.jsonc and .kilo rules.
+Use one area directory as the Kilo project root, for example `kilo-code/cybersecurity/incident-response-dfir-recovery/`.
 
-When a platform supports upward discovery, the nearest area-level instructions take precedence for that area. When a platform requires manual import, treat each area as an isolated package and do not mix files across areas unless a human explicitly approves a cross-area handoff.
+Kilo discovers:
+
+- `kilo.jsonc` from the project root.
+- `AGENTS.md` from the project root, plus per-directory `AGENTS.md` files when files in those directories are read.
+- `.kilo/agents/*.md` as project custom agents/subagents.
+- `.kilo/commands/*.md` as slash-command workflows invoked as `/<filename>`.
+- `.kilo/skills/<skill>/SKILL.md` as project Skills.
+- `.kilocodeignore` as a supported access-control compatibility file that is migrated into read/edit deny behavior.
+
+Configuration precedence is layered: built-in defaults, global config, project `kilo.jsonc`, `.kilo` agent files, and environment overrides. Project instructions take precedence over global instructions for conflicts, but user/global settings can still broaden behavior if the user configured them.
+
+Do not open `kilo-code/cybersecurity/` as one combined project and expect all eight nested area packages to merge correctly. Choose one area root per task.
 
 ## Area map
 
-- `kilo-code/cybersecurity/governance-risk-compliance-assurance/` - Governance, Risk, Compliance, and Assurance: governance, cyber risk, compliance mapping, policies, assurance, exceptions, and risk-decision support.
-- `kilo-code/cybersecurity/security-architecture-engineering/` - Security Architecture and Engineering: security architecture, engineering patterns, identity, network, cloud, data, platform, and control design review.
-- `kilo-code/cybersecurity/application-product-devsecops-security/` - Application, Product, and DevSecOps Security: product security, secure SDLC, threat modeling, code/design review, CI/CD, supply chain, PSIRT, and release assurance.
-- `kilo-code/cybersecurity/exposure-vulnerability-hardening/` - Exposure, Vulnerability, and Hardening: asset exposure, vulnerability triage, prioritization, hardening, remediation governance, and validation evidence.
-- `kilo-code/cybersecurity/defensive-security-operations-detection-intelligence/` - Defensive Security Operations, Detection, and Intelligence: SOC operating model, telemetry, detection engineering, alert triage, hunting, intelligence, and coverage quality.
-- `kilo-code/cybersecurity/incident-response-dfir-recovery/` - Incident Response, DFIR, and Recovery: incident planning, evidence governance, DFIR analysis planning, containment planning, recovery coordination, and lessons learned.
-- `kilo-code/cybersecurity/offensive-security-authorized-validation/` - Offensive Security and Authorized Validation: explicitly authorized assessment planning, rules of engagement, emulation governance, retest planning, and safety review.
-- `kilo-code/cybersecurity/cyber-resilience-specialized-technologies/` - Cyber Resilience and Specialized Technologies: resilience, ransomware recovery planning, specialized technology review, cryptography, critical infrastructure, OT/IoT/cloud edge, and transition assurance.
+- `kilo-code/cybersecurity/governance-risk-compliance-assurance/` - governance, policy, risk, compliance mapping, exceptions, assurance, third-party review, and reporting.
+- `kilo-code/cybersecurity/security-architecture-engineering/` - enterprise, solution, identity, cloud, network, data, platform, container, automation, and control architecture.
+- `kilo-code/cybersecurity/application-product-devsecops-security/` - product security, secure SDLC, threat modeling, secure design/code review, CI/CD, supply chain, PSIRT, and release assurance.
+- `kilo-code/cybersecurity/exposure-vulnerability-hardening/` - exposure management, vulnerability triage, finding prioritization, remediation, hardening, and validation reporting.
+- `kilo-code/cybersecurity/defensive-security-operations-detection-intelligence/` - SOC governance, telemetry, detection, triage, hunting, intelligence, malware-analysis planning, automation review, and coverage quality.
+- `kilo-code/cybersecurity/incident-response-dfir-recovery/` - incident command support, evidence governance, DFIR planning, containment planning, recovery coordination, scenarios, and post-incident action.
+- `kilo-code/cybersecurity/offensive-security-authorized-validation/` - authorization, scope, rules of engagement, assessment planning, emulation, deconfliction, retest, cleanup, and safety review.
+- `kilo-code/cybersecurity/cyber-resilience-specialized-technologies/` - resilience, backup/recovery, ransomware recovery, specialized technology, OT/ICS, IoT, AI security, hardware, firmware, cryptography, and critical infrastructure.
 
 ## Native components
 
-- `governance-risk-compliance-assurance/`: `AGENTS.md`, `kilo.jsonc`, `.kilo/`
-- `security-architecture-engineering/`: `AGENTS.md`, `kilo.jsonc`, `.kilo/`
-- `application-product-devsecops-security/`: `AGENTS.md`, `kilo.jsonc`, `.kilo/`
-- `exposure-vulnerability-hardening/`: `AGENTS.md`, `kilo.jsonc`, `.kilo/`
-- `defensive-security-operations-detection-intelligence/`: `AGENTS.md`, `kilo.jsonc`, `.kilo/`
-- `incident-response-dfir-recovery/`: `AGENTS.md`, `kilo.jsonc`, `.kilo/`
-- `offensive-security-authorized-validation/`: `AGENTS.md`, `kilo.jsonc`, `.kilo/`
-- `cyber-resilience-specialized-technologies/`: `AGENTS.md`, `kilo.jsonc`, `.kilo/`
+Each area retains:
 
-Unsupported native mechanisms are omitted rather than simulated. The package does not include fake MCP servers, live hooks that execute security actions, hosted scanner integrations, cloud deployment automation, or credentials.
+- `AGENTS.md` for project-level and per-directory instruction discovery.
+- `kilo.jsonc` for instructions, permissions, and empty MCP configuration.
+- `.kilo/agents/*.md` custom subagents with `mode: subagent`.
+- `.kilo/commands/*.md` slash-command workflow prompts.
+- `.kilo/skills/<skill>/SKILL.md` Agent Skills.
+- `.kilo/rules/*.md` only where the rule file contains unique content referenced by `kilo.jsonc`.
+- `.kilocodeignore` for sensitive-file and bulky-output access exclusions.
 
 ## How to use the department
 
-Select the area that owns the requested work, open or import that area according to the platform rules above, and provide authorized scope, exclusions, accountable owner, requester, intended audience, decision needed, evidence inventory, assumptions, constraints, reviewer, and approver role.
+Select the area that owns the work, open that area as the Kilo project, and provide a scoped request such as:
 
-Expected outputs are scoped artifacts with evidence tables, assumptions, findings or recommendations separated by evidence state, limitations, confidence, residual risk, required human decisions, and completion criteria. High-impact outputs must be routed to an independent reviewer that did not create the work. Components stop when authorization is missing, sensitive data is unredacted, scope is unclear, a live action is requested, evidence is insufficient for a conclusion, or self-review would occur.
+```text
+Use /authorization-scope-roe for the authorized API validation plan. Scope: staging API endpoints listed in evidence/scope.md. Exclusions: production, exploitation, credential use, DoS, persistence, and social engineering. Output: ROE review, missing approvals, safe test boundaries, evidence table, and independent safety review checklist.
+```
+
+Use slash commands by typing the filename with a leading slash, such as `/governance-policy-frameworks`, `/security-architecture-review`, `/threat-modeling`, `/incident-readiness-triage`, or `/independent-offensive-safety-review`.
+
+Custom subagents can be invoked by primary agents or manually with `@agent-name`, for example:
+
+```text
+@independent-assurance-reviewer review this draft exception package for unsupported conclusions and missing evidence.
+```
+
+Expected output is a static artifact with scope, assumptions, evidence table, findings separated by evidence state, limitations, confidence, residual risk, human decisions, handoffs, stop conditions, and completion criteria. Stop when authorization is missing, evidence is insufficient, sensitive data is unredacted, a live action is requested, self-review would occur, or a human-only decision is requested.
 
 ## Permissions and safety
 
-Default behavior is read-only and static. Repository writes, where a platform technically allows them, must stay inside the selected `kilo-code/cybersecurity/<area>/` directory and require an explicit user task to update static artifacts. Shell, network, installation, deployment, scanning, exploitation, recovery execution, remote Git operations, MCP connections, hosted tools, and external connectors are prohibited by default.
+Area `kilo.jsonc` files allow repository read/search behavior, route subagent delegation through `permission.task`, ask before project writes, deny external-path writes, deny destructive Git and remove operations, and define an empty `mcp` object. Subagent files are stricter: they allow read/search and deny edit, write, bash, and task delegation.
 
-AI components cannot self-approve, accept enterprise risk, authorize offensive testing, approve production changes, close incidents, certify compliance, make legal determinations, or conceal residual risk. Human review is mandatory for approvals, exceptions, risk acceptance, release or closure decisions, incident command, offensive authorization, external reporting, and production actions.
+Kilo permission rules resolve to `allow`, `ask`, or `deny`; pattern rules are evaluated with the last matching rule winning. Review user/global Kilo settings before use because global configuration, organization-managed agents, or environment overrides can alter behavior.
+
+MCP is absent in this package. Do not add MCP servers, provider API keys, proxy configs, hosted tools, scanner connectors, cloud accounts, terminal auto-approval, or broad Action Allowlist entries unless a separate authorized environment and human approval explicitly require them.
 
 ## Configuration and customization
 
-Organizations may add policies, frameworks, asset context, risk appetite, service-level targets, tool names, responsible roles, approved integrations, sector requirements, and evidence templates as static files in the relevant area after human review. Keep values organization-neutral in shared packages, redact sensitive information, and document any integration without enabling it by default.
+### Project-dependent configuration
+
+Adapt repository paths, source directories, application architecture, build systems, technology stack, deployment model, cloud provider, CI/CD structure, telemetry locations, product requirements, threat-model scope, project assets, approved targets, area working directory, and repository-specific policies per project.
+
+### User/organization-dependent configuration
+
+Supply or approve Kilo account/subscription, provider credentials, user identity, organization policies, regulatory frameworks, risk appetite, asset criticality, SLAs, escalation contacts, approval authorities, permitted tools, permitted integrations, API credentials, MCP endpoints, cloud accounts, SIEM/EDR/XDR/SOAR systems, ticketing systems, incident contacts, offensive-testing scope, data retention, legal constraints, and privacy constraints outside this repository. Never commit real secrets or confidential organization values.
+
+### Fixed baseline configuration
+
+Keep area ownership boundaries, independent review, no self-approval, no automatic risk acceptance, evidence requirements, conservative permissions, prohibited unauthorized actions, stop conditions, and human approval gates unless a formal governance decision changes the baseline.
 
 ## Validation
 
-Static validation can check file syntax, native paths, frontmatter, JSON/TOML/YAML parsing, prompt references, Skill structure, duplicate or obsolete files, empty artifacts, broken links, and absence of secrets or active integrations. Live system behavior, connector access, model behavior, scanner operation, incident action, recovery, and production integration require a separate authorized environment and were not exercised by this repository package.
+Repository validation covers JSONC parsing, Markdown/YAML frontmatter parsing, agent names and modes, permission fields, command location, Skill structure, rule references, duplicate/orphan review, `.kilocodeignore`, empty files, broken references, secrets, and temporary residue.
+
+Runtime validation of actual Kilo model behavior, provider authentication, MCP connections, agent execution, live scans, incident actions, and production changes requires a separate authorized environment and was not performed by this repository remediation.
 
 ## Troubleshooting
 
-- If instructions are ignored, confirm the platform was opened from the documented working directory or the files were manually imported into the correct Project, Skill, agent, or rule location.
-- If an agent or Skill is unavailable, verify the platform feature is enabled for the plan/workspace and that the directory name and native filename match the current product documentation.
-- If permissions appear broader than intended, inspect platform settings before use and deny shell, network, MCP, connector, deployment, scanner, and remote Git access.
-- If paths fail to resolve, use paths relative to the selected area package unless the platform documentation states otherwise.
-- If a platform preview feature changes, re-check official documentation and update `kilo-code/cybersecurity/NATIVE_SOURCES.md` before relying on it.
+- If commands are missing, confirm they are in `.kilo/commands/`, not `.kilo/workflows/`, and run `/reload`.
+- If an agent is not available, confirm the file is in `.kilo/agents/`, has valid YAML frontmatter, and uses `mode: subagent`, `primary`, or `all`.
+- If a Skill is not used, check `.kilo/skills/<name>/SKILL.md` and make the `description` specific enough for Kilo to select it.
+- If rules appear duplicated, rely on `AGENTS.md` for the area baseline and keep only unique `.kilo/rules` files referenced in `kilo.jsonc`.
+- If permissions are broader than intended, inspect project `kilo.jsonc`, global `~/.config/kilo/kilo.jsonc`, organization-managed agents, and environment overrides.
+- If sensitive files are accessible, confirm `.kilocodeignore` and `permission.read`/`permission.edit` deny rules are active from the selected workspace root.
 
 ## Removal or uninstall
 
-Remove the imported Project, GPT, Skill, agent, rule, command, workflow, or workspace configuration from the platform UI or delete the selected `kilo-code/cybersecurity/` directory from the repository. Remove any manually uploaded knowledge files from the platform. Do not delete organizational evidence or platform-global settings unless a human owner explicitly authorizes that cleanup.
+To remove this package from a repository, delete `kilo-code/cybersecurity/<area>/` or `kilo-code/cybersecurity/` after preserving any real project evidence stored elsewhere. To remove imported global components, delete only the user-owned copies from `~/.config/kilo/agents/`, `~/.config/kilo/commands/`, `~/.kilo/skills/`, or global `kilo.jsonc` after explicit approval.
+
+To stop using Kilo for the area without deleting repository content, close the workspace, remove any manually imported MCP or provider settings from Kilo's UI/config, and clear broad approval rules that were added outside this package.
 
 ## Limitations
 
-This package is a static professional baseline. It is not a managed security service, scanner, SIEM, SOAR, EDR/XDR integration, penetration-testing tool, incident-response platform, legal opinion, compliance certification, or production-control system. Platform support and schema details can change, especially for preview agent, Skill, hook, and permission features.
+This package is a static professional baseline, not a managed security service, scanner, SIEM, SOAR, EDR/XDR integration, penetration-testing tool, DFIR platform, legal opinion, compliance certification, or production-control system. Kilo feature availability and extension/CLI behavior can change.
 
 ## Security notice
 
-Offensive testing, incident actions, production changes, external integrations, live scans, exploitation, deployment, recovery, publication, and use of sensitive evidence require explicit authorization, validated scope, and human control. Do not use these components to bypass approval, access secrets, contact external systems, or claim live execution without evidence.
+Offensive testing, incident actions, production changes, external integrations, live scans, exploitation, deployment, recovery, publication, and sensitive evidence handling require explicit authorization, validated scope, and human control. Do not use these components to bypass approval, access secrets, contact external systems, or claim live execution without evidence.

@@ -2,7 +2,9 @@
 name: findings-retest-assurance-agent
 description: Own finding quality, evidence, severity, confidence, cleanup assurance, authorized retest planning, and remediation validation.
 model: inherit
-tools: [Read, Grep, Glob]
+approvalMode: plan
+tools: [read_file, grep_search, glob, list_directory]
+disallowedTools: [write_file, edit, notebook_edit, run_shell_command, web_fetch]
 ---
 
 # findings-retest-assurance-agent

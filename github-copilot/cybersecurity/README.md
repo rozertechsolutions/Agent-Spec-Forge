@@ -25,27 +25,33 @@ It does not authorize live scanning, exploitation, containment, recovery executi
 
 ## Platform compatibility
 
-Product surface: GitHub Copilot in VS Code, Copilot CLI, Copilot coding agent, custom instructions, prompt files, custom agents, Agent Skills, and preview hooks where supported.
+Product surface: GitHub Copilot in VS Code, GitHub Copilot CLI, Copilot coding agent/cloud agent where enabled, workspace custom instructions in `.github/copilot-instructions.md`, custom agents in `.github/agents/*.agent.md`, prompt files in `.github/prompts/*.prompt.md`, Agent Skills in `.github/skills/<name>/SKILL.md`, optional hooks, and optional MCP only when separately configured.
 
-Validated documentation date: 2026-07-21. Plan, account, workspace, IDE, CLI, SDK, and preview availability vary by vendor release and administrator policy. This package documents static, repository-local or manually importable components only.
+Validated documentation date: 2026-07-21. Copilot subscription, VS Code version, CLI/cloud-agent access, organization customizations, available models, hooks, and MCP policy vary by account, plan, preview flag, and administrator policy. This package documents static, repository-local components only.
 
 ## Prerequisites
 
-GitHub Copilot subscription and supported IDE/CLI/coding-agent surface; trusted workspace; plan and preview availability vary.
+GitHub Copilot subscription; supported VS Code/Copilot CLI or Copilot coding-agent surface; trusted workspace; repository customizations enabled; Agent Skills/custom agents available for the user's version and plan.
 
 Do not place credentials, tokens, keys, private endpoints, personal data, confidential customer data, or live system access material in this package. Connectors, MCP servers, cloud accounts, scanners, SIEM/EDR/XDR/SOAR tools, ticketing systems, identity providers, and hosted tools are disabled or absent unless a retained native file explicitly documents a human-approved external configuration.
 
 ## Installation or import
 
-Keep .github instructions, prompts, agents, and skills in each area. Open in VS Code or Copilot CLI and enable custom instructions/agents/skills according to GitHub documentation.
+Open the selected area folder as the workspace so its `.github/` directory is the active customization root:
+
+```bash
+code github-copilot/cybersecurity/governance-risk-compliance-assurance
+```
+
+In VS Code, the equivalent is File -> Open Folder and selecting `github-copilot/cybersecurity/<area>/`. Confirm Copilot Chat customization diagnostics show the area's `.github/copilot-instructions.md`, `.github/agents/*.agent.md`, `.github/prompts/*.prompt.md`, and `.github/skills/`. Use one area per session unless the human explicitly asks for a cross-area handoff.
 
 Use project-local or repository-local setup only. Do not install tools globally from this package, and do not authenticate services merely to import the instructions.
 
 ## Working directory and discovery
 
-Copilot discovers .github/copilot-instructions.md, path-specific instructions, prompt files, custom agents, and Agent Skills from documented repository locations. Area isolation is by area-local .github content.
+VS Code automatically detects `.github/copilot-instructions.md` at the workspace root for all chat requests, custom agents from `.github/agents/*.agent.md`, prompt files from `.github/prompts/*.prompt.md`, and Agent Skills from `.github/skills/<skill-name>/SKILL.md`. Prompt files are slash-command style prompts invoked manually. Skills are discovered separately and can load when relevant or be invoked from the Skills menu where supported.
 
-When a platform supports upward discovery, the nearest area-level instructions take precedence for that area. When a platform requires manual import, treat each area as an isolated package and do not mix files across areas unless a human explicitly approves a cross-area handoff.
+Launch from `github-copilot/cybersecurity/<area>/` for area isolation. In monorepos, parent repository discovery settings can cause parent customizations to load; disable or account for those settings if you need strict area isolation. Organization-level instructions, organization custom agents, user prompts, user Skills, and user settings are user/organization-dependent and are not included here.
 
 ## Area map
 
@@ -60,32 +66,53 @@ When a platform supports upward discovery, the nearest area-level instructions t
 
 ## Native components
 
-- `governance-risk-compliance-assurance/`: `.github/`
-- `security-architecture-engineering/`: `.github/`
-- `application-product-devsecops-security/`: `.github/`
-- `exposure-vulnerability-hardening/`: `.github/`
-- `defensive-security-operations-detection-intelligence/`: `.github/`
-- `incident-response-dfir-recovery/`: `.github/`
-- `offensive-security-authorized-validation/`: `.github/`
-- `cyber-resilience-specialized-technologies/`: `.github/`
+- `.github/copilot-instructions.md`: area custom instructions automatically applied in the selected workspace.
+- `.github/agents/*.agent.md`: VS Code/GitHub Copilot custom agents with native frontmatter `name`, `description`, and read/search `tools`.
+- `.github/prompts/*.prompt.md`: manual prompt files for reusable slash-command workflows.
+- `.github/skills/<name>/SKILL.md`: Agent Skills with `name` and `description` frontmatter plus procedural instructions.
 
 Unsupported native mechanisms are omitted rather than simulated. The package does not include fake MCP servers, live hooks that execute security actions, hosted scanner integrations, cloud deployment automation, or credentials.
 
 ## How to use the department
 
-Select the area that owns the requested work, open or import that area according to the platform rules above, and provide authorized scope, exclusions, accountable owner, requester, intended audience, decision needed, evidence inventory, assumptions, constraints, reviewer, and approver role.
+Select the area that owns the requested work, open that area in VS Code or the supported Copilot surface, and provide authorized scope, exclusions, accountable owner, requester, intended audience, decision needed, evidence inventory, assumptions, constraints, reviewer, and approver role.
+
+Examples:
+
+```text
+Select governance-policy-frameworks-agent and review the supplied policy excerpts against the attached control matrix. Use static evidence only. Return a gap table, assumptions, confidence, residual risk, and human approval points.
+```
+
+```text
+/threat-modeling
+Scope: attached API design only.
+Output: threat model with abuse cases, mitigations, validation criteria, evidence gaps, and independent-review triggers.
+No file edits, shell commands, web access, or live scans.
+```
+
+```text
+Use independent-offensive-safety-review on the attached rules of engagement. Confirm authorization, targets, exclusions, stop conditions, and retest boundaries. Do not scan or contact any target.
+```
 
 Expected outputs are scoped artifacts with evidence tables, assumptions, findings or recommendations separated by evidence state, limitations, confidence, residual risk, required human decisions, and completion criteria. High-impact outputs must be routed to an independent reviewer that did not create the work. Components stop when authorization is missing, sensitive data is unredacted, scope is unclear, a live action is requested, evidence is insufficient for a conclusion, or self-review would occur.
 
 ## Permissions and safety
 
-Default behavior is read-only and static. Repository writes, where a platform technically allows them, must stay inside the selected `github-copilot/cybersecurity/<area>/` directory and require an explicit user task to update static artifacts. Shell, network, installation, deployment, scanning, exploitation, recovery execution, remote Git operations, MCP connections, hosted tools, and external connectors are prohibited by default.
+Default behavior is read-only and static. Custom agents use VS Code/GitHub Copilot tool identifiers `search/codebase` and `search/usages` only; they do not include edit, terminal, web, MCP, pull-request, issue, or deployment tools. If a user changes the active tools, starts a different built-in agent, enables MCP, enables hooks, or uses a cloud/coding-agent environment, those permissions are outside this baseline and require separate human approval.
+
+Repository writes, where a Copilot surface technically allows them outside the restricted custom agents, must stay inside the selected `github-copilot/cybersecurity/<area>/` directory and require an explicit user task to update static artifacts. Shell, network, installation, deployment, scanning, exploitation, recovery execution, remote Git operations, MCP connections, hosted tools, and external connectors are prohibited by default.
 
 AI components cannot self-approve, accept enterprise risk, authorize offensive testing, approve production changes, close incidents, certify compliance, make legal determinations, or conceal residual risk. Human review is mandatory for approvals, exceptions, risk acceptance, release or closure decisions, incident command, offensive authorization, external reporting, and production actions.
 
 ## Configuration and customization
 
-Organizations may add policies, frameworks, asset context, risk appetite, service-level targets, tool names, responsible roles, approved integrations, sector requirements, and evidence templates as static files in the relevant area after human review. Keep values organization-neutral in shared packages, redact sensitive information, and document any integration without enabling it by default.
+Project-dependent configuration: repository paths, source directories, application architecture, technology stack, deployment model, CI/CD layout, telemetry locations, threat-model scope, asset lists, approved targets, area-specific working directories, and repository-specific policies must be supplied per project and should not be hard-coded globally.
+
+User/organization-dependent configuration: GitHub/Copilot subscription, organization customizations, user identity, available models, cloud/coding-agent policy, organization policies, regulatory frameworks, risk appetite, asset criticality, SLAs, escalation contacts, approval authorities, permitted tools, permitted integrations, MCP endpoints, cloud/SIEM/EDR/XDR/SOAR/ticketing systems, incident contacts, offensive-testing authorization, retention rules, and legal/privacy constraints must be supplied or approved by the user or organization. Do not commit real secrets or confidential organization values.
+
+Fixed baseline configuration: area ownership boundaries, independent review, no self-approval, no automatic risk acceptance, evidence requirements, read/search-only custom agents, absent MCP/connectors/hooks, prohibited unauthorized actions, stop conditions, and human-approval gates normally remain unchanged because they define the reusable safety model.
+
+Organizations may add static policies, frameworks, asset context, service-level targets, approved tool names, sector requirements, and evidence templates in the relevant area after human review. Keep values organization-neutral in shared packages, redact sensitive information, and document any integration without enabling it by default.
 
 ## Validation
 
@@ -93,15 +120,17 @@ Static validation can check file syntax, native paths, frontmatter, JSON/TOML/YA
 
 ## Troubleshooting
 
-- If instructions are ignored, confirm the platform was opened from the documented working directory or the files were manually imported into the correct Project, Skill, agent, or rule location.
-- If an agent or Skill is unavailable, verify the platform feature is enabled for the plan/workspace and that the directory name and native filename match the current product documentation.
-- If permissions appear broader than intended, inspect platform settings before use and deny shell, network, MCP, connector, deployment, scanner, and remote Git access.
+- If instructions are ignored, confirm the selected area is the VS Code workspace root and Copilot diagnostics list the area's `.github/copilot-instructions.md`.
+- If an agent is unavailable, verify `.github/agents/<name>.agent.md` exists under the opened area and that Copilot custom agents are enabled.
+- If a prompt is unavailable, verify `.github/prompts/<name>.prompt.md` exists under the opened area and invoke it from the slash-command menu.
+- If a Skill is unavailable, verify `.github/skills/<name>/SKILL.md` exists under the opened area and that the Skill name matches the directory name.
+- If permissions appear broader than intended, inspect active agent, selected tools, VS Code settings, MCP state, hooks, organization policy, and cloud/coding-agent mode before use.
 - If paths fail to resolve, use paths relative to the selected area package unless the platform documentation states otherwise.
 - If a platform preview feature changes, re-check official documentation and update `github-copilot/cybersecurity/NATIVE_SOURCES.md` before relying on it.
 
 ## Removal or uninstall
 
-Remove the imported Project, GPT, Skill, agent, rule, command, workflow, or workspace configuration from the platform UI or delete the selected `github-copilot/cybersecurity/` directory from the repository. Remove any manually uploaded knowledge files from the platform. Do not delete organizational evidence or platform-global settings unless a human owner explicitly authorizes that cleanup.
+Close the Copilot session, remove any manually copied area files from a consuming project, or delete the selected `github-copilot/cybersecurity/<area>/` directory from a repository that no longer needs it. To remove one component, delete that area's `.github/agents/<name>.agent.md`, `.github/prompts/<name>.prompt.md`, `.github/skills/<name>/`, or `.github/copilot-instructions.md` and refresh VS Code/Copilot customizations. Do not delete organizational evidence, user settings, organization customizations, credentials, or platform-global settings unless a human owner explicitly authorizes that cleanup.
 
 ## Limitations
 

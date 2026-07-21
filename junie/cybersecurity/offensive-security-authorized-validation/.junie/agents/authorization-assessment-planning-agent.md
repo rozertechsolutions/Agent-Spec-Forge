@@ -1,7 +1,6 @@
 ---
 name: authorization-assessment-planning-agent
 description: Own written authorization, exact scope, rules of engagement, assessment planning, exclusions, dates, and emergency stop.
-model: inherit
 tools: [Read, Grep, Glob]
 ---
 
