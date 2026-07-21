@@ -2,7 +2,9 @@
 name: white-team-deconfliction-agent
 description: Own white-team deconfliction, safety, communications, emergency stop, and artifact-control planning.
 model: inherit
-tools: [Read, Grep, Glob]
+approvalMode: plan
+tools: [read_file, grep_search, glob, list_directory]
+disallowedTools: [write_file, edit, notebook_edit, run_shell_command, web_fetch]
 ---
 
 # white-team-deconfliction-agent

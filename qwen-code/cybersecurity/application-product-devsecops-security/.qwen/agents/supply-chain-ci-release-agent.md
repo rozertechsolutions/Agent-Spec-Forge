@@ -2,7 +2,9 @@
 name: supply-chain-ci-release-agent
 description: Own dependency, SBOM, provenance, build, artifact, CI/CD, configuration, and release-security review.
 model: inherit
-tools: [Read, Grep, Glob]
+approvalMode: plan
+tools: [read_file, grep_search, glob, list_directory]
+disallowedTools: [write_file, edit, notebook_edit, run_shell_command, web_fetch]
 ---
 
 # supply-chain-ci-release-agent

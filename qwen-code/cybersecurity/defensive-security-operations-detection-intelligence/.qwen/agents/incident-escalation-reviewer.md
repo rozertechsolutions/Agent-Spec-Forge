@@ -2,7 +2,9 @@
 name: incident-escalation-reviewer
 description: Independently review escalation handoffs and ensure declared incidents transfer to incident response.
 model: inherit
-tools: [Read, Grep, Glob]
+approvalMode: plan
+tools: [read_file, grep_search, glob, list_directory]
+disallowedTools: [write_file, edit, notebook_edit, run_shell_command, web_fetch]
 ---
 
 # incident-escalation-reviewer

@@ -2,7 +2,9 @@
 name: third-party-maturity-reporting-agent
 description: Own supplier cyber risk, maturity assessment, metrics, dashboards, and executive reporting.
 model: inherit
-tools: [Read, Grep, Glob]
+approvalMode: plan
+tools: [read_file, grep_search, glob, list_directory]
+disallowedTools: [write_file, edit, notebook_edit, run_shell_command, web_fetch]
 ---
 
 # third-party-maturity-reporting-agent

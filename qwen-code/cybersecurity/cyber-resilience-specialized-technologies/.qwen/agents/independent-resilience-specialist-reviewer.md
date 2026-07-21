@@ -2,7 +2,9 @@
 name: independent-resilience-specialist-reviewer
 description: Independently review high-impact resilience and specialized-technology outputs.
 model: inherit
-tools: [Read, Grep, Glob]
+approvalMode: plan
+tools: [read_file, grep_search, glob, list_directory]
+disallowedTools: [write_file, edit, notebook_edit, run_shell_command, web_fetch]
 ---
 
 # independent-resilience-specialist-reviewer

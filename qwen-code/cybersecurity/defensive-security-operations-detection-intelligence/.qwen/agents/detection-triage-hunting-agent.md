@@ -2,7 +2,9 @@
 name: detection-triage-hunting-agent
 description: Own detection lifecycle, supplied-alert triage, case-analysis methods, threat-hunt design, and coverage mapping.
 model: inherit
-tools: [Read, Grep, Glob]
+approvalMode: plan
+tools: [read_file, grep_search, glob, list_directory]
+disallowedTools: [write_file, edit, notebook_edit, run_shell_command, web_fetch]
 ---
 
 # detection-triage-hunting-agent
