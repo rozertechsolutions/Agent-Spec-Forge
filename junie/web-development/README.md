@@ -49,6 +49,18 @@ Start Junie in the target repository and describe the task. Ask for a Skill by p
 
 Junie follows `.junie/AGENTS.md`, discovers the stack, confirms scope and acceptance criteria, uses Skills for focused procedures, separates implementation from independent review, and reports `PASS`, `FAIL`, `BLOCKED`, `NOT APPLICABLE`, or `NOT EXECUTED` with direct evidence. No simulated custom agents are included.
 
+## Examples
+
+- Feature/architecture: ask with Junie in the target repository to plan a passwordless login flow for the current web app. State: `Do not deploy or install packages.`
+- Review/audit: request security/privacy review for CSP, cookies, CSRF, CORS, authorization, logging, third-party scripts, and sensitive data handling.
+- Stack selection: provide repository evidence and ask the department to use only applicable Web Development specialists for React, Rails, Django, Laravel, static-site, or other detected stacks.
+- Project customization: add `Node 22, pnpm only, WCAG 2.2 AA, LCP budget 2.5s, Playwright smoke tests` to task criteria without editing core department files.
+- Sensitive action: request a deployment, publication, package-install, or Git checklist without executing it; actual external action requires separate human approval.
+
+## Project-specific and user-specific configuration
+
+Already specialized and normally not modified:  .junie/AGENTS.md and Skills, review responsibilities, security/privacy responsibilities, accessibility/performance/SEO responsibilities, testing responsibilities, quality gates, and the operating model. Project/user values may include framework and runtime versions, package manager policy, repository layout, code style, lint/format/test commands, coverage thresholds, browser support matrix, WCAG target, performance budgets, Core Web Vitals thresholds, SEO requirements, API conventions, auth provider, database/storage technology, approved dependencies, deployment target, CI/CD commands, environment names, feature-flag conventions, observability provider, logging requirements, organization security policy, privacy/legal requirements, data classification, approval owners, release process, branch strategy, protected branches, allowed external integrations, MCP servers or connectors, private endpoints, organization IDs, and workspace IDs. Never hard-code or commit API keys, tokens, passwords, private keys, production credentials, real secret values, or sensitive private URLs; use placeholders or environment-variable names. Project-specific configuration extends the department; it does not create the specialization.
+
 ## Safety and human approval
 
 This package does not authorize automatic deployment, publication, authentication, secret use, spending, signing, submission, destructive operations, dependency installation, Git mutation, MCP use, provider-key use, terminal execution, remote agents, subagents, or production changes. Every sensitive or external action requires exact human authorization in the active Junie surface.
