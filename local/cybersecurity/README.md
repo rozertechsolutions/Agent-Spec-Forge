@@ -1,112 +1,187 @@
-# Cybersecurity Department for local
+# Local Cybersecurity Department
 
-This Cybersecurity department is a professional, adaptable baseline for local covering governance, architecture, product security, vulnerability management, defensive operations, incident response, authorized offensive validation, and resilience.
+This Cybersecurity department is a provider-neutral, runtime-neutral specification package for local implementations. It covers governance, risk, compliance, assurance, security architecture and engineering, application/product/DevSecOps security, exposure and hardening, defensive operations and intelligence, incident response and recovery, authorized offensive validation, and resilience or specialized technology security.
 
-Its purpose is to help humans produce evidence-based cybersecurity work products while preserving clear professional ownership, least privilege, independent review, and human authority for consequential decisions.
+It solves the problem of giving implementers a reusable cybersecurity contract that can be mapped into their own local runner, documentation system, orchestration layer, or review process without binding the repository to Ollama, LM Studio, a specific model, a vector store, an endpoint, or a commercial AI platform. Possible uses include policy review, control mapping, risk exception support, architecture review, threat modeling, secure SDLC review, vulnerability prioritization, detection planning, incident readiness, authorized validation planning, resilience review, and independent assurance.
 
-Possible uses include risk and compliance assessment, security architecture review, threat modeling, secure SDLC review, vulnerability prioritization, detection engineering, incident-response planning, authorized penetration-test planning, resilience exercises, and independent assurance.
+## Department Overview
 
-## Department overview
+The department contains eight area packages under `local/cybersecurity/<area>/`. Each area provides project-defined YAML contracts, JSON Schema definitions, role manifests, Skill definitions, workflows, tools, policies, and Markdown specifications for static cybersecurity work.
 
-The department contains eight Cybersecurity areas under `local/cybersecurity/<area>/`. Each area is scoped to a distinct professional ownership boundary and is intended for static analysis, planning, review, documentation, and assurance using supplied evidence.
+The local package defines contracts only. It does not provide a model, runner, server, vector database, credential store, connector, scanner, shell integration, MCP server, or production integration. A human implementer remains accountable for runtime mapping, authorization, validation, approvals, risk decisions, and operational controls.
 
-It does not authorize live scanning, exploitation, containment, recovery execution, production changes, publication, external integrations, legal determinations, risk acceptance, or closure decisions. Human owners remain accountable for authorization, approvals, exceptions, risk acceptance, incident declaration or closure, offensive testing authorization, and production action.
+## Possible Uses
 
-## Possible uses
+- Use `local.yaml` as the area manifest for a custom internal runner.
+- Validate role, Skill, workflow, tool, and policy YAML files against the retained JSON Schemas.
+- Map the neutral contracts into an organization's own review workflow.
+- Generate static decision packages, evidence requests, review checklists, and assurance artifacts.
+- Use the portable `SKILL.md` files as human-readable procedures or as input to a compatible Skill system.
 
-- Risk and compliance assessment using supplied policies, control evidence, and framework mappings.
-- Security architecture and engineering review for proposed designs and reference patterns.
-- Threat modeling, secure SDLC review, release-readiness support, and supply-chain evidence review.
-- Vulnerability prioritization, remediation planning, and hardening governance from provided findings.
-- Detection engineering, telemetry coverage review, SOC triage methods, and threat-hunt planning.
-- Incident-response readiness, DFIR planning, evidence governance, recovery planning, and lessons learned.
-- Authorized offensive assessment planning, rules of engagement review, validation planning, and retest assurance.
-- Resilience exercises, ransomware recovery planning, specialized technology review, and independent assurance.
+## Platform Compatibility
 
-## Platform compatibility
+Validated on 2026-07-21 against the repository-defined local contracts and JSON Schema Draft 2020-12 declarations embedded in `schemas/*.schema.json`.
 
-Product surface: Provider-neutral local specification, YAML schemas, roles, workflows, policies, and extension points.
+Supported local surface:
 
-Validated documentation date: 2026-07-21. Plan, account, workspace, IDE, CLI, SDK, and preview availability vary by vendor release and administrator policy. This package documents static, repository-local or manually importable components only.
+- Provider-neutral YAML manifests.
+- JSON Schema Draft 2020-12 schema files.
+- Static Markdown specifications and Skill procedure files.
+- Implementation-defined runners that deliberately map these contracts into their own environment.
+
+Unsupported by design:
+
+- Bundled model providers, endpoints, local model servers, vector stores, orchestration frameworks, cloud services, scanners, connectors, MCP servers, hooks, and production automation.
 
 ## Prerequisites
 
-A local runner or documentation consumer chosen by the organization; no provider/model/installer/server bundled.
+- A repository checkout.
+- A YAML parser and JSON Schema validator selected by the implementer for local validation.
+- A human-approved implementation plan before mapping the contracts into any runtime.
+- Redacted static evidence for review work.
 
-Do not place credentials, tokens, keys, private endpoints, personal data, confidential customer data, or live system access material in this package. Connectors, MCP servers, cloud accounts, scanners, SIEM/EDR/XDR/SOAR tools, ticketing systems, identity providers, and hosted tools are disabled or absent unless a retained native file explicitly documents a human-approved external configuration.
+No provider account, API key, model, local model server, endpoint, connector, scanner, cloud account, SIEM/EDR/XDR/SOAR system, ticketing system, or production access is required by this baseline.
 
-## Installation or import
+## Installation Or Import
 
-Use YAML and Markdown as a static specification. Import into a local framework only after mapping fields and adding human-approved integrations outside this repository.
+Use one area at a time.
 
-Use project-local or repository-local setup only. Do not install tools globally from this package, and do not authenticate services merely to import the instructions.
+For static review:
 
-## Working directory and discovery
+1. Open the selected area, for example `local/cybersecurity/governance-risk-compliance-assurance/`.
+2. Read `SPECIFICATION.md` when present, then `local.yaml`.
+3. Load the area `policies/`, `agents/`, `skills/`, `workflows/`, `tools/`, and `schemas/` files as static contract inputs.
+4. Provide redacted project evidence and an explicit scope.
+5. Produce only static artifacts and human decision packages.
 
-No AI platform auto-discovers local/. Consumers load files deliberately. Area isolation is by directory and schema references; no live runtime is provided.
+For a custom local runner:
 
-When a platform supports upward discovery, the nearest area-level instructions take precedence for that area. When a platform requires manual import, treat each area as an isolated package and do not mix files across areas unless a human explicitly approves a cross-area handoff.
+1. Choose the runner outside this repository.
+2. Map `local.yaml` and each YAML contract field into the runner's native configuration.
+3. Validate YAML syntax and JSON Schema constraints before use.
+4. Keep `runtime_binding: none` in the reusable baseline; store runtime-specific bindings in the consuming project.
+5. Add credentials, endpoints, connectors, and tool integrations only in the consuming environment after human approval.
 
-## Area map
+## Working Directory And Discovery
 
-- `local/cybersecurity/governance-risk-compliance-assurance/` - Governance, Risk, Compliance, and Assurance: governance, cyber risk, compliance mapping, policies, assurance, exceptions, and risk-decision support.
-- `local/cybersecurity/security-architecture-engineering/` - Security Architecture and Engineering: security architecture, engineering patterns, identity, network, cloud, data, platform, and control design review.
-- `local/cybersecurity/application-product-devsecops-security/` - Application, Product, and DevSecOps Security: product security, secure SDLC, threat modeling, code/design review, CI/CD, supply chain, PSIRT, and release assurance.
-- `local/cybersecurity/exposure-vulnerability-hardening/` - Exposure, Vulnerability, and Hardening: asset exposure, vulnerability triage, prioritization, hardening, remediation governance, and validation evidence.
-- `local/cybersecurity/defensive-security-operations-detection-intelligence/` - Defensive Security Operations, Detection, and Intelligence: SOC operating model, telemetry, detection engineering, alert triage, hunting, intelligence, and coverage quality.
-- `local/cybersecurity/incident-response-dfir-recovery/` - Incident Response, DFIR, and Recovery: incident planning, evidence governance, DFIR analysis planning, containment planning, recovery coordination, and lessons learned.
-- `local/cybersecurity/offensive-security-authorized-validation/` - Offensive Security and Authorized Validation: explicitly authorized assessment planning, rules of engagement, emulation governance, retest planning, and safety review.
-- `local/cybersecurity/cyber-resilience-specialized-technologies/` - Cyber Resilience and Specialized Technologies: resilience, ransomware recovery planning, specialized technology review, cryptography, critical infrastructure, OT/IoT/cloud edge, and transition assurance.
+No AI platform auto-discovers `local/cybersecurity/`. Consumers load files deliberately.
 
-## Native components
+Recommended launch or import directory:
 
-- `governance-risk-compliance-assurance/`: `SPECIFICATION.md`, `local.yaml`, `skills/`, `workflows/`, `agents/`, `policies/`, `schemas/`
-- `security-architecture-engineering/`: `SPECIFICATION.md`, `local.yaml`, `skills/`, `workflows/`, `agents/`, `policies/`, `schemas/`
-- `application-product-devsecops-security/`: `SPECIFICATION.md`, `local.yaml`, `skills/`, `workflows/`, `agents/`, `policies/`, `schemas/`
-- `exposure-vulnerability-hardening/`: `local.yaml`, `skills/`, `workflows/`, `agents/`, `policies/`, `schemas/`
-- `defensive-security-operations-detection-intelligence/`: `local.yaml`, `skills/`, `workflows/`, `agents/`, `policies/`, `schemas/`
-- `incident-response-dfir-recovery/`: `SPECIFICATION.md`, `local.yaml`, `skills/`, `workflows/`, `agents/`, `policies/`, `schemas/`
-- `offensive-security-authorized-validation/`: `SPECIFICATION.md`, `local.yaml`, `skills/`, `workflows/`, `agents/`, `policies/`, `schemas/`
-- `cyber-resilience-specialized-technologies/`: `SPECIFICATION.md`, `local.yaml`, `skills/`, `workflows/`, `agents/`, `policies/`, `schemas/`
+```text
+local/cybersecurity/<area>/
+```
 
-Unsupported native mechanisms are omitted rather than simulated. The package does not include fake MCP servers, live hooks that execute security actions, hosted scanner integrations, cloud deployment automation, or credentials.
+Area-local references are relative to that selected area. For example, `agents/grc-coordinator.yaml` may reference `subagents/governance-policy-frameworks-agent.yaml`, `policies/permissions.yaml`, or `tools/project-read.yaml`.
 
-## How to use the department
+Precedence is implementation-defined, but a safe default is:
 
-Select the area that owns the requested work, open or import that area according to the platform rules above, and provide authorized scope, exclusions, accountable owner, requester, intended audience, decision needed, evidence inventory, assumptions, constraints, reviewer, and approver role.
+1. `local.yaml`.
+2. area policies.
+3. coordinator or primary agent.
+4. selected subagent or Skill.
+5. selected workflow.
+6. output artifact schema.
 
-Expected outputs are scoped artifacts with evidence tables, assumptions, findings or recommendations separated by evidence state, limitations, confidence, residual risk, required human decisions, and completion criteria. High-impact outputs must be routed to an independent reviewer that did not create the work. Components stop when authorization is missing, sensitive data is unredacted, scope is unclear, a live action is requested, evidence is insufficient for a conclusion, or self-review would occur.
+Do not mix area contracts unless a human explicitly approves a cross-area handoff.
 
-## Permissions and safety
+## Area Map
 
-Default behavior is read-only and static. Repository writes, where a platform technically allows them, must stay inside the selected `local/cybersecurity/<area>/` directory and require an explicit user task to update static artifacts. Shell, network, installation, deployment, scanning, exploitation, recovery execution, remote Git operations, MCP connections, hosted tools, and external connectors are prohibited by default.
+- `governance-risk-compliance-assurance/`: governance, policy, control mapping, compliance, risk records, exceptions, assurance, evidence, suppliers, maturity, and reporting.
+- `security-architecture-engineering/`: security architecture, engineering patterns, identity, cloud, network, data, containers, infrastructure as code, automation, and architecture assurance.
+- `application-product-devsecops-security/`: product security, secure SDLC, threat modeling, secure code/design review, CI/CD, software supply chain, PSIRT, release readiness, and appsec assurance.
+- `exposure-vulnerability-hardening/`: exposure management, vulnerability triage, prioritization, hardening, remediation governance, validation, and reporting.
+- `defensive-security-operations-detection-intelligence/`: SOC governance, telemetry, detection engineering, triage, hunting, intelligence, malware-analysis planning, automation review, and coverage quality.
+- `incident-response-dfir-recovery/`: incident command, evidence governance, DFIR planning, containment planning, recovery coordination, scenarios, crisis review, and corrective action.
+- `offensive-security-authorized-validation/`: authorization, scope, rules of engagement, assessment planning, deconfliction, emulation, Purple Team validation, findings, cleanup, retest, and safety review.
+- `cyber-resilience-specialized-technologies/`: resilience programs, ransomware recovery, backups, specialized technology security, OT/ICS, IoT, embedded, AI systems, firmware, cryptographic agility, critical infrastructure, and transition governance.
 
-AI components cannot self-approve, accept enterprise risk, authorize offensive testing, approve production changes, close incidents, certify compliance, make legal determinations, or conceal residual risk. Human review is mandatory for approvals, exceptions, risk acceptance, release or closure decisions, incident command, offensive authorization, external reporting, and production actions.
+## Native Components
 
-## Configuration and customization
+Native to this local package:
 
-Organizations may add policies, frameworks, asset context, risk appetite, service-level targets, tool names, responsible roles, approved integrations, sector requirements, and evidence templates as static files in the relevant area after human review. Keep values organization-neutral in shared packages, redact sensitive information, and document any integration without enabling it by default.
+- `local.yaml`: provider-neutral area manifest.
+- `schemas/*.schema.json`: project-defined JSON Schema contracts.
+- `agents/*.yaml`: coordinator and role contracts.
+- `subagents/*.yaml`: lightweight delegation contracts where the area includes explicit subagent mappings.
+- `skills/*.yaml`: structured Skill contracts where present.
+- `skills/*/SKILL.md`: portable human-readable Skill procedures.
+- `workflows/*.yaml`: manual static workflows.
+- `tools/*.yaml`: static tool capability contracts where present.
+- `policies/*.yaml` and `policies/*.md`: safety, permissions, evidence, and security policy contracts.
+- `SPECIFICATION.md`: area specification where present.
+
+Project-defined fields such as `static_only`, `manual_static_only`, `provider_neutral`, and `runtime_binding` are valid local contract fields. They are not vendor configuration fields and should not be removed merely because a commercial platform does not use them.
+
+## How To Use The Department
+
+Select the area that owns the work and provide:
+
+- authorized scope and explicit exclusions;
+- accountable owner, requester, reviewer, approver role, and intended audience;
+- evidence inventory with provenance, period, freshness, and limitations;
+- decision needed, assumptions, constraints, and required output.
+
+Example input:
+
+```text
+Using local/cybersecurity/exposure-vulnerability-hardening, map the uploaded static vulnerability export into an evidence-backed remediation plan. Scope is static review only. Exclude live scanning and ticket updates. Return normalized findings, prioritization rationale, evidence gaps, owner questions, and required human approvals.
+```
+
+Expected output is a scoped artifact with evidence tables, findings separated by evidence state, assumptions, limitations, confidence, residual risk, required human decisions, and completion criteria. High-impact, closure-facing, exception, release, incident, offensive, or external-facing outputs must go to an independent reviewer that did not create the artifact.
+
+Stop when authorization is missing, evidence is unredacted or insufficient, scope is unclear, a live action is requested, an output would self-review, or a human-only decision is requested.
+
+## Permissions And Safety
+
+The baseline is static and read-only by default:
+
+- `provider_neutral: true`.
+- `runtime_binding: none`.
+- `active_integrations: false`.
+- `mcp_servers: []`.
+- shell, network, and live system actions denied.
+
+Repository writes, if a consuming implementation supports them, must stay inside the selected `local/cybersecurity/<area>/` directory and require an explicit user task to update static artifacts. Shell, network, installation, deployment, scanning, exploitation, recovery execution, remote Git operations, MCP connections, hosted tools, connectors, and external integrations are prohibited by default.
+
+Human approval is required for risk acceptance, exception approval, policy publication, architecture approval, release readiness, incident declaration or closure, external distribution, supplier decisions, offensive authorization, production recovery, and critical finding closure.
+
+## Configuration And Customization
+
+### Project-dependent configuration
+
+Adapt repository paths, source directories, application architecture, build systems, languages, deployment model, cloud provider, CI/CD structure, telemetry locations, asset inventory, data-flow scope, threat-model scope, vulnerability evidence, approved test scope, area-specific working directories, and repository-specific policies per consuming project.
+
+### User/organization-dependent configuration
+
+Supply or approve runner choice, account identity, organization policies, regulatory frameworks, risk appetite, asset criticality, SLAs, escalation contacts, approval authorities, permitted tools, permitted integrations, API credentials, MCP endpoints, cloud accounts, SIEM/EDR/XDR/SOAR systems, ticketing systems, incident contacts, authorized offensive-testing scope, retention rules, and legal/privacy constraints outside this repository. Do not commit secrets or confidential values.
+
+### Fixed baseline configuration
+
+Keep provider neutrality, runtime neutrality, area ownership boundaries, independent review, no self-approval, no automatic risk acceptance, evidence requirements, static-by-default behavior, prohibited unauthorized actions, stop conditions, no live integrations by default, and human approval gates intact.
 
 ## Validation
 
-Static validation can check file syntax, native paths, frontmatter, JSON/TOML/YAML parsing, prompt references, Skill structure, duplicate or obsolete files, empty artifacts, broken links, and absence of secrets or active integrations. Live system behavior, connector access, model behavior, scanner operation, incident action, recovery, and production integration require a separate authorized environment and were not exercised by this repository package.
+Repository validation can check JSON parsing, YAML parsing, JSON Schema syntax, required area coverage, Skill frontmatter, file existence, exact duplicates, empty files, empty directories, and absence of provider-specific runtime bindings.
+
+Runtime behavior, model behavior, connector behavior, scanner output, incident actions, recovery, and production changes require a separately authorized consuming implementation and were not executed by this repository package.
 
 ## Troubleshooting
 
-- If instructions are ignored, confirm the platform was opened from the documented working directory or the files were manually imported into the correct Project, Skill, agent, or rule location.
-- If an agent or Skill is unavailable, verify the platform feature is enabled for the plan/workspace and that the directory name and native filename match the current product documentation.
-- If permissions appear broader than intended, inspect platform settings before use and deny shell, network, MCP, connector, deployment, scanner, and remote Git access.
-- If paths fail to resolve, use paths relative to the selected area package unless the platform documentation states otherwise.
-- If a platform preview feature changes, re-check official documentation and update `local/cybersecurity/NATIVE_SOURCES.md` before relying on it.
+- If a consuming runner cannot load an area, start from `local.yaml` in the selected area and resolve relative paths from that area directory.
+- If a schema validator rejects a YAML file, confirm the correct project-defined schema is being used for that contract type.
+- If a runner requires provider, model, endpoint, or vector-store settings, place those in the consuming project's private configuration, not in this reusable baseline.
+- If permissions appear broader than intended, inspect the consuming runtime configuration and deny shell, network, MCP, connector, deployment, scanner, and remote Git access.
+- If an area lacks a subdirectory such as `subagents/` or `tools/`, treat it as intentionally absent unless the selected area manifest references it.
 
-## Removal or uninstall
+## Removal Or Uninstall
 
-Remove the imported Project, GPT, Skill, agent, rule, command, workflow, or workspace configuration from the platform UI or delete the selected `local/cybersecurity/` directory from the repository. Remove any manually uploaded knowledge files from the platform. Do not delete organizational evidence or platform-global settings unless a human owner explicitly authorizes that cleanup.
+Remove the selected `local/cybersecurity/<area>/` contracts from the consuming runner or delete the imported copy from the consuming project. Disconnect or delete any runtime-specific provider, endpoint, connector, MCP, vector-store, or credential configuration in the consuming environment according to that environment's approved process. Do not delete unrelated organization evidence or global runtime settings without human approval.
 
 ## Limitations
 
-This package is a static professional baseline. It is not a managed security service, scanner, SIEM, SOAR, EDR/XDR integration, penetration-testing tool, incident-response platform, legal opinion, compliance certification, or production-control system. Platform support and schema details can change, especially for preview agent, Skill, hook, and permission features.
+This package is a static professional baseline and contract set, not a runner, model, model server, vector store, orchestration framework, managed security service, scanner, SIEM, SOAR, EDR/XDR integration, penetration-testing platform, incident command system, recovery orchestrator, legal opinion, compliance certification, or production-control system.
 
-## Security notice
+## Security Notice
 
-Offensive testing, incident actions, production changes, external integrations, live scans, exploitation, deployment, recovery, publication, and use of sensitive evidence require explicit authorization, validated scope, and human control. Do not use these components to bypass approval, access secrets, contact external systems, or claim live execution without evidence.
+Explicit authorization and human control are mandatory for offensive testing, incident actions, production changes, external integrations, live scans, exploitation, deployment, recovery, publication, and sensitive evidence handling. Do not use this package to bypass approval, access secrets, contact external systems, or claim execution without evidence.
