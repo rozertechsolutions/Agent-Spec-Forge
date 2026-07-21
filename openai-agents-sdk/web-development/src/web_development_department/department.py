@@ -6,7 +6,7 @@ from agents import Agent
 
 from .guardrails import final_verdict_guardrail, safe_web_request_guardrail
 from .instructions import BASE_INSTRUCTIONS
-from .models import ArchitectureDecision, FinalVerdict, ImplementationProposal, ReviewerFinding
+from .models import FinalVerdict, SpecialistReviewResult
 from .tools import PROPOSAL_TOOLS, READ_CONTEXT_TOOLS, SENSITIVE_ACTION_TOOLS
 
 
@@ -52,42 +52,50 @@ web_architecture_specialist = Agent(
     name="Web Architecture Specialist",
     instructions=ARCHITECTURE_INSTRUCTIONS,
     tools=READ_CONTEXT_TOOLS,
-    output_type=ArchitectureDecision,
+    output_type=SpecialistReviewResult,
 )
 
 frontend_specialist = Agent(
     name="Frontend Specialist",
     instructions=FRONTEND_INSTRUCTIONS,
     tools=[*READ_CONTEXT_TOOLS, *PROPOSAL_TOOLS],
-    output_type=ImplementationProposal,
+    output_type=SpecialistReviewResult,
 )
 
 backend_api_specialist = Agent(
     name="Backend and API Specialist",
     instructions=BACKEND_INSTRUCTIONS,
     tools=[*READ_CONTEXT_TOOLS, *PROPOSAL_TOOLS],
-    output_type=ImplementationProposal,
+    output_type=SpecialistReviewResult,
 )
 
 security_privacy_reviewer = Agent(
     name="Security and Privacy Reviewer",
     instructions=SECURITY_REVIEW_INSTRUCTIONS,
     tools=READ_CONTEXT_TOOLS,
-    output_type=ReviewerFinding,
+    output_type=SpecialistReviewResult,
 )
 
 accessibility_performance_seo_reviewer = Agent(
     name="Accessibility, Performance and SEO Reviewer",
     instructions=ACCESSIBILITY_REVIEW_INSTRUCTIONS,
     tools=READ_CONTEXT_TOOLS,
-    output_type=ReviewerFinding,
+    output_type=SpecialistReviewResult,
 )
 
-quality_release_reviewer = Agent(
-    name="Quality and Release Reviewer",
+testing_release_reviewer = Agent(
+    name="Testing and Release Readiness Reviewer",
     instructions=QUALITY_REVIEW_INSTRUCTIONS,
     tools=READ_CONTEXT_TOOLS,
-    output_type=ReviewerFinding,
+    output_type=SpecialistReviewResult,
+)
+
+independent_final_quality_reviewer = Agent(
+    name="Independent Final Quality Reviewer",
+    instructions=QUALITY_REVIEW_INSTRUCTIONS
+    + "\nRun only after every other applicable required review has a trusted terminal ledger record.",
+    tools=READ_CONTEXT_TOOLS,
+    output_type=SpecialistReviewResult,
 )
 
 web_development_lead = Agent(
@@ -114,9 +122,13 @@ web_development_lead = Agent(
             tool_name="review_accessibility_performance_seo",
             tool_description="Return independent read-only accessibility, performance, responsive, and SEO findings.",
         ),
-        quality_release_reviewer.as_tool(
-            tool_name="review_quality_release",
-            tool_description="Return independent read-only quality and release readiness findings.",
+        testing_release_reviewer.as_tool(
+            tool_name="review_testing_release_readiness",
+            tool_description="Return read-only testing and release readiness findings.",
+        ),
+        independent_final_quality_reviewer.as_tool(
+            tool_name="review_independent_final_quality",
+            tool_description="Return independent final quality findings after all other reviews are terminal.",
         ),
         *READ_CONTEXT_TOOLS,
         *PROPOSAL_TOOLS,
@@ -134,5 +146,6 @@ SPECIALIST_AGENTS = (
     backend_api_specialist,
     security_privacy_reviewer,
     accessibility_performance_seo_reviewer,
-    quality_release_reviewer,
+    testing_release_reviewer,
+    independent_final_quality_reviewer,
 )
