@@ -57,6 +57,18 @@ Use commands such as `plan-web-change`, `implement-web-change`, `review-security
 
 Kilo loads project rules through `kilo.jsonc`, starts the primary lead for workflows, delegates bounded specialist work through `permission.task`, keeps reviewers read-only, and requires the quality/release reviewer last for final readiness. Completion uses `PASS`, `FAIL`, `BLOCKED`, `NOT APPLICABLE`, or `NOT EXECUTED` with direct evidence.
 
+## Examples
+
+- Feature/architecture: ask with Kilo Code using the Web Development lead to plan a passwordless login flow for the current web app. State: `Do not deploy or install packages.`
+- Review/audit: request security/privacy review for CSP, cookies, CSRF, CORS, authorization, logging, third-party scripts, and sensitive data handling.
+- Stack selection: provide repository evidence and ask the department to use only applicable Web Development specialists for React, Rails, Django, Laravel, static-site, or other detected stacks.
+- Project customization: add `Node 22, pnpm only, WCAG 2.2 AA, LCP budget 2.5s, Playwright smoke tests` to task criteria without editing core department files.
+- Sensitive action: request a deployment, publication, package-install, or Git checklist without executing it; actual external action requires separate human approval.
+
+## Project-specific and user-specific configuration
+
+The department is already specialized. Already specialized and normally not modified: kilo.jsonc, agents, rules, commands, and Skills, review responsibilities, security/privacy responsibilities, accessibility/performance/SEO responsibilities, testing responsibilities, quality gates, and the operating model. Project/user values may include framework and runtime versions, package manager policy, repository layout, code style, lint/format/test commands, coverage thresholds, browser support matrix, WCAG target, performance budgets, Core Web Vitals thresholds, SEO requirements, API conventions, auth provider, database/storage technology, approved dependencies, deployment target, CI/CD commands, environment names, feature-flag conventions, observability provider, logging requirements, organization security policy, privacy/legal requirements, data classification, approval owners, release process, branch strategy, protected branches, allowed external integrations, MCP servers or connectors, private endpoints, organization IDs, and workspace IDs. Never hard-code or commit API keys, tokens, passwords, private keys, production credentials, real secret values, or sensitive private URLs; use placeholders or environment-variable names. Project-specific configuration extends the department; it does not create the specialization.
+
 ## Safety and human approval
 
 This package does not authorize automatic deployment, publication, authentication, secret use, spending, signing, submission, destructive operations, dependency installation, Git mutation, bash execution, MCP use, hook execution, plugin execution, provider-key use, or production changes. `kilo.jsonc` denies bash and asks before edits; every sensitive or external action requires exact human authorization.

@@ -57,6 +57,18 @@ Expected outputs are scoped plans, findings, recommendations, evidence summaries
 
 The coordinator confirms scope and acceptance criteria, discovers the stack from repository evidence, selects applicable specialists, reconciles findings, and reports final limitations. Specialists and reviewers return bounded text-only results with concrete evidence. Security/privacy and release readiness remain independent reviews and cannot be self-approved by implementers. Completion requires direct evidence; absent checks are reported as NOT EXECUTED.
 
+## Examples
+
+- Feature/architecture: ask with the Mistral Vibe coordinator to plan a passwordless login flow for the current web app. State: `Do not deploy or install packages.`
+- Review/audit: request security/privacy review for CSP, cookies, CSRF, CORS, authorization, logging, third-party scripts, and sensitive data handling.
+- Stack selection: provide repository evidence and ask the department to use only applicable Web Development specialists for React, Rails, Django, Laravel, static-site, or other detected stacks.
+- Project customization: add `Node 22, pnpm only, WCAG 2.2 AA, LCP budget 2.5s, Playwright smoke tests` to task criteria without editing core department files.
+- Sensitive action: request a deployment, publication, package-install, or Git checklist without executing it; actual external action requires separate human approval.
+
+## Project-specific and user-specific configuration
+
+The department is already specialized. Already specialized and normally not modified: Vibe agents, prompts, and Skills, review responsibilities, security/privacy responsibilities, accessibility/performance/SEO responsibilities, testing responsibilities, quality gates, and the operating model. Project/user values may include framework and runtime versions, package manager policy, repository layout, code style, lint/format/test commands, coverage thresholds, browser support matrix, WCAG target, performance budgets, Core Web Vitals thresholds, SEO requirements, API conventions, auth provider, database/storage technology, approved dependencies, deployment target, CI/CD commands, environment names, feature-flag conventions, observability provider, logging requirements, organization security policy, privacy/legal requirements, data classification, approval owners, release process, branch strategy, protected branches, allowed external integrations, MCP servers or connectors, private endpoints, organization IDs, and workspace IDs. Never hard-code or commit API keys, tokens, passwords, private keys, production credentials, real secret values, or sensitive private URLs; use placeholders or environment-variable names. Project-specific configuration extends the department; it does not create the specialization.
+
 ## Safety and human approval
 
 No automatic deployment, publication, authentication, secret use, spending, signing, submission, destructive operation, dependency installation, command execution, Git mutation, MCP use, connector use, or external side effect may occur without exact human authorization. Reviewer agents disable write and shell-capable tools. The coordinator has `task` set to ask for approval and disables shell, write, MCP, and connector tool patterns.
