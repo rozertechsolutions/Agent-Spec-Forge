@@ -3,8 +3,6 @@ name: forensics-containment-recovery-agent
 description: Own forensic questions, acquisition planning, containment options, eradication options, secure recovery, and restoration assurance.
 model: inherit
 readonly: true
-tools: [Read, Grep, Glob]
-skills: [incident-readiness-triage, evidence-forensics-planning, containment-recovery-coordination, scenario-tabletop-post-incident, independent-incident-recovery-assurance]
 ---
 
 # forensics-containment-recovery-agent
