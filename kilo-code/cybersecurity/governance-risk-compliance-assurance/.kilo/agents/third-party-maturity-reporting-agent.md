@@ -9,14 +9,11 @@ permission:
     "*.env.*": ask
   grep: allow
   glob: allow
-  edit:
-    "*": ask
-  write:
-    "*": ask
+  edit: deny
+  write: deny
   bash:
     "*": deny
-  task:
-    "*": ask
+  task: deny
 ---
 
 # third-party-maturity-reporting-agent

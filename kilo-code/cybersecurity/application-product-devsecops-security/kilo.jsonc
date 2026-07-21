@@ -1,7 +1,6 @@
 {
   "$schema": "https://app.kilo.ai/config.json",
   "instructions": [
-    ".kilo/rules/application-product-devsecops-security.md",
     ".kilo/rules/responsibility-matrix.md"
   ],
   "permission": {
