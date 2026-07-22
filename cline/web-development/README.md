@@ -21,21 +21,21 @@ This is a project-scoped Cline specialization for a stack-aware Web Development 
 This package targets Cline project configuration in a repository workspace.
 
 - IDE extension: Cline runs in VS Code-compatible IDEs and uses Plan/Act modes, approval prompts, project rules, and Skills.
-- CLI/SDK surfaces: Cline configuration is shared through `.cline/` project configuration where supported, but UI features such as rule toggles and Plan/Act controls can differ by surface.
-- Project configuration path: current official configuration documents project rules at `.cline/rules/` and project Skills at `.cline/skills/`.
-- Legacy `.clinerules/`: not retained here because it would duplicate the same always-on instructions.
+- CLI/SDK surfaces: Cline project configuration uses `.cline/` where supported, but UI features such as rule toggles and Plan/Act controls can differ by surface.
+- Project Rules path: current official Cline Rules documentation defines workspace rules at `.clinerules/` in the project root.
+- Project Skills path: current official Cline Skills documentation defines project Skills under `.cline/skills/<skill>/SKILL.md`.
 - Repository auto-discovery exists only after these files are copied to the target repository root and Cline is run in that workspace.
 - This package is static configuration. It includes no executable hooks, plugins, cron, MCP, agents, provider settings, or workflows.
 
 ## Included native components
 
-- `.cline/rules/*.md`: project rules loaded as persistent project instructions.
+- `.clinerules/*.md`: project rules loaded as persistent project instructions.
 - `.cline/skills/*/SKILL.md`: project Skills loaded on demand when their descriptions match a request.
 - `README.md`: human setup and validation guide. It is not loaded by Cline.
 
 ## Installation and integration
 
-1. Copy the contents of `cline/web-development/` to the target repository root so the target root contains `.cline/rules/` and `.cline/skills/`.
+1. Copy the contents of `cline/web-development/` to the target repository root so the target root contains `.clinerules/` and `.cline/skills/`.
 2. Open the repository in Cline through the IDE extension or CLI surface.
 3. Review the rules and Skills before enabling or relying on them.
 4. Enable Skills only if the Cline surface and settings expose Skill support.
@@ -78,14 +78,14 @@ This package does not authorize automatic deployment, publication, authenticatio
 ## Validation
 
 - Syntax validation: `SKILL.md` YAML frontmatter was parsed for retained Cline Skills.
-- Schema/static validation: retained files were mapped to `.cline/rules/` and `.cline/skills/`; no `.clinerules/`, hooks, plugins, MCP, cron, provider settings, custom agents, or executable workflows remain.
+- Schema/static validation: retained files were mapped to `.clinerules/` and `.cline/skills/`; no `.cline/rules/`, hooks, plugins, MCP, cron, provider settings, custom agents, or executable workflows remain.
 - Actual product loading: `NOT EXECUTED`.
 - Runtime tests: `NOT EXECUTED`.
 - Browser/build/deployment checks: `NOT EXECUTED`.
 
 ## Official documentation
 
-Verified on July 20, 2026:
+Verified on July 22, 2026:
 
 - Cline Docs: Config - https://docs.cline.bot/getting-started/config
 - Cline Docs: Rules - https://docs.cline.bot/customization/cline-rules
