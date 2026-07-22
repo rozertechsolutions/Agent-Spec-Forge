@@ -20,15 +20,15 @@ The lead selects applicable specialists and workflows according to project evide
 
 ## Supported product surface
 
-This package targets current Devin Desktop / Cascade workspace configuration. It uses root `AGENTS.md`, current workspace Rules in `.devin/rules/`, Cascade workspace Skills in `.windsurf/skills/<skill>/SKILL.md`, and Cascade workflows in `.windsurf/workflows/*.md`. It is static configuration, not an SDK, hook package, MCP server, App Deploy setup, browser automation package, or external integration.
+This package targets current Cascade workspace configuration for Windsurf-compatible repositories. It uses root `AGENTS.md`, workspace Rules in `.windsurf/rules/*.md`, Cascade workspace Skills in `.windsurf/skills/<skill>/SKILL.md`, and Cascade workflows in `.windsurf/workflows/*.md`. It is static configuration, not an SDK, hook package, MCP server, App Deploy setup, browser automation package, or external integration.
 
-Current official documentation prefers `.devin/rules/*.md` for workspace Rules. `.windsurf/rules/` is legacy fallback only and is not retained here. Current official documentation still uses `.windsurf/skills/` and `.windsurf/workflows/` for Cascade workspace Skills and Workflows.
+Current official Windsurf plugin documentation discovers Cascade workspace Rules from `.windsurf/rules/` directories in the workspace, subdirectories, and parent directories up to the Git root. Current Devin Desktop documentation also describes `.devin/rules/` as its preferred branded rule directory and `.windsurf/rules/` as a compatibility fallback. This package keeps one authoritative Cascade workspace Rules copy under `.windsurf/rules/` to avoid duplicate always-on rules. Current official documentation still uses `.windsurf/skills/` and `.windsurf/workflows/` for Cascade workspace Skills and Workflows.
 
 ## Included native components
 
 - `AGENTS.md`: repository-root instruction surface for Devin-compatible agents; defines Web Development scope, evidence, review model, and stop conditions.
-- `.devin/rules/web-development.md`: current workspace Rule loaded by Devin Desktop / Cascade for always-on Web Development behavior.
-- `.devin/rules/quality-gates.md`: current workspace Rule for readiness, security, privacy, accessibility, performance, SEO, testing, and human-review gates.
+- `.windsurf/rules/web-development.md`: workspace Rule loaded by Cascade for always-on Web Development behavior.
+- `.windsurf/rules/quality-gates.md`: workspace Rule for readiness, security, privacy, accessibility, performance, SEO, testing, and human-review gates.
 - `.windsurf/skills/<skill>/SKILL.md`: Cascade workspace Skills for stack discovery, architecture decisions, frontend delivery, backend/API/auth, security/privacy, accessibility/performance/SEO, testing/browser compatibility, dependency review, and release readiness.
 - `.windsurf/workflows/*.md`: manual Cascade workflow slash commands for planning, implementation support, debugging, audits, dependency review, API/auth review, and release readiness.
 
@@ -39,9 +39,9 @@ Rules are automatic according to their triggers. Skills may be selected by the m
 1. Install/open Devin Desktop or Cascade-compatible Windsurf.
 2. Open the actual target Git repository.
 3. Copy `windsurf/web-development/AGENTS.md` to the target repository root.
-4. Copy `windsurf/web-development/.devin/rules/` to the target repository root as `.devin/rules/`.
+4. Copy `windsurf/web-development/.windsurf/rules/` to the target repository root as `.windsurf/rules/`.
 5. Copy `windsurf/web-development/.windsurf/skills/` and `.windsurf/workflows/` to the target repository root.
-6. Keep `.devin/` and `.windsurf/` as hidden project directories.
+6. Keep `.windsurf/` as a hidden project directory.
 7. Reopen, reload, or refresh the workspace if discovery has already occurred.
 8. Verify the Web Development Rules, Skills, and Workflows are visible or active in the product.
 9. Keep hooks, MCP, App Deploy, browser automation, remote connectors, and external integrations disabled unless the user explicitly configures them.
@@ -108,13 +108,14 @@ Static validation cannot prove live product discovery, model behavior, browser b
 
 ## Validation
 
-Validated July 21, 2026: root `AGENTS.md` exists, `.devin/rules/` contains current workspace Rules with valid frontmatter, legacy `.windsurf/rules/` copies are removed, `.windsurf/skills/` and `.windsurf/workflows/` remain current native surfaces, Markdown references resolve, no secrets are included, and no hooks/MCP/App Deploy/browser automation/external integrations are configured. Live Devin Desktop/Cascade loading and live model runs were not executed.
+Validated July 22, 2026: root `AGENTS.md` exists, `.windsurf/rules/` contains Cascade workspace Rules with valid frontmatter, `.devin/rules/` duplicate copies are removed, `.windsurf/skills/` and `.windsurf/workflows/` remain current native surfaces, Markdown references resolve, no secrets are included, and no hooks/MCP/App Deploy/browser automation/external integrations are configured. Live Devin Desktop/Cascade loading and live model runs were not executed.
 
 ## Official documentation
 
-Verified July 21, 2026:
+Verified July 22, 2026:
 
-- Devin documentation: https://docs.devin.ai/
-- Devin / Cascade rules: https://docs.devin.ai/workspaces/rules
-- Windsurf/Cascade Skills: https://docs.windsurf.com/
-- Windsurf/Cascade Workflows: https://docs.windsurf.com/
+- Devin Desktop Cascade Rules: https://docs.devin.ai/desktop/cascade/memories
+- Devin Desktop AGENTS.md: https://docs.devin.ai/desktop/cascade/agents-md
+- Windsurf plugin Cascade Rules: https://docs.devin.ai/windsurf/plugins/cascade/memories
+- Cascade Skills: https://docs.devin.ai/desktop/cascade/skills
+- Cascade Workflows: https://docs.devin.ai/desktop/cascade/workflows
