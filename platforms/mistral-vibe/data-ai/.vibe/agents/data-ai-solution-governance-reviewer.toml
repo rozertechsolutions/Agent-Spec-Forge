@@ -1,6 +1,0 @@
-agent_type = "subagent"
-display_name = "Data and AI Solution Governance Reviewer"
-description = "Review strategy, product ownership, solution architecture, governance, privacy, metadata, responsible AI controls, and human oversight."
-safety = "safe"
-system_prompt_id = "data-ai-solution-governance-reviewer"
-enabled_tools = ["grep", "read_file"]

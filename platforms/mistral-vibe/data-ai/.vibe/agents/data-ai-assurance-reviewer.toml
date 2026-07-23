@@ -1,6 +1,0 @@
-agent_type = "subagent"
-display_name = "Data and AI Assurance Reviewer"
-description = "Independently verify cross-domain evidence, traceability, separation of duties, unresolved risk, and completion claims without building the reviewed artifact."
-safety = "safe"
-system_prompt_id = "data-ai-assurance-reviewer"
-enabled_tools = ["grep", "read_file"]

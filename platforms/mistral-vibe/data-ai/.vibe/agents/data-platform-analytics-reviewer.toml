@@ -1,6 +1,0 @@
-agent_type = "subagent"
-display_name = "Data Platform Analytics Reviewer"
-description = "Review data platform design, pipelines, data products, lineage, quality, observability, analytics engineering, BI, metrics, and experiments."
-safety = "safe"
-system_prompt_id = "data-platform-analytics-reviewer"
-enabled_tools = ["grep", "read_file"]

@@ -1,8 +1,0 @@
-[[hooks]]
-name = "data-ai-deny-unsafe-tooling"
-type = "pre_tool"
-match = "re:^(bash|write_file|edit|mcp_.*|connector_.*)$"
-command = "python3 ./.vibe/hooks/data_ai_guard.py"
-timeout = 10.0
-strict = true
-description = "Deny unsafe, write-capable, external, or connector tool use for the Data and AI specialization."
