@@ -1,120 +1,45 @@
 # AI Specialized Departments
 
-AI Specialized Departments is a multi-platform collection of professional AI configurations organized by department and specialty.
+AI Specialized Departments is a repository for creating professional AI configurations adapted to specific departments and specialties.
 
-Each department contains the agents, subagents, skills, hooks, MCP integrations, and workflows required for its specific field.
+The objective is to define what an AI environment needs in order to work effectively in a professional area and then prepare the corresponding configuration for each supported platform.
 
-## Purpose
+The project separates the professional definition of a department from the way each platform implements it. This allows the same department to be adapted to different AI tools without redefining its purpose, roles, capabilities, procedures, instructions, integrations, or operational requirements from scratch.
 
-The project provides focused AI configurations for professional areas such as:
-
-* Software development
-* Web development
-* Cybersecurity
-* Marketing
-* Medicine
-* Legal
-* Finance
-* Education
-
-Each specialty is designed independently so it only contains the components it actually requires.
-
-## Supported Platforms
-
-The project may include native configurations for platforms such as:
-
-* OpenAI Codex
-* Claude Code
-* Gemini CLI
-* GitHub Copilot
-* Qwen Code
-* Mistral Vibe
-* Ollama
-* LM Studio
-
-Support depends on the native capabilities of each platform.
-
-## Structure
+## Project Structure
 
 ```text
 ai-specialized-departments/
-├── codex/
-│   ├── software-development/
-│   │   ├── agents/
-│   │   ├── subagents/
-│   │   ├── skills/
-│   │   ├── hooks/
-│   │   ├── mcp/
-│   │   └── workflows/
-│   ├── cybersecurity/
-│   ├── marketing/
-│   └── medicine/
-├── claude-code/
-├── gemini-cli/
-├── github-copilot/
-├── qwen-code/
-├── mistral-vibe/
-├── ollama/
-└── lm-studio/
+├── departments/
+├── shared/
+├── platform/
+└── README.md
 ```
 
-## Design Principles
+### `departments/`
 
-* Platform-native configurations
-* Independent professional departments
-* No mandatory shared layer
-* No project-specific business rules
-* No real secrets or credentials
-* No external services enabled by default
-* Security-focused permissions
-* Clear separation between specialties
-* Components added only when supported by the platform
+Contains the professional definition of each department and its specialties.
 
-## Department Components
+Each department may define the roles, capabilities, procedures, instructions, MCP requirements, events, and other elements needed for that area of work.
 
-A department may contain:
+### `shared/`
 
-* **Agents:** primary professional roles
-* **Subagents:** specialized supporting roles
-* **Skills:** reusable capabilities for the department
-* **Hooks:** optional lifecycle or validation events
-* **MCP:** safe integration configurations
-* **Workflows:** structured collaboration and execution processes
+Contains reusable components that can be used by more than one department, such as common roles, capabilities, procedures, instructions, MCP definitions, or external integrations.
 
-Not every platform or department must implement every component.
+### `platform/`
 
-## Current Scope
+Contains the real implementation of each department for the supported AI platforms.
 
-This repository contains specialized configurations for individual AI platforms.
+Each platform keeps its own native configuration structure, formats, files, terminology, and capabilities.
 
-It is not currently intended to provide:
+## Goal
 
-* A universal AI framework
-* A shared runtime
-* A cross-platform execution engine
-* Automatic conversion between platforms
-* Universal compatibility guarantees
+The final result should allow a user to choose a professional department and obtain a practical AI configuration for the platform they use.
 
-These capabilities may be developed separately in the future.
+The repository is intended to support different types of AI environments, including IDE-based tools, CLI agents, desktop applications, web platforms, and other configurable AI systems when appropriate.
 
-## Security
+The list of departments, specialties, and supported platforms will evolve as the project is developed.
 
-* Never commit real API keys, tokens, passwords, or credentials.
-* External integrations must remain disabled until explicitly configured.
-* Permissions should follow the principle of least privilege.
-* High-impact actions should require explicit user approval.
-* Medical, legal, financial, and security-related departments must include appropriate validation and human-review rules.
-
-## Contributing
-
-Contributions should:
-
-1. Target a specific platform and department.
-2. Use the native format supported by that platform.
-3. Avoid unnecessary duplication.
-4. Document required capabilities and limitations.
-5. Include no private data or real credentials.
-6. Clearly identify unsupported or degraded functionality.
 
 ## License
 
