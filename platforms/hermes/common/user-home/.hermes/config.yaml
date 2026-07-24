@@ -1,0 +1,7 @@
+# Minimal non-secret example.
+# Add provider/model configuration only when the final user chooses them.
+
+skills:
+  config: {}
+
+mcp_servers: {}

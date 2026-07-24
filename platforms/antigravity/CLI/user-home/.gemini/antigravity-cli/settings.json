@@ -1,0 +1,6 @@
+{
+  "toolPermission": "request-review",
+  "artifactReviewPolicy": "asks-for-review",
+  "enableTerminalSandbox": true,
+  "allowNonWorkspaceAccess": false
+}

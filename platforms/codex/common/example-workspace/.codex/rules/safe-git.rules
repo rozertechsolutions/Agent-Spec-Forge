@@ -1,0 +1,5 @@
+prefix_rule(
+    pattern = ["git", ["status", "diff", "log", "show"]],
+    decision = "allow",
+    justification = "Allow read-only Git inspection commands used for verification.",
+)

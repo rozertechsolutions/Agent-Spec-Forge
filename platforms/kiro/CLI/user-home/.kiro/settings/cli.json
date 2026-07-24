@@ -1,0 +1,10 @@
+{
+  "telemetry": {
+    "enabled": false
+  },
+  "chat": {
+    "greeting": {
+      "enabled": false
+    }
+  }
+}

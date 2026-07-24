@@ -1,0 +1,10 @@
+---
+description: Core specialization constraints for evidence-based work
+alwaysApply: true
+---
+
+- Inspect the relevant source before making claims.
+- Prefer correctness and material risk over style-only changes.
+- Preserve existing conventions unless a change is required.
+- Never expose secrets or credentials.
+- State what could not be verified.
